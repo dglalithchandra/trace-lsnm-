@@ -1,0 +1,18 @@
+{
+  "status": "EXACT_IMAGE_AUDIT_ONLY",
+  "archive_images": 1000,
+  "eligible_after_exact_screen": 996,
+  "exact_duplicate_groups": 4,
+  "cross_class_exact_groups": 0,
+  "target_counts": {
+    "RP": 22,
+    "Bietti": 8,
+    "Normal": 37
+  },
+  "focus_exact_overlap_edid": 0,
+  "focus_exact_overlap_rfmid_v1_training": 0,
+  "patient_ids_available": false,
+  "per_image_camera_ids_available": false,
+  "warning": "Exact byte matching does not detect re-encoded or cropped copies",
+  "protected_test_images_opened": 0
+}
