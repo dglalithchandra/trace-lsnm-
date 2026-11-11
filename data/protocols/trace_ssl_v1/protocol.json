@@ -1,0 +1,20 @@
+{
+  "version": "trace-ssl-v1",
+  "status": "FROZEN_LABEL_HIDDEN_TRAINING_INPUT",
+  "source_dataset": "RFMiD v1",
+  "source_split": "training_only",
+  "image_count": 1917,
+  "manifest_sha256": "38fa01dee6a6b23922f7627483897f3c2b5e52337a6917f9cc249fc3f4efa846",
+  "manifest_fields": [
+    "record_id",
+    "archive_member",
+    "image_sha256"
+  ],
+  "encoder_start": "verified_local_DINOv2-S/14_pretrained_weights",
+  "image_preprocessing": "frozen_448px_geometry_and_quality;photometric_harmonisation_disabled",
+  "primary_comparison": "same_RFMiD_v1_training_images_updates_backbone_and_head_budget;plain_contrastive_vs_lesion_preserving_views",
+  "candidate_extension": "bounded_neighbour_downweighting_with_random_downweighting_control_after_base_comparison",
+  "evaluation_policy": "select_on_existing_development_episodes_only;exclude_EDID_JSIEC_and_protected_RFMiD_test_from_SSL_training",
+  "warning": "The manifest has no disease labels, but archive images can still contain visible pathology; no patient IDs exist for false-negative screening.",
+  "protected_test_images_opened": 0
+}

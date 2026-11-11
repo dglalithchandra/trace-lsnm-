@@ -1,0 +1,12 @@
+{
+  "status": "GEOMETRIC_VIEW_PREFLIGHT_ONLY_NOT_LESION_PRESERVATION",
+  "sampled_training_images": 60,
+  "seed": 20261111,
+  "plain_crop_retinal_mask_retention_mean": 0.9577155839852864,
+  "plain_crop_retinal_mask_retention_min": 0.8555673511890675,
+  "full_field_retinal_mask_retention_mean": 0.9999870398294216,
+  "full_field_retinal_mask_retention_min": 0.9998918107499544,
+  "contact_sheet": "tmp\\trace_ssl_view_preflight.jpg",
+  "warning": "Retinal field retention is a geometric measure; it does not prove preservation of every lesion or medical finding.",
+  "protected_test_images_opened": 0
+}

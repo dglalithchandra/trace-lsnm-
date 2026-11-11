@@ -65,3 +65,7 @@ The official, unaugmented Eye Disease Image Dataset ZIP is downloaded and SHA-25
 
 JSIEC-1000 was audited as a candidate disease-control cohort. It has 22 RP, eight Bietti and 37 normal distinct images after exact deduplication. The RP/Bietti comparison is relevant but too small and lacks public patient IDs; it can only be descriptive. See `data/protocols/trace_bench_v2/EXTERNAL_MIMIC_FEASIBILITY.md`. Continue with the encoder's controlled label-hidden contrastive experiment using accessible RFMiD v1 training images. Keep EDID and JSIEC out of that SSL training pool if they remain external evaluations.
 
+## TRACE SSL v1 starting point
+
+The label-hidden 1,917-image RFMiD-v1-training manifest is frozen at `data/protocols/trace_ssl_v1/unlabeled_train_manifest.csv`. A 60-image view preflight measured nearly complete retinal-mask retention for the mild full-field view versus 95.8% mean retention for the plain random crop. This does not establish lesion preservation or downstream benefit. No contrastive checkpoint has been trained yet. See `data/protocols/trace_ssl_v1/README.md`; the next step is to implement and run a matched plain-crop versus full-field InfoNCE training experiment with checkpointing and development-only evaluation.
+
