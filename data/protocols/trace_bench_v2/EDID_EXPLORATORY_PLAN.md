@@ -2,6 +2,8 @@
 
 Status: **dataset acquired, duplicate screened, exploratory query manifest frozen; model evaluation pending**.
 
+The frozen preprocessing audit covers all 1,333 target and healthy queries. It accepted 1,331 and accepted two macular-scar images with warnings; it rejected none. Warnings remain included in the query set. The per-image record is `edid_preprocessing_audit.csv`. This audit preceded EDID model scores.
+
 ## Scope
 
 Use the original-image EDID archive as an exploratory external cohort for RFMiD-trained few-shot support. It can help test whether low-support finding representations transfer to a different dataset. It is not a per-camera evaluation. Patient IDs and per-image camera IDs are unavailable.

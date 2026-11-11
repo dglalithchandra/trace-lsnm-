@@ -1,0 +1,60 @@
+{
+  "status": "PREPROCESSING_AUDIT_BEFORE_MODEL_SCORES",
+  "query_count": 1333,
+  "by_status": {
+    "accept": 1331,
+    "accept_with_warning": 2
+  },
+  "by_class_status": {
+    "Disc Edema": {
+      "accept": 106
+    },
+    "Healthy": {
+      "accept": 777
+    },
+    "Macular Scar": {
+      "accept": 324,
+      "accept_with_warning": 2
+    },
+    "Retinitis Pigmentosa": {
+      "accept": 124
+    }
+  },
+  "preprocessing": {
+    "version": "trace-preprocessing-dev-v0.2",
+    "modality": "color_fundus_photograph",
+    "geometry": {
+      "output_size": 448,
+      "background_threshold": 12,
+      "minimum_input_side": 256,
+      "minimum_retinal_coverage": 0.2,
+      "crop_margin_fraction": 0.025,
+      "common_mask_radius_fraction": 0.485
+    },
+    "photometric_bounds": {
+      "maximum_channel_gain_change": 0.12,
+      "minimum_saturation_gain": 0.85,
+      "maximum_saturation_gain": 1.15,
+      "minimum_contrast_gain": 0.85,
+      "maximum_contrast_gain": 1.15,
+      "minimum_gamma": 0.85,
+      "maximum_gamma": 1.18,
+      "maximum_brightness_shift": 0.08,
+      "maximum_illumination_strength": 0.35
+    },
+    "quality": {
+      "maximum_mean_absolute_change": 0.12,
+      "maximum_p95_absolute_change": 0.32,
+      "minimum_structural_similarity": 0.82,
+      "maximum_bright_clip_increase": 0.015,
+      "maximum_dark_clip_increase": 0.02,
+      "minimum_output_retinal_coverage": 0.7,
+      "provisional_blur_warning_below": 18.0,
+      "provisional_glare_warning_above": 0.03
+    },
+    "preserve_original": true,
+    "apply_photometric_correction": false,
+    "policy_status": "geometry_and_quality_active_photometric_harmonisation_not_selected"
+  },
+  "protected_test_images_opened": 0
+}
