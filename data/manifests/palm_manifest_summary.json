@@ -1,0 +1,53 @@
+{
+  "archive_bytes": 1659253782,
+  "archive_md5": "28636601413706884ea89ec1be835e94",
+  "archive_path": "data/external/PALM/PALM.zip",
+  "atrophy_masks": 870,
+  "cross_official_split_exact_duplicate_groups": 11,
+  "detachment_masks": 24,
+  "disc_masks": 1144,
+  "empty_present_masks": 0,
+  "exact_duplicate_groups": 16,
+  "exact_duplicate_records": 32,
+  "excluded_duplicate_records_by_source_split": {
+    "test": 3,
+    "train": 9,
+    "validation": 4
+  },
+  "excluded_exact_duplicate_records": 16,
+  "patient_split_note": "The paper reports patient separation, but patient identifiers are not present for independent verification. Exact image duplicates cross the official splits, so a leakage-safe primary-analysis view excludes duplicate copies and gives protected test records priority.",
+  "primary_analysis_records": 1184,
+  "primary_records_by_effective_split": {
+    "test": 397,
+    "train": 391,
+    "validation": 396
+  },
+  "records": 1200,
+  "records_by_camera_model": {
+    "Canon CR-2": 153,
+    "ZEISS Visucam 500": 1047
+  },
+  "records_by_final_split": {
+    "test": 400,
+    "train": 400,
+    "validation": 400
+  },
+  "records_by_pathologic_myopia": {
+    "0": 563,
+    "1": 637
+  },
+  "records_by_shooting_center": {
+    "fovea": 800,
+    "midpoint_optic_disc_and_fovea": 277,
+    "optic_disc": 123
+  },
+  "records_by_source_split": {
+    "testing": 400,
+    "training": 400,
+    "validation": 400
+  },
+  "status": "PASS",
+  "test_use_policy": "Do not tune preprocessing or thresholds on PALM test records. Use only is_primary_analysis_record=True rows, and never use effective_split=excluded.",
+  "unique_image_sha256": 1184,
+  "zip_crc_check": "PASS"
+}

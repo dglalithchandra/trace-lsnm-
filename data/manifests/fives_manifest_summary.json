@@ -1,0 +1,48 @@
+{
+  "camera_warning": "Per-image camera identity is not present in the public release.",
+  "disease_counts": {
+    "age_related_macular_degeneration": 200,
+    "diabetic_retinopathy": 200,
+    "glaucoma": 200,
+    "normal": 200
+  },
+  "duplicate_groups_with_different_masks": 6,
+  "empty_vessel_mask_records": [
+    "fives:train:447_G",
+    "fives:train:448_G"
+  ],
+  "empty_vessel_masks": 2,
+  "exact_duplicate_groups": 6,
+  "exact_duplicate_records": 12,
+  "image_mask_pairs": 800,
+  "image_size": "2048x2048",
+  "mask_pixel_values": [
+    0,
+    255
+  ],
+  "patient_id_warning": "Patient IDs are not present in the public release.",
+  "primary_analysis_records_after_exact_deduplication": 794,
+  "quality_counts": {
+    "quality_blur_good": {
+      "good": 669,
+      "poor": 131
+    },
+    "quality_illumination_colour_good": {
+      "good": 644,
+      "poor": 156
+    },
+    "quality_low_contrast_good": {
+      "good": 765,
+      "poor": 35
+    }
+  },
+  "records": 800,
+  "source_splits": {
+    "test": 200,
+    "train": 600
+  },
+  "split_warning": "Published train/test split retained as source metadata only.",
+  "status": "PASS",
+  "unique_photographs_by_sha256": 794,
+  "usable_nonempty_vessel_masks": 798
+}

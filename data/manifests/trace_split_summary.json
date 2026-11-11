@@ -1,0 +1,38 @@
+{
+  "confirmed_duplicate_groups": 56,
+  "conservative_idrid_related_edges": 81,
+  "final_split_counts": {
+    "test": 792,
+    "train": 2361,
+    "validation": 644
+  },
+  "final_split_counts_by_dataset": {
+    "IDRiD_Grading_Localisation": {
+      "test": 115,
+      "train": 396,
+      "validation": 5
+    },
+    "IDRiD_Segmentation": {
+      "test": 33,
+      "train": 48
+    },
+    "RFMiD": {
+      "test": 644,
+      "train": 1917,
+      "validation": 639
+    }
+  },
+  "guarantee": "Confirmed duplicate photographs and conservatively linked IDRiD records do not cross splits.",
+  "limitation": "Patient independence cannot be guaranteed because patient identifiers are unavailable.",
+  "moves": {
+    "train->test": 21,
+    "train->validation": 5,
+    "validation->test": 1
+  },
+  "multi_record_split_groups": 126,
+  "policy": "When a group crossed source splits, the entire group was moved to test, then validation, then train in that priority order.",
+  "records": 3797,
+  "records_moved_to_more_conservative_holdout": 27,
+  "split_groups": 3656,
+  "status": "PASS"
+}

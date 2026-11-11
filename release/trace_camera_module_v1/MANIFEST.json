@@ -1,0 +1,121 @@
+{
+  "release": "trace-camera-module-v1.0-research",
+  "date": "2026-11-11",
+  "status": "frozen_research_prototype",
+  "active_method": "camera-ID-agnostic geometry plus diagnostic quality measurements and frozen disease scoring",
+  "disabled_methods": [
+    "photometric harmonisation",
+    "shift-consistency adapter",
+    "learned artifact-QC detectors"
+  ],
+  "clinical_use": false,
+  "universal_camera_claim": false,
+  "protected_test_records_accessed_during_release_smoke": 0,
+  "files": [
+    {
+      "path": "trace_camera/__init__.py",
+      "bytes": 187,
+      "sha256": "2e97b6c555e892cc82a11516ffb73a911eb02c7169a1f70d218f55738b93d7c2"
+    },
+    {
+      "path": "trace_camera/module.py",
+      "bytes": 3899,
+      "sha256": "c03d37de2a1a5e7ec4e7d857b2604ced3cd6bbb22f192d032828c79703fa630d"
+    },
+    {
+      "path": "trace_preprocessing/config.py",
+      "bytes": 2304,
+      "sha256": "88aeeead06355266694d48409e124bfee7cdadf8094b61bca822e8554131274d"
+    },
+    {
+      "path": "trace_preprocessing/pipeline.py",
+      "bytes": 7784,
+      "sha256": "e399c7efa89e2b830a85bec8ef2bb4ebe7d5e6d961bfbd9fdcd8230d39f0f914"
+    },
+    {
+      "path": "trace_preprocessing/geometry.py",
+      "bytes": 3533,
+      "sha256": "8ce24da9bf830848c690ca18c4100a366d5de430e178192b66bedc44473e0014"
+    },
+    {
+      "path": "trace_preprocessing/measurements.py",
+      "bytes": 4606,
+      "sha256": "d738f52c234851edea3b0798883d825ce33bd157350fd776c3fbbfb8d67f9be7"
+    },
+    {
+      "path": "trace_preprocessing/quality.py",
+      "bytes": 3401,
+      "sha256": "4c8b3a57efacbaf3a8628def66e08535f03bd976093f3231a343cb0b1a85ceee"
+    },
+    {
+      "path": "trace_models/rfmid_scorer.py",
+      "bytes": 5672,
+      "sha256": "a64036c7bfd33d236eb947ad31ecb03c9c8ad897abc5fa9194bf59f7744dd6c5"
+    },
+    {
+      "path": "scripts/run_trace_camera_module.py",
+      "bytes": 3385,
+      "sha256": "52c870d0b889b711f65aa7a0854fb2e43513dca3a96ac08365d752c5db382520"
+    },
+    {
+      "path": "models/dinov2_vits14/dinov2_vits14_pretrain.pth",
+      "bytes": 88283115,
+      "sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9"
+    },
+    {
+      "path": "models/rfmid_dinov2_linear_v1/rfmid_dinov2_linear_v1.pt",
+      "bytes": 77043,
+      "sha256": "d87254c344222f133e21cc3715279b4cd701e350fe1066bd352b7cd80d5bc41d"
+    },
+    {
+      "path": "outputs/camera_module_decision/current_decision.json",
+      "bytes": 5096,
+      "sha256": "8fde88724bd084a9f90b27fa7c2f6f84b79543fda90717d2a4f8b1395b93b5d9"
+    },
+    {
+      "path": "outputs/palm_camera_transfer_v1/EXPERIMENT_2A_REPORT.md",
+      "bytes": 4238,
+      "sha256": "c80c021dffcd098680c2c144835de03416cd96a859296732eeb717320cbb3023"
+    },
+    {
+      "path": "outputs/palm_trust_layer_v1/EXPERIMENT_3A_REPORT.md",
+      "bytes": 5632,
+      "sha256": "7a5081a9e555193214f85c165a8a0f5ac7386d35c0c62e5da62806297332ea95"
+    },
+    {
+      "path": "outputs/paraguay_external_shift_v1/EXPERIMENT_3B_REPORT.md",
+      "bytes": 6225,
+      "sha256": "c2010c2cfd9f0036ad41fb91fdeb2f66a8da75eedb713cad114b0ee81d96f2a9"
+    },
+    {
+      "path": "outputs/rfmid_artifact_stress_v2/EXPERIMENT_4A_REPORT.md",
+      "bytes": 5847,
+      "sha256": "e4a8e13228dee3d210153c4b2a292c691b9d2fa0cf7737697524f6150a8fe4ed"
+    },
+    {
+      "path": "outputs/artifact_qc_v1/EXPERIMENT_4B_REPORT.md",
+      "bytes": 4497,
+      "sha256": "f038917871d1edf25b57e2df5018950aae06f106d19e36db0b50046f762cd9f7"
+    },
+    {
+      "path": "outputs/fives_frozen_artifact_qc_v1/EXPERIMENT_4C_REPORT.md",
+      "bytes": 3461,
+      "sha256": "044c7a6c50fef77bf44255105736e8fea8d4a519f4e281755d0724233c0cf7d7"
+    },
+    {
+      "path": "outputs/final_camera_module_smoke/trace_result.json",
+      "bytes": 6802,
+      "sha256": "989d02299ac6ea04aaadb0ad448468e44856e1ae245e62a640a8948005e97835"
+    },
+    {
+      "path": "outputs/final_camera_module_smoke/trace_standardized.png",
+      "bytes": 172908,
+      "sha256": "4a83598eca8e88db68b6423f4543f4b55b75459c86e65ed6e5ea832a4cc231d9"
+    },
+    {
+      "path": "outputs/final_camera_module_smoke/trace_retinal_mask.png",
+      "bytes": 2359,
+      "sha256": "18c8e5a5a67b1aab37444dc3b47d60aea42f23c7f1737b1561d4e21855cba1f2"
+    }
+  ]
+}

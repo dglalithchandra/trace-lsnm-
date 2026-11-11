@@ -1,0 +1,37 @@
+{
+  "acquisition_site": "Hospital de Clinicas, Paraguay",
+  "any_dr_positive": 726,
+  "archive": "data/external/ParaguayDR/Dataset_from_fundus_images_for_the_study_of_diabetic_retinopathy_V03.zip",
+  "archive_bytes": 1523619607,
+  "archive_md5": "1d9109e010533c408ed362ac9b1bbc9d",
+  "archive_sha256": "06bc2333f9ab3f75a6bdd0e043da8c475350daa4bdf87b00a88cac9d5f6ef28b",
+  "camera_model": "ZEISS Visucam 500",
+  "dimension_counts": {
+    "1052x1028": 1,
+    "1062x1029": 1,
+    "1444x1444": 20,
+    "2124x2056": 1412,
+    "4288x2848": 3
+  },
+  "exact_matches_in_existing_manifests": 0,
+  "label_counts": {
+    "Advanced PDR": 145,
+    "Mild (or early) NPDR": 6,
+    "Moderate NPDR": 110,
+    "No DR signs": 711,
+    "PDR": 116,
+    "Severe NPDR": 210,
+    "Very Severe NPDR": 139
+  },
+  "patient_ids_available": false,
+  "primary_analysis_records": 1437,
+  "proliferative_dr_positive": 261,
+  "protected_test_records_accessed": 0,
+  "records": 1437,
+  "referable_dr_positive": 720,
+  "role": "external development validation for DR site/domain shift; not rare-disease training",
+  "status": "PASS",
+  "within_dataset_duplicate_hashes": 0,
+  "within_dataset_duplicate_records": 0,
+  "zip_integrity": "PASS"
+}

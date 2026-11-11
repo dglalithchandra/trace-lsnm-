@@ -1,0 +1,119 @@
+{
+  "adapter_rule": "Shared adapters train on base-label-positive records only after excluding every record positive for any novel label.",
+  "base_labels": [
+    "DR",
+    "ARMD",
+    "MH",
+    "DN",
+    "MYA",
+    "BRVO",
+    "TSLN",
+    "ODC",
+    "ODP",
+    "ODE"
+  ],
+  "base_tuning_checks": {
+    "base_labels": 10,
+    "episode_replicates": 50,
+    "episode_rows": 1500,
+    "k_values": [
+      1,
+      3,
+      5
+    ],
+    "limitation": "RFMiD has no patient identifiers; duplicate-group separation does not establish patient-independent evaluation. Dataset support counts are not estimates of clinical rarity.",
+    "novel_labels": 11,
+    "status": "PASS",
+    "test_records_accessed": 0,
+    "train_records": 1917,
+    "train_validation_record_overlap": 0,
+    "validation_query_records": 639
+  },
+  "checks": {
+    "base_labels": 10,
+    "episode_replicates": 50,
+    "episode_rows": 1650,
+    "k_values": [
+      1,
+      3,
+      5
+    ],
+    "limitation": "RFMiD has no patient identifiers; duplicate-group separation does not establish patient-independent evaluation. Dataset support counts are not estimates of clinical rarity.",
+    "novel_labels": 11,
+    "status": "PASS",
+    "test_records_accessed": 0,
+    "train_records": 1917,
+    "train_validation_record_overlap": 0,
+    "validation_query_records": 639
+  },
+  "config": {
+    "base_minimum_train_positives": 50,
+    "episode_replicates": 50,
+    "k_values": [
+      1,
+      3,
+      5
+    ],
+    "minimum_query_positives": 5,
+    "seed": 20261111,
+    "strict_negative_ratio": 1,
+    "version": "trace-fewshot-v1"
+  },
+  "descriptive_only_labels": [
+    "TV",
+    "AH",
+    "ST",
+    "PT",
+    "MHL",
+    "RP",
+    "CWS",
+    "PRH",
+    "CRAO",
+    "TD",
+    "CME",
+    "PTCR",
+    "CF",
+    "VH",
+    "VS",
+    "BRAO",
+    "PLQ"
+  ],
+  "files": {
+    "base_adapter_pool": "base_adapter_pool.csv",
+    "base_tuning_episode_plan": "base_tuning_episode_plan.csv",
+    "episode_plan": "episode_plan.csv",
+    "fixed_query_records": "fixed_query_records.csv",
+    "label_eligibility": "label_eligibility.csv"
+  },
+  "final_test_policy": "No test feature file is loaded or required. Final test remains protected.",
+  "novel_labels": [
+    "ERM",
+    "LS",
+    "MS",
+    "CSR",
+    "CRVO",
+    "AION",
+    "RT",
+    "RS",
+    "CRS",
+    "EDN",
+    "RPEC"
+  ],
+  "selection_rule": {
+    "base": "all primary-grid-eligible labels with at least 50 training positives",
+    "novel": "all primary-grid-eligible labels with 5 to 49 training positives",
+    "primary_query_minimum_positives": 5,
+    "warning": "This is an operational low-support split, not a claim that RFMiD frequency equals real-world disease rarity."
+  },
+  "source_hashes": {
+    "rfmid_train_dinov2_vits14_geometry_v1.npz": "d961e9f00cc667fbad36899660be0acd5384a33030f9489214eec1a0453629fc",
+    "rfmid_validation_dinov2_vits14_geometry_v1.npz": "d4b36e7045d86644befdefbfc9cf97bf3199f85b84bd0bcce3b5f3acb8ac8939"
+  },
+  "status": "FROZEN_DEVELOPMENT_PROTOCOL",
+  "support_protocols": {
+    "primary": "K positives plus every available training negative",
+    "query": "all fixed validation records for every method",
+    "secondary": "K positives plus 1K negatives"
+  },
+  "version": "trace-fewshot-v1"
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "title": "Retinal Fundus Multi-Disease Image Dataset (RFMiD): A Dataset for Multi-Disease Detection Research",
+    "url": "https://www.mdpi.com/2306-5729/6/2/14",
+    "mapping_status": "RFMiD abbreviations expanded from the dataset paper; FLAIR prompt categories matched to official FLAIR definition keys"
+  },
+  "labels": {
+    "DR": {"rfmid_name": "Diabetic retinopathy", "flair_category": "diabetic retinopathy"},
+    "ARMD": {"rfmid_name": "Age-related macular degeneration", "flair_category": "age related macular degeneration"},
+    "MH": {"rfmid_name": "Media haze", "flair_category": "media haze"},
+    "DN": {"rfmid_name": "Drusens", "flair_category": "drusens"},
+    "MYA": {"rfmid_name": "Myopia", "flair_category": "pathologic myopia", "mapping_note": "broader RFMiD label mapped to the closest available FLAIR category"},
+    "BRVO": {"rfmid_name": "Branch retinal vein occlusion", "flair_category": "branch retinal vein occlusion"},
+    "TSLN": {"rfmid_name": "Tessellation", "flair_category": "tessellation"},
+    "ODC": {"rfmid_name": "Optic disc cupping", "flair_category": "optic disc cupping"},
+    "ODP": {"rfmid_name": "Optic disc pallor", "flair_category": "optic disc pallor"},
+    "ODE": {"rfmid_name": "Optic disc edema", "flair_category": "optic disc edema"},
+    "ERM": {"rfmid_name": "Epiretinal membrane", "flair_category": "epiretinal membrane"},
+    "LS": {"rfmid_name": "Laser scars", "flair_category": "laser scar"},
+    "MS": {"rfmid_name": "Macular scar", "flair_category": "macular scar"},
+    "CSR": {"rfmid_name": "Central serous retinopathy", "flair_category": "central serous retinopathy"},
+    "CRVO": {"rfmid_name": "Central retinal vein occlusion", "flair_category": "central retinal vein occlusion"},
+    "AION": {"rfmid_name": "Anterior ischemic optic neuropathy", "flair_category": "anterior ischemic optic neuropathy"},
+    "RT": {"rfmid_name": "Retinal traction", "flair_category": "retinal traction"},
+    "RS": {"rfmid_name": "Retinitis", "flair_category": "retinitis"},
+    "CRS": {"rfmid_name": "Chorioretinitis", "flair_category": "chorioretinitis"},
+    "EDN": {"rfmid_name": "Exudation", "flair_category": "exudates", "mapping_note": "RFMiD finding name matched to FLAIR's plural finding category"},
+    "RPEC": {"rfmid_name": "Retinal pigment epithelium changes", "flair_category": "retinal pigment epithelium changes"}
+  }
+}

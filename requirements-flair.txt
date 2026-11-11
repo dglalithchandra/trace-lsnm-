@@ -1,0 +1,2 @@
+flair @ git+https://github.com/jusiro/FLAIR.git@d6652d53389ff49e5f73efaccf4246e9de88d1a3
+transformers==5.22.2

@@ -1,0 +1,40 @@
+{
+  "archive_members_checked": true,
+  "camera_domains": "two RFMiD models derived, one RFMiD resolution group unresolved, IDRiD Kowa specified",
+  "camera_identity": "derived from official acquisition tables with RFMiD 4288x2848 unresolved",
+  "canonical_records": 3797,
+  "confirmed_duplicate_groups": 56,
+  "confirmed_duplicate_pairs": 60,
+  "confirmed_duplicate_records": 116,
+  "final_split": "pending duplicate-aware assignment",
+  "idrid_grading_records_with_labels_and_coordinates": 516,
+  "records_by_dataset": {
+    "IDRiD_Grading_Localisation": 516,
+    "IDRiD_Segmentation": 81,
+    "RFMiD": 3200
+  },
+  "records_by_source_split": {
+    "IDRiD_Grading_Localisation/testing": 103,
+    "IDRiD_Grading_Localisation/training": 413,
+    "IDRiD_Segmentation/testing": 27,
+    "IDRiD_Segmentation/training": 54,
+    "RFMiD/testing": 640,
+    "RFMiD/training": 1920,
+    "RFMiD/validation": 640
+  },
+  "rfmid_camera_model_counts": {
+    "TOPCON 3D OCT-2000": 2427,
+    "TOPCON TRC-NW300": 276,
+    "unresolved": 497
+  },
+  "rfmid_label_columns_per_record": 45,
+  "segmentation_mask_counts": {
+    "mask_haemorrhages": 80,
+    "mask_hard_exudates": 81,
+    "mask_microaneurysms": 81,
+    "mask_optic_disc": 81,
+    "mask_soft_exudates": 40
+  },
+  "status": "PASS",
+  "unique_record_ids": 3797
+}

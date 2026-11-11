@@ -1,0 +1,33 @@
+{
+  "camera_identity_warning": "Camera models are derived from official dataset acquisition tables, not embedded per-image metadata. RFMiD 4288x2848 remains unresolved because the archive has 497 such images versus 467 reported for Kowa, while 2048x1536 has 276 images versus 306 reported for TRC-NW300.",
+  "candidate_or_related_pairs": 143,
+  "confirmed_duplicate_groups": 56,
+  "confirmed_duplicate_records": 116,
+  "idrid_localisation_exact_duplicates_of_grading": 516,
+  "idrid_localisation_total_images": 516,
+  "manifest_schema_version": 1,
+  "records_by_camera_domain": {
+    "idrid_camera_kowa_vx_10_alpha": 597,
+    "rfmid_camera_topcon_3d_oct_2000": 2427,
+    "rfmid_camera_topcon_trc_nw300": 276,
+    "rfmid_resolution_4288x2848_unresolved": 497
+  },
+  "records_by_camera_model": {
+    "Kowa VX-10 alpha": 597,
+    "TOPCON 3D OCT-2000": 2427,
+    "TOPCON TRC-NW300": 276,
+    "unresolved": 497
+  },
+  "records_by_dataset": {
+    "IDRiD_Grading_Localisation": 516,
+    "IDRiD_Segmentation": 81,
+    "RFMiD": 3200
+  },
+  "records_by_resolution": {
+    "2048x1536": 276,
+    "2144x1424": 2427,
+    "4288x2848": 1094
+  },
+  "split_warning": "final_split is intentionally blank until duplicate-aware assignment is generated.",
+  "total_canonical_image_records": 3797
+}
