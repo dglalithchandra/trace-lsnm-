@@ -1,0 +1,15 @@
+{
+  "status": "FROZEN_BEFORE_EDID_MODEL_SCORES",
+  "episode_counts": {
+    "MS": 150,
+    "RP": 26,
+    "ODE": 150
+  },
+  "rp_support_subsets": {
+    "k1": 6,
+    "k3": 20
+  },
+  "query_manifest": "data/manifests/edid_exploratory_manifest_v2.csv",
+  "support_source": "RFMiD v1 training only",
+  "test_records_accessed": 0
+}
