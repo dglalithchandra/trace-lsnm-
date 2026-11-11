@@ -1,0 +1,206 @@
+{
+  "status": "PASS",
+  "source_archive": "data/external/EDID/Original_Dataset.zip",
+  "source_sha256": "4cc006a9a769cb5172d552b69395d65fa1f1794af27baf32574a027051ea188d",
+  "image_members": 5335,
+  "class_counts": {
+    "Central Serous Chorioretinopathy [Color Fundus]": 101,
+    "Diabetic Retinopathy": 1509,
+    "Disc Edema": 127,
+    "Glaucoma": 1349,
+    "Healthy": 1024,
+    "Macular Scar": 444,
+    "Myopia": 500,
+    "Pterygium": 17,
+    "Retinal Detachment": 125,
+    "Retinitis Pigmentosa": 139
+  },
+  "dimension_counts": {
+    "2004x1690": 5335
+  },
+  "extension_counts": {
+    ".jpg": 5335
+  },
+  "exif_tag_counts": {},
+  "exact_duplicate_groups": 470,
+  "exact_duplicate_extra_images": 484,
+  "cross_class_exact_duplicate_groups": 464,
+  "healthy_cross_class_exact_duplicate_groups": 201,
+  "cross_class_pairs": {
+    "Glaucoma || Healthy": 167,
+    "Glaucoma || Myopia": 147,
+    "Glaucoma || Macular Scar": 35,
+    "Diabetic Retinopathy || Macular Scar": 23,
+    "Healthy || Macular Scar": 18,
+    "Healthy || Myopia": 18,
+    "Diabetic Retinopathy || Disc Edema": 16,
+    "Central Serous Chorioretinopathy [Color Fundus] || Macular Scar": 12,
+    "Macular Scar || Myopia": 11,
+    "Diabetic Retinopathy || Glaucoma": 8,
+    "Diabetic Retinopathy || Myopia": 6,
+    "Glaucoma || Retinitis Pigmentosa": 5,
+    "Central Serous Chorioretinopathy [Color Fundus] || Glaucoma": 4,
+    "Central Serous Chorioretinopathy [Color Fundus] || Diabetic Retinopathy": 4,
+    "Diabetic Retinopathy || Retinal Detachment": 4,
+    "Myopia || Retinitis Pigmentosa": 4,
+    "Central Serous Chorioretinopathy [Color Fundus] || Healthy": 3,
+    "Disc Edema || Macular Scar": 2,
+    "Diabetic Retinopathy || Retinitis Pigmentosa": 2,
+    "Macular Scar || Retinitis Pigmentosa": 2,
+    "Disc Edema || Glaucoma": 1
+  },
+  "unique_images_with_one_class_folder": {
+    "Central Serous Chorioretinopathy [Color Fundus]": 80,
+    "Diabetic Retinopathy": 1448,
+    "Disc Edema": 108,
+    "Glaucoma": 990,
+    "Healthy": 823,
+    "Macular Scar": 352,
+    "Myopia": 321,
+    "Pterygium": 17,
+    "Retinal Detachment": 120,
+    "Retinitis Pigmentosa": 128
+  },
+  "all_unique_bytewise_images": 4851,
+  "exact_duplicate_examples": [
+    [
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR1.jpg",
+      "Original Dataset/Macular Scar/Macular Scar4.jpg"
+    ],
+    [
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR14.jpg",
+      "Original Dataset/Macular Scar/Macular Scar29.jpg"
+    ],
+    [
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR3.jpg",
+      "Original Dataset/Macular Scar/Macular Scar5.jpg"
+    ],
+    [
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR34.jpg",
+      "Original Dataset/Glaucoma/Glaucoma131.jpg",
+      "Original Dataset/Macular Scar/Macular Scar202.jpg"
+    ],
+    [
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR36.jpg",
+      "Original Dataset/Glaucoma/Glaucoma134.jpg",
+      "Original Dataset/Healthy/Healthy357.jpg"
+    ],
+    [
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR39.jpg",
+      "Original Dataset/Healthy/Healthy373.jpg"
+    ],
+    [
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR41.jpg",
+      "Original Dataset/Macular Scar/Macular Scar231.jpg"
+    ],
+    [
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR48.jpg",
+      "Original Dataset/Macular Scar/Macular Scar255.jpg"
+    ],
+    [
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR52.jpg",
+      "Original Dataset/Macular Scar/Macular Scar273.jpg"
+    ],
+    [
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR53.jpg",
+      "Original Dataset/Macular Scar/Macular Scar274.jpg"
+    ],
+    [
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR58.jpg",
+      "Original Dataset/Macular Scar/Macular Scar297.jpg"
+    ],
+    [
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR6.jpg",
+      "Original Dataset/Macular Scar/Macular Scar8.jpg"
+    ],
+    [
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR63.jpg",
+      "Original Dataset/Glaucoma/Glaucoma507.jpg"
+    ],
+    [
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR64.jpg",
+      "Original Dataset/Macular Scar/Macular Scar306.jpg"
+    ],
+    [
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR67.jpg",
+      "Original Dataset/Diabetic Retinopathy/DR472.jpg"
+    ],
+    [
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR68.jpg",
+      "Original Dataset/Diabetic Retinopathy/DR473.jpg"
+    ],
+    [
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR69.jpg",
+      "Original Dataset/Diabetic Retinopathy/DR474.jpg"
+    ],
+    [
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR84.jpg",
+      "Original Dataset/Healthy/Healthy830.jpg"
+    ],
+    [
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR85.jpg",
+      "Original Dataset/Glaucoma/Glaucoma739.jpg"
+    ],
+    [
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR86.jpg",
+      "Original Dataset/Diabetic Retinopathy/DR718.jpg"
+    ]
+  ],
+  "broken_image_count": 0,
+  "broken_image_examples": [],
+  "sample_names_by_class": {
+    "Central Serous Chorioretinopathy [Color Fundus]": [
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR1.jpg",
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR10.jpg",
+      "Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR100.jpg"
+    ],
+    "Diabetic Retinopathy": [
+      "Original Dataset/Diabetic Retinopathy/DR1.jpg",
+      "Original Dataset/Diabetic Retinopathy/DR10.jpg",
+      "Original Dataset/Diabetic Retinopathy/DR100.jpg"
+    ],
+    "Disc Edema": [
+      "Original Dataset/Disc Edema/Disc Edema1.jpg",
+      "Original Dataset/Disc Edema/Disc Edema10.jpg",
+      "Original Dataset/Disc Edema/Disc Edema100.jpg"
+    ],
+    "Glaucoma": [
+      "Original Dataset/Glaucoma/Glaucoma1.jpg",
+      "Original Dataset/Glaucoma/Glaucoma10.jpg",
+      "Original Dataset/Glaucoma/Glaucoma100.jpg"
+    ],
+    "Healthy": [
+      "Original Dataset/Healthy/Healthy1.jpg",
+      "Original Dataset/Healthy/Healthy10.jpg",
+      "Original Dataset/Healthy/Healthy100.jpg"
+    ],
+    "Macular Scar": [
+      "Original Dataset/Macular Scar/Macular Scar1.jpg",
+      "Original Dataset/Macular Scar/Macular Scar10.jpg",
+      "Original Dataset/Macular Scar/Macular Scar100.jpg"
+    ],
+    "Myopia": [
+      "Original Dataset/Myopia/Myopia1.jpg",
+      "Original Dataset/Myopia/Myopia10.jpg",
+      "Original Dataset/Myopia/Myopia100.jpg"
+    ],
+    "Pterygium": [
+      "Original Dataset/Pterygium/Pterygium1.jpg",
+      "Original Dataset/Pterygium/Pterygium10.jpg",
+      "Original Dataset/Pterygium/Pterygium11.jpg"
+    ],
+    "Retinal Detachment": [
+      "Original Dataset/Retinal Detachment/Retinal Detachment1.jpg",
+      "Original Dataset/Retinal Detachment/Retinal Detachment10.jpg",
+      "Original Dataset/Retinal Detachment/Retinal Detachment100.jpg"
+    ],
+    "Retinitis Pigmentosa": [
+      "Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa1.jpg",
+      "Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa10.jpg",
+      "Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa100.jpg"
+    ]
+  },
+  "patient_ids_verified": false,
+  "per_image_camera_ids_verified": false,
+  "augmented_archive_opened": false
+}

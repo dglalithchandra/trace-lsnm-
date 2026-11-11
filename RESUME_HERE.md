@@ -57,3 +57,7 @@ presentation using frozen DINOv2-S. Camera/QC limitations remain unchanged:
 photometric harmonisation and all learned QC filters are disabled, and stronger
 QC claims require fresh expert-labelled real quality data.
 
+## EDID external cohort preparation
+
+The official, unaugmented Eye Disease Image Dataset ZIP is downloaded and SHA-256 verified. Its 5,335 original images contain extensive exact copying across class folders: 464 cross-class groups, including 201 involving the `Healthy` folder. The conservative manifest excludes those groups, within-class extra copies, and anterior-segment Pterygium, leaving 4,370 distinct fundus image files for exploratory use. See `data/EDID_SOURCE.md` and `data/protocols/trace_bench_v2/EDID_EXPLORATORY_PLAN.md`. Next, screen near duplicates and RFMiD support/query overlap, then freeze the query set before any EDID model evaluation. BRSET is not available without PhysioNet credentialed access.
+

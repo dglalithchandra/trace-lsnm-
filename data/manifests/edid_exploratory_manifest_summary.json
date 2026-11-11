@@ -1,0 +1,28 @@
+{
+  "status": "EXPLORATORY_MANIFEST_READY",
+  "source_records": 5335,
+  "exact_unique_image_groups": 4851,
+  "eligible_fundus_images": 4370,
+  "eligible_counts_by_class": {
+    "Central Serous Chorioretinopathy [Color Fundus]": 80,
+    "Diabetic Retinopathy": 1448,
+    "Disc Edema": 108,
+    "Glaucoma": 990,
+    "Healthy": 823,
+    "Macular Scar": 352,
+    "Myopia": 321,
+    "Retinal Detachment": 120,
+    "Retinitis Pigmentosa": 128
+  },
+  "excluded_counts_by_reason": {
+    "cross_class_exact_copy": 942,
+    "duplicate_copy_within_class": 6,
+    "non_fundus_pterygium": 17
+  },
+  "labels_are_single_folder_assignments": true,
+  "patient_ids_verified": false,
+  "per_image_camera_ids_verified": false,
+  "near_duplicate_screen_complete": false,
+  "rfmid_cross_dataset_overlap_screen_complete": false,
+  "model_evaluation_ready": false
+}
