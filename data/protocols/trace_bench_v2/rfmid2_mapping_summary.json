@@ -1,0 +1,27 @@
+{
+  "status": "DRAFT_DEVELOPMENT_FEASIBILITY_ONLY",
+  "same_abbreviation_candidates": 38,
+  "source_definition_aligned_provisional": [
+    "CRS",
+    "MS",
+    "RT"
+  ],
+  "paper_csv_code_conflicts": [
+    "EDN"
+  ],
+  "novel_codes_with_at_least_five_v2_validation_positives": [
+    "CRS",
+    "MS",
+    "RT"
+  ],
+  "training_records": 509,
+  "validation_records": 177,
+  "unresolved_fields": [
+    "EDN",
+    "ME",
+    "OPDM",
+    ""
+  ],
+  "protected_test_members_opened": 0,
+  "caution": "Matching abbreviations are candidate mappings, not confirmed identical clinical labels."
+}

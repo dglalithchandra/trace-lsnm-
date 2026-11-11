@@ -48,7 +48,7 @@ Protected-test records accessed across Experiment 5A: **0**.
 
 ## Next valid work
 
-RFMiD 2.0 official archive is downloaded and checksum-verified. A development-only audit found 38 shared abbreviation candidates, a nonbreaking-space `ON` header, and an unnamed positive CSV column. Four local-feature overlap alarms were visually rejected as false positives, so this screen has zero verified cross-release duplicates. See `data/RFMiD2_DEVELOPMENT_AUDIT.md`. Resolve source label semantics and cohort eligibility before constructing a v2 transfer benchmark. The v2 test archive remains sealed.
+RFMiD 2.0 official archive is downloaded and checksum-verified. A development-only audit found 38 shared abbreviation candidates, a nonbreaking-space `ON` header, and an unnamed positive CSV column. Four local-feature overlap alarms were visually rejected as false positives, so this screen has zero verified cross-release duplicates. Source-paper review provisionally aligned `CRS`, `MS`, and `RT` for a small cross-release development comparison. `EDN` is excluded because the v2 paper calls it `EX` while the supplied CSV uses `EDN`. See `data/RFMiD2_DEVELOPMENT_AUDIT.md` and `data/protocols/trace_bench_v2/README.md`. Next, implement and run this development-only transfer benchmark, keeping support episodes fixed across encoders. The v2 test archive remains sealed.
 
 Do not deploy or further tune the rejected adapter on the same novel validation
 episodes. The next encoder experiment must be a separately specified method

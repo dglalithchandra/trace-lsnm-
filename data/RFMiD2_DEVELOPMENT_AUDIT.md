@@ -28,7 +28,7 @@ The eleven v1 few-shot novel labels have these v2 development counts:
 
 The v2 validation split alone supports only a narrow subset of useful novel-label measurements. Total test positives remain unknown because the test labels are sealed.
 
-At a provisional threshold of at least five v2 validation positives, only `MS`, `RT`, `CRS`, and `EDN` among the eleven v1 novel labels are eligible. This rule uses development counts and is a feasibility screen, not a final performance result.
+At a provisional threshold of at least five v2 validation positives, `MS`, `RT`, `CRS`, and `EDN` among the eleven v1 novel labels have enough examples for a feasibility screen. Source-paper definition review supports provisional cross-release comparison for `MS` (macular scar), `RT` (retinal traction), and `CRS` (chorioretinitis). The v2 paper calls exudation `EX`, whereas its CSV calls the field `EDN`, and the v1 paper uses a broader `EDN` category. Therefore `EDN` is excluded from scored cross-release comparison pending clarification. These are operational low-support labels, not proof of population rarity. The generated mapping and protocol draft are under `data/protocols/trace_bench_v2/`.
 
 ## Acquisition metadata
 
@@ -46,4 +46,4 @@ RFMiD 2.0 remains useful as an external cohort after source definition mapping. 
 
 Sources: [RFMiD v1 paper](https://www.mdpi.com/2306-5729/6/2/14), [RFMiD 2.0 paper](https://www.mdpi.com/2306-5729/8/2/29), [official v2 archive](https://zenodo.org/records/7505822).
 
-Artifacts: `scripts/audit_rfmid2_development_labels.py`, `scripts/screen_rfmid2_development_overlap.py`, `scripts/confirm_rfmid2_development_overlap.py`, `data/manifests/rfmid2_development_overlap_screen.csv`, `data/manifests/rfmid2_development_detail_matches.csv`.
+Artifacts: `scripts/audit_rfmid2_development_labels.py`, `scripts/screen_rfmid2_development_overlap.py`, `scripts/confirm_rfmid2_development_overlap.py`, `scripts/build_rfmid2_label_mapping_draft.py`, `data/manifests/rfmid2_development_overlap_screen.csv`, `data/manifests/rfmid2_development_detail_matches.csv`, `data/protocols/trace_bench_v2/`.
