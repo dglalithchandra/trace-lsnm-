@@ -1,0 +1,14 @@
+{
+  "status": "CANDIDATE_SCREEN_ONLY",
+  "edid_corpus": 4370,
+  "rfmid_training_corpus": 1917,
+  "edid_query_candidates": 1411,
+  "proposed_pairs": 11985,
+  "pairs_by_source": {
+    "edid": 11625,
+    "rfmid_train": 360
+  },
+  "detail_review_flagged": 10227,
+  "protected_test_images_opened": 0,
+  "warning": "Coarse photographic similarity does not establish duplicate retinal identity."
+}

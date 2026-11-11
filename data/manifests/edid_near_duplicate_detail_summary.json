@@ -1,0 +1,15 @@
+{
+  "status": "LOCAL_GEOMETRY_SCREEN_ONLY",
+  "pairs_checked": 548,
+  "by_source": {
+    "edid": 473,
+    "rfmid_train": 75
+  },
+  "passes_local_geometry_screen": 66,
+  "passes_by_source": {
+    "edid": 66,
+    "rfmid_train": 0
+  },
+  "protected_test_images_opened": 0,
+  "warning": "Local geometry alone does not prove that two photographs show the same retina; visual review follows."
+}

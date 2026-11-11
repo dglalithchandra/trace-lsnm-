@@ -1,0 +1,23 @@
+{
+  "status": "FROZEN_EXPLORATORY_QUERY_MANIFEST",
+  "engineering_visual_reviewed_pairs": 76,
+  "remaining_eligible_fundus_files": 4281,
+  "query_counts": {
+    "Disc Edema": 106,
+    "Healthy": 777,
+    "Macular Scar": 326,
+    "Retinitis Pigmentosa": 124
+  },
+  "new_exclusion_counts": {
+    "near_copy_of_excluded_exact_class_conflict": 10,
+    "near_duplicate_cross_class_conflict": 30,
+    "near_duplicate_copy_within_class": 49
+  },
+  "caveats": [
+    "Hash candidate screen is not exhaustive",
+    "Patient IDs and per-image camera IDs unavailable",
+    "Folder labels have not been clinically adjudicated",
+    "RFMiD support screen found no confirmed overlap among priority pairs; residual overlap is possible"
+  ],
+  "protected_test_images_opened": 0
+}

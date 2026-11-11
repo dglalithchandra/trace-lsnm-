@@ -1,0 +1,7 @@
+{
+  "status": "CANDIDATE_SCREEN_ONLY",
+  "queries": 1411,
+  "excluded_exact_cross_class_groups": 464,
+  "proposed_pairs": 6172,
+  "protected_test_images_opened": 0
+}

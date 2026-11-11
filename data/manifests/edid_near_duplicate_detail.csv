@@ -1,0 +1,549 @@
+query_member,query_class,candidate_source,candidate_id,candidate_class,dhash_hamming_256,phash_hamming_64,thumbnail_correlation,needs_detail_review,sift_ratio_matches,ransac_inliers,ransac_inlier_fraction,passes_local_geometry_screen
+Original Dataset/Healthy/Healthy132.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy135.jpg,Healthy,3,2,0.998718,True,313,309,0.98722,True
+Original Dataset/Macular Scar/Macular Scar36.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar406.jpg,Macular Scar,1,2,0.997769,True,301,299,0.99336,True
+Original Dataset/Macular Scar/Macular Scar12.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar14.jpg,Macular Scar,3,2,0.998004,True,278,275,0.98921,True
+Original Dataset/Macular Scar/Macular Scar11.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar9.jpg,Macular Scar,5,4,0.998219,True,267,265,0.99251,True
+Original Dataset/Healthy/Healthy134.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy136.jpg,Healthy,2,4,0.998723,True,246,242,0.98374,True
+Original Dataset/Macular Scar/Macular Scar2.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar6.jpg,Macular Scar,7,2,0.988538,True,211,208,0.98578,True
+Original Dataset/Disc Edema/Disc Edema7.jpg,Disc Edema,edid,edid:Original Dataset/Disc Edema/Disc Edema8.jpg,Disc Edema,5,0,0.998311,True,198,197,0.99495,True
+Original Dataset/Healthy/Healthy133.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy137.jpg,Healthy,7,2,0.99919,True,198,197,0.99495,True
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa5.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa7.jpg,Retinitis Pigmentosa,1,0,0.999749,True,190,190,1.0,True
+Original Dataset/Healthy/Healthy88.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy89.jpg,Healthy,2,2,0.998554,True,190,189,0.99474,True
+Original Dataset/Disc Edema/Disc Edema1.jpg,Disc Edema,edid,edid:Original Dataset/Disc Edema/Disc Edema3.jpg,Disc Edema,8,4,0.998374,True,166,165,0.99398,True
+Original Dataset/Healthy/Healthy1018.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy1020.jpg,Healthy,7,2,0.998299,True,162,158,0.97531,True
+Original Dataset/Macular Scar/Macular Scar10.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar14.jpg,Macular Scar,10,4,0.990501,True,167,147,0.88024,True
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa1.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa3.jpg,Retinitis Pigmentosa,3,0,0.999713,True,144,143,0.99306,True
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa4.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa6.jpg,Retinitis Pigmentosa,3,2,0.999724,True,130,129,0.99231,True
+Original Dataset/Healthy/Healthy375.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy377.jpg,Healthy,4,2,0.998237,True,129,128,0.99225,True
+Original Dataset/Healthy/Healthy876.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy878.jpg,Healthy,4,2,0.997145,True,130,127,0.97692,True
+Original Dataset/Healthy/Healthy1004.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy1005.jpg,Healthy,6,0,0.999109,True,124,124,1.0,True
+Original Dataset/Healthy/Healthy111.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy112.jpg,Healthy,5,2,0.9991,True,126,123,0.97619,True
+Original Dataset/Healthy/Healthy237.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy240.jpg,Healthy,4,2,0.999215,True,116,115,0.99138,True
+Original Dataset/Healthy/Healthy1002.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia7.jpg,Myopia,5,2,0.998722,True,100,98,0.98,True
+Original Dataset/Healthy/Healthy366.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy369.jpg,Healthy,4,0,0.999132,True,95,94,0.98947,True
+Original Dataset/Healthy/Healthy367.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy368.jpg,Healthy,10,2,0.999147,True,98,94,0.95918,True
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa17.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa18.jpg,Retinitis Pigmentosa,4,0,0.998821,True,89,87,0.97753,True
+Original Dataset/Healthy/Healthy1007.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1019.jpg,Glaucoma,7,2,0.998453,True,86,85,0.98837,True
+Original Dataset/Healthy/Healthy907.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar395.jpg,Macular Scar,2,2,0.997988,True,87,85,0.97701,True
+Original Dataset/Healthy/Healthy640.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia200.jpg,Myopia,1,2,0.998078,True,79,77,0.97468,True
+Original Dataset/Macular Scar/Macular Scar391.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar392.jpg,Macular Scar,2,0,0.999723,True,67,67,1.0,True
+Original Dataset/Healthy/Healthy822.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar348.jpg,Macular Scar,2,0,0.998127,True,68,65,0.95588,True
+Original Dataset/Healthy/Healthy887.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy889.jpg,Healthy,4,2,0.998365,True,63,62,0.98413,True
+Original Dataset/Macular Scar/Macular Scar438.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar440.jpg,Macular Scar,7,4,0.998553,True,56,53,0.94643,True
+Original Dataset/Healthy/Healthy885.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy888.jpg,Healthy,5,0,0.99855,True,56,52,0.92857,True
+Original Dataset/Healthy/Healthy890.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy893.jpg,Healthy,10,2,0.998518,True,53,52,0.98113,True
+Original Dataset/Healthy/Healthy935.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar422.jpg,Macular Scar,4,4,0.998221,True,51,49,0.96078,True
+Original Dataset/Healthy/Healthy379.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma156.jpg,Glaucoma,4,0,0.999098,True,48,47,0.97917,True
+Original Dataset/Healthy/Healthy933.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy936.jpg,Healthy,3,2,0.99834,True,47,47,1.0,True
+Original Dataset/Macular Scar/Macular Scar437.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar439.jpg,Macular Scar,4,2,0.998914,True,49,47,0.95918,True
+Original Dataset/Healthy/Healthy970.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy971.jpg,Healthy,4,2,0.997778,True,46,46,1.0,True
+Original Dataset/Healthy/Healthy41.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1102.jpg,Glaucoma,6,2,0.999646,True,46,44,0.95652,True
+Original Dataset/Healthy/Healthy528.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia170.jpg,Myopia,4,2,0.998182,True,45,43,0.95556,True
+Original Dataset/Healthy/Healthy892.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy895.jpg,Healthy,5,2,0.99882,True,44,42,0.95455,True
+Original Dataset/Healthy/Healthy910.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar396.jpg,Macular Scar,5,2,0.999025,True,43,42,0.97674,True
+Original Dataset/Healthy/Healthy863.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma785.jpg,Glaucoma,7,2,0.999622,True,43,41,0.95349,True
+Original Dataset/Macular Scar/Macular Scar358.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma738.jpg,Glaucoma,4,4,0.998475,True,48,40,0.83333,True
+Original Dataset/Healthy/Healthy898.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy901.jpg,Healthy,5,2,0.99762,True,38,38,1.0,True
+Original Dataset/Healthy/Healthy943.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy944.jpg,Healthy,2,4,0.998859,True,38,38,1.0,True
+Original Dataset/Healthy/Healthy987.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy990.jpg,Healthy,2,2,0.998289,True,39,38,0.97436,True
+Original Dataset/Healthy/Healthy966.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy968.jpg,Healthy,6,2,0.999053,True,38,36,0.94737,True
+Original Dataset/Macular Scar/Macular Scar379.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar381.jpg,Macular Scar,6,2,0.999614,True,38,36,0.94737,True
+Original Dataset/Healthy/Healthy964.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy967.jpg,Healthy,6,6,0.998601,True,35,33,0.94286,True
+Original Dataset/Healthy/Healthy932.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma874.jpg,Glaucoma,3,0,0.999605,True,33,32,0.9697,True
+Original Dataset/Healthy/Healthy920.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy922.jpg,Healthy,8,4,0.999323,True,34,31,0.91176,True
+Original Dataset/Macular Scar/Macular Scar105.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar107.jpg,Macular Scar,13,0,0.999959,True,32,31,0.96875,True
+Original Dataset/Macular Scar/Macular Scar335.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma636.jpg,Glaucoma,5,0,0.999207,True,32,31,0.96875,True
+Original Dataset/Macular Scar/Macular Scar106.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar108.jpg,Macular Scar,8,0,0.99996,True,30,29,0.96667,True
+Original Dataset/Macular Scar/Macular Scar79.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar81.jpg,Macular Scar,2,2,0.998094,True,29,28,0.96552,True
+Original Dataset/Healthy/Healthy934.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy937.jpg,Healthy,8,2,0.99818,True,28,27,0.96429,True
+Original Dataset/Healthy/Healthy656.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy732.jpg,Healthy,18,8,0.993967,True,38,25,0.65789,True
+Original Dataset/Healthy/Healthy899.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy900.jpg,Healthy,4,2,0.997217,True,27,25,0.92593,True
+Original Dataset/Macular Scar/Macular Scar222.jpg,Macular Scar,edid,edid:Original Dataset/Diabetic Retinopathy/DR81.jpg,Diabetic Retinopathy,2,0,0.99843,True,28,25,0.89286,True
+Original Dataset/Macular Scar/Macular Scar380.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar382.jpg,Macular Scar,6,2,0.999298,True,28,24,0.85714,True
+Original Dataset/Healthy/Healthy873.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy874.jpg,Healthy,8,2,0.999248,True,24,22,0.91667,True
+Original Dataset/Healthy/Healthy946.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy947.jpg,Healthy,7,4,0.999589,True,22,22,1.0,True
+Original Dataset/Macular Scar/Macular Scar140.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar95.jpg,Macular Scar,5,2,0.998218,True,23,21,0.91304,True
+Original Dataset/Macular Scar/Macular Scar191.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar192.jpg,Macular Scar,13,4,0.996917,True,34,21,0.61765,True
+Original Dataset/Macular Scar/Macular Scar78.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar80.jpg,Macular Scar,8,0,0.997678,True,20,20,1.0,True
+Original Dataset/Healthy/Healthy679.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma661.jpg,Glaucoma,19,8,0.993432,True,24,17,0.70833,False
+Original Dataset/Healthy/Healthy924.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy925.jpg,Healthy,18,4,0.994262,True,22,17,0.77273,False
+Original Dataset/Healthy/Healthy679.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma659.jpg,Glaucoma,18,10,0.994682,True,21,16,0.7619,False
+Original Dataset/Macular Scar/Macular Scar155.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar156.jpg,Macular Scar,30,4,0.995129,True,21,16,0.7619,False
+Original Dataset/Macular Scar/Macular Scar235.jpg,Macular Scar,edid,edid:Original Dataset/Healthy/Healthy551.jpg,Healthy,20,10,0.993704,True,17,16,0.94118,False
+Original Dataset/Disc Edema/Disc Edema106.jpg,Disc Edema,edid,edid:Original Dataset/Glaucoma/Glaucoma843.jpg,Glaucoma,16,10,0.993745,True,17,15,0.88235,False
+Original Dataset/Healthy/Healthy678.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia221.jpg,Myopia,26,6,0.99539,True,16,15,0.9375,False
+Original Dataset/Healthy/Healthy679.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma967.jpg,Glaucoma,18,4,0.993984,True,19,15,0.78947,False
+Original Dataset/Healthy/Healthy691.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy732.jpg,Healthy,15,6,0.997155,True,19,15,0.78947,False
+Original Dataset/Healthy/Healthy711.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy732.jpg,Healthy,15,12,0.993232,True,17,15,0.88235,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa33.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Diabetic Retinopathy/DR423.jpg,Diabetic Retinopathy,18,12,0.990265,True,24,15,0.625,False
+Original Dataset/Healthy/Healthy550.jpg,Healthy,edid,edid:Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR89.jpg,Central Serous Chorioretinopathy [Color Fundus],17,12,0.993097,True,17,14,0.82353,False
+Original Dataset/Healthy/Healthy599.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma659.jpg,Glaucoma,16,4,0.992978,True,20,14,0.7,False
+Original Dataset/Healthy/Healthy599.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma747.jpg,Glaucoma,20,6,0.991658,True,26,14,0.53846,False
+Original Dataset/Healthy/Healthy656.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma678.jpg,Glaucoma,13,6,0.994408,True,20,14,0.7,False
+Original Dataset/Healthy/Healthy678.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia332.jpg,Myopia,16,8,0.994353,True,15,14,0.93333,False
+Original Dataset/Healthy/Healthy679.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy829.jpg,Healthy,19,8,0.994566,True,20,14,0.7,False
+Original Dataset/Healthy/Healthy680.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy828.jpg,Healthy,15,10,0.992217,True,17,14,0.82353,False
+Original Dataset/Healthy/Healthy686.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma798.jpg,Glaucoma,18,4,0.991758,True,17,14,0.82353,False
+Original Dataset/Healthy/Healthy690.jpg,Healthy,edid,edid:Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa101.jpg,Retinitis Pigmentosa,14,8,0.993707,True,17,14,0.82353,False
+Original Dataset/Healthy/Healthy690.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR747.jpg,Diabetic Retinopathy,21,4,0.995964,True,16,14,0.875,False
+Original Dataset/Healthy/Healthy691.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia246.jpg,Myopia,17,4,0.998204,True,16,14,0.875,False
+Original Dataset/Healthy/Healthy711.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1320.jpg,Glaucoma,16,10,0.994539,True,15,14,0.93333,False
+Original Dataset/Healthy/Healthy711.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma949.jpg,Glaucoma,17,14,0.990283,True,15,14,0.93333,False
+Original Dataset/Healthy/Healthy816.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy824.jpg,Healthy,23,8,0.996534,True,19,14,0.73684,False
+Original Dataset/Macular Scar/Macular Scar299.jpg,Macular Scar,edid,edid:Original Dataset/Healthy/Healthy677.jpg,Healthy,23,6,0.995661,True,15,14,0.93333,False
+Original Dataset/Macular Scar/Macular Scar314.jpg,Macular Scar,edid,edid:Original Dataset/Healthy/Healthy751.jpg,Healthy,19,12,0.990956,True,22,14,0.63636,False
+Original Dataset/Macular Scar/Macular Scar347.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma715.jpg,Glaucoma,9,6,0.996228,True,19,14,0.73684,False
+Original Dataset/Disc Edema/Disc Edema106.jpg,Disc Edema,edid,edid:Original Dataset/Healthy/Healthy732.jpg,Healthy,15,12,0.995405,True,25,13,0.52,False
+Original Dataset/Disc Edema/Disc Edema115.jpg,Disc Edema,edid,edid:Original Dataset/Glaucoma/Glaucoma246.jpg,Glaucoma,19,12,0.990246,True,17,13,0.76471,False
+Original Dataset/Disc Edema/Disc Edema86.jpg,Disc Edema,edid,edid:Original Dataset/Healthy/Healthy645.jpg,Healthy,12,12,0.990001,True,15,13,0.86667,False
+Original Dataset/Disc Edema/Disc Edema86.jpg,Disc Edema,edid,edid:Original Dataset/Healthy/Healthy746.jpg,Healthy,16,14,0.990912,True,14,13,0.92857,False
+Original Dataset/Disc Edema/Disc Edema99.jpg,Disc Edema,edid,edid:Original Dataset/Diabetic Retinopathy/DR157.jpg,Diabetic Retinopathy,13,14,0.991418,True,15,13,0.86667,False
+Original Dataset/Healthy/Healthy550.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR244.jpg,Diabetic Retinopathy,17,14,0.992086,True,14,13,0.92857,False
+Original Dataset/Healthy/Healthy677.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia246.jpg,Myopia,21,12,0.996744,True,15,13,0.86667,False
+Original Dataset/Healthy/Healthy678.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia344.jpg,Myopia,23,6,0.995686,True,14,13,0.92857,False
+Original Dataset/Healthy/Healthy679.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma949.jpg,Glaucoma,20,6,0.99222,True,21,13,0.61905,False
+Original Dataset/Healthy/Healthy680.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR1450.jpg,Diabetic Retinopathy,16,10,0.992062,True,17,13,0.76471,False
+Original Dataset/Healthy/Healthy686.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR462.jpg,Diabetic Retinopathy,19,6,0.991178,True,18,13,0.72222,False
+Original Dataset/Healthy/Healthy686.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma764.jpg,Glaucoma,19,6,0.990314,True,26,13,0.5,False
+Original Dataset/Healthy/Healthy690.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar368.jpg,Macular Scar,14,12,0.992127,True,15,13,0.86667,False
+Original Dataset/Healthy/Healthy691.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR125.jpg,Diabetic Retinopathy,15,8,0.991844,True,15,13,0.86667,False
+Original Dataset/Healthy/Healthy694.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia409.jpg,Myopia,26,4,0.995694,True,14,13,0.92857,False
+Original Dataset/Healthy/Healthy698.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia345.jpg,Myopia,20,12,0.994021,True,15,13,0.86667,False
+Original Dataset/Healthy/Healthy698.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR422.jpg,Diabetic Retinopathy,22,16,0.995265,True,16,13,0.8125,False
+Original Dataset/Healthy/Healthy777.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar172.jpg,Macular Scar,18,12,0.994151,True,15,13,0.86667,False
+Original Dataset/Healthy/Healthy817.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia347.jpg,Myopia,22,8,0.995009,True,16,13,0.8125,False
+Original Dataset/Healthy/Healthy829.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma681.jpg,Glaucoma,19,10,0.995363,True,15,13,0.86667,False
+Original Dataset/Macular Scar/Macular Scar235.jpg,Macular Scar,edid,edid:Original Dataset/Diabetic Retinopathy/DR631.jpg,Diabetic Retinopathy,19,10,0.993333,True,14,13,0.92857,False
+Original Dataset/Macular Scar/Macular Scar299.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma542.jpg,Glaucoma,28,4,0.996512,True,16,13,0.8125,False
+Original Dataset/Macular Scar/Macular Scar387.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma967.jpg,Glaucoma,20,8,0.992213,True,16,13,0.8125,False
+Original Dataset/Macular Scar/Macular Scar428.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma898.jpg,Glaucoma,15,4,0.994684,True,17,13,0.76471,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa107.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Diabetic Retinopathy/DR126.jpg,Diabetic Retinopathy,20,10,0.99133,True,15,13,0.86667,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa33.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Diabetic Retinopathy/DR157.jpg,Diabetic Retinopathy,20,12,0.991645,True,13,13,1.0,False
+Original Dataset/Disc Edema/Disc Edema106.jpg,Disc Edema,edid,edid:Original Dataset/Healthy/Healthy711.jpg,Healthy,16,10,0.991942,True,15,12,0.8,False
+Original Dataset/Disc Edema/Disc Edema115.jpg,Disc Edema,edid,edid:Original Dataset/Healthy/Healthy645.jpg,Healthy,18,16,0.990851,True,15,12,0.8,False
+Original Dataset/Healthy/Healthy329.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy267.jpg,Healthy,19,4,0.990325,True,24,12,0.5,False
+Original Dataset/Healthy/Healthy645.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy828.jpg,Healthy,19,8,0.9928,True,16,12,0.75,False
+Original Dataset/Healthy/Healthy647.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1321.jpg,Glaucoma,18,4,0.992823,True,14,12,0.85714,False
+Original Dataset/Healthy/Healthy656.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR463.jpg,Diabetic Retinopathy,17,6,0.993686,True,25,12,0.48,False
+Original Dataset/Healthy/Healthy674.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy817.jpg,Healthy,17,12,0.993014,True,14,12,0.85714,False
+Original Dataset/Healthy/Healthy677.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma542.jpg,Glaucoma,19,6,0.996975,True,12,12,1.0,False
+Original Dataset/Healthy/Healthy678.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR312.jpg,Diabetic Retinopathy,19,12,0.994466,True,14,12,0.85714,False
+Original Dataset/Healthy/Healthy690.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma100.jpg,Glaucoma,14,4,0.994746,True,16,12,0.75,False
+Original Dataset/Healthy/Healthy711.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma444.jpg,Glaucoma,16,12,0.992017,True,14,12,0.85714,False
+Original Dataset/Healthy/Healthy732.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma659.jpg,Glaucoma,12,8,0.993566,True,12,12,1.0,False
+Original Dataset/Healthy/Healthy732.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR463.jpg,Diabetic Retinopathy,15,6,0.994709,True,14,12,0.85714,False
+Original Dataset/Healthy/Healthy787.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR745.jpg,Diabetic Retinopathy,17,6,0.996001,True,15,12,0.8,False
+Original Dataset/Healthy/Healthy816.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia433.jpg,Myopia,19,8,0.994672,True,14,12,0.85714,False
+Original Dataset/Healthy/Healthy824.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR337.jpg,Diabetic Retinopathy,18,12,0.991942,True,14,12,0.85714,False
+Original Dataset/Healthy/Healthy829.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma967.jpg,Glaucoma,17,4,0.993427,True,21,12,0.57143,False
+Original Dataset/Healthy/Healthy829.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma949.jpg,Glaucoma,19,10,0.991602,True,19,12,0.63158,False
+Original Dataset/Macular Scar/Macular Scar135.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar241.jpg,Macular Scar,20,12,0.991541,True,14,12,0.85714,False
+Original Dataset/Macular Scar/Macular Scar135.jpg,Macular Scar,edid,edid:Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa99.jpg,Retinitis Pigmentosa,20,14,0.994663,True,14,12,0.85714,False
+Original Dataset/Macular Scar/Macular Scar242.jpg,Macular Scar,edid,edid:Original Dataset/Diabetic Retinopathy/DR746.jpg,Diabetic Retinopathy,29,4,0.995935,True,13,12,0.92308,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa111.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Diabetic Retinopathy/DR463.jpg,Diabetic Retinopathy,20,20,0.991984,True,14,12,0.85714,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa113.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa114.jpg,Retinitis Pigmentosa,14,4,0.994459,True,17,12,0.70588,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa65.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Diabetic Retinopathy/DR494.jpg,Diabetic Retinopathy,19,16,0.990246,True,25,12,0.48,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa97.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Diabetic Retinopathy/DR541.jpg,Diabetic Retinopathy,17,10,0.990218,True,18,12,0.66667,False
+Original Dataset/Disc Edema/Disc Edema105.jpg,Disc Edema,edid,edid:Original Dataset/Glaucoma/Glaucoma557.jpg,Glaucoma,17,12,0.991005,True,14,11,0.78571,False
+Original Dataset/Disc Edema/Disc Edema106.jpg,Disc Edema,edid,edid:Original Dataset/Disc Edema/Disc Edema85.jpg,Disc Edema,27,6,0.995213,True,17,11,0.64706,False
+Original Dataset/Disc Edema/Disc Edema122.jpg,Disc Edema,edid,edid:Original Dataset/Glaucoma/Glaucoma958.jpg,Glaucoma,17,8,0.991098,True,13,11,0.84615,False
+Original Dataset/Disc Edema/Disc Edema122.jpg,Disc Edema,edid,edid:Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR27.jpg,Central Serous Chorioretinopathy [Color Fundus],19,6,0.990947,True,14,11,0.78571,False
+Original Dataset/Disc Edema/Disc Edema124.jpg,Disc Edema,edid,edid:Original Dataset/Glaucoma/Glaucoma840.jpg,Glaucoma,19,10,0.992432,True,13,11,0.84615,False
+Original Dataset/Disc Edema/Disc Edema50.jpg,Disc Edema,edid,edid:Original Dataset/Healthy/Healthy777.jpg,Healthy,16,6,0.992234,True,13,11,0.84615,False
+Original Dataset/Disc Edema/Disc Edema68.jpg,Disc Edema,edid,edid:Original Dataset/Healthy/Healthy746.jpg,Healthy,15,8,0.992471,True,12,11,0.91667,False
+Original Dataset/Disc Edema/Disc Edema68.jpg,Disc Edema,edid,edid:Original Dataset/Diabetic Retinopathy/DR1450.jpg,Diabetic Retinopathy,19,8,0.990392,True,13,11,0.84615,False
+Original Dataset/Healthy/Healthy218.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma446.jpg,Glaucoma,12,10,0.992705,True,16,11,0.6875,False
+Original Dataset/Healthy/Healthy218.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma659.jpg,Glaucoma,17,10,0.99341,True,16,11,0.6875,False
+Original Dataset/Healthy/Healthy551.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma288.jpg,Glaucoma,17,12,0.99252,True,18,11,0.61111,False
+Original Dataset/Healthy/Healthy552.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma291.jpg,Glaucoma,17,14,0.990215,True,25,11,0.44,False
+Original Dataset/Healthy/Healthy576.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR8.jpg,Diabetic Retinopathy,19,10,0.990447,True,13,11,0.84615,False
+Original Dataset/Healthy/Healthy646.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma569.jpg,Glaucoma,19,8,0.990051,True,17,11,0.64706,False
+Original Dataset/Healthy/Healthy647.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma541.jpg,Glaucoma,15,6,0.997275,True,11,11,1.0,False
+Original Dataset/Healthy/Healthy665.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia347.jpg,Myopia,17,4,0.990742,True,15,11,0.73333,False
+Original Dataset/Healthy/Healthy673.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR1443.jpg,Diabetic Retinopathy,20,0,0.991496,True,12,11,0.91667,False
+Original Dataset/Healthy/Healthy677.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy691.jpg,Healthy,18,10,0.997947,True,13,11,0.84615,False
+Original Dataset/Healthy/Healthy677.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy726.jpg,Healthy,29,6,0.997591,True,13,11,0.84615,False
+Original Dataset/Healthy/Healthy678.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy727.jpg,Healthy,23,8,0.996914,True,12,11,0.91667,False
+Original Dataset/Healthy/Healthy679.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma444.jpg,Glaucoma,19,8,0.993338,True,17,11,0.64706,False
+Original Dataset/Healthy/Healthy690.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR423.jpg,Diabetic Retinopathy,16,12,0.995731,True,14,11,0.78571,False
+Original Dataset/Healthy/Healthy700.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR357.jpg,Diabetic Retinopathy,18,18,0.990143,True,14,11,0.78571,False
+Original Dataset/Healthy/Healthy700.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR423.jpg,Diabetic Retinopathy,19,12,0.994148,True,13,11,0.84615,False
+Original Dataset/Healthy/Healthy726.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy732.jpg,Healthy,20,4,0.996017,True,12,11,0.91667,False
+Original Dataset/Healthy/Healthy727.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy728.jpg,Healthy,14,10,0.996586,True,12,11,0.91667,False
+Original Dataset/Healthy/Healthy728.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia247.jpg,Myopia,19,4,0.996082,True,13,11,0.84615,False
+Original Dataset/Healthy/Healthy730.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia454.jpg,Myopia,16,12,0.990977,True,19,11,0.57895,False
+Original Dataset/Healthy/Healthy745.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy686.jpg,Healthy,20,6,0.992945,True,17,11,0.64706,False
+Original Dataset/Healthy/Healthy746.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR541.jpg,Diabetic Retinopathy,18,8,0.993283,True,14,11,0.78571,False
+Original Dataset/Healthy/Healthy746.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy828.jpg,Healthy,19,2,0.992909,True,16,11,0.6875,False
+Original Dataset/Healthy/Healthy750.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR337.jpg,Diabetic Retinopathy,19,6,0.99044,True,19,11,0.57895,False
+Original Dataset/Healthy/Healthy751.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR494.jpg,Diabetic Retinopathy,15,16,0.994392,True,13,11,0.84615,False
+Original Dataset/Healthy/Healthy774.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma649.jpg,Glaucoma,23,6,0.996271,True,14,11,0.78571,False
+Original Dataset/Healthy/Healthy775.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR670.jpg,Diabetic Retinopathy,19,16,0.99197,True,12,11,0.91667,False
+Original Dataset/Healthy/Healthy777.jpg,Healthy,edid,edid:Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR89.jpg,Central Serous Chorioretinopathy [Color Fundus],18,8,0.992686,True,12,11,0.91667,False
+Original Dataset/Healthy/Healthy809.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma958.jpg,Glaucoma,16,2,0.991218,True,12,11,0.91667,False
+Original Dataset/Macular Scar/Macular Scar106.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar325.jpg,Macular Scar,25,4,0.995078,True,15,11,0.73333,False
+Original Dataset/Macular Scar/Macular Scar108.jpg,Macular Scar,edid,edid:Original Dataset/Healthy/Healthy665.jpg,Healthy,20,10,0.990207,True,27,11,0.40741,False
+Original Dataset/Macular Scar/Macular Scar108.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar325.jpg,Macular Scar,25,4,0.995034,True,15,11,0.73333,False
+Original Dataset/Macular Scar/Macular Scar150.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma288.jpg,Glaucoma,19,8,0.990048,True,18,11,0.61111,False
+Original Dataset/Macular Scar/Macular Scar153.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar157.jpg,Macular Scar,12,2,0.997879,True,21,11,0.52381,False
+Original Dataset/Macular Scar/Macular Scar156.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma444.jpg,Glaucoma,25,6,0.995444,True,15,11,0.73333,False
+Original Dataset/Macular Scar/Macular Scar242.jpg,Macular Scar,edid,edid:Original Dataset/Myopia/Myopia428.jpg,Myopia,27,4,0.995813,True,12,11,0.91667,False
+Original Dataset/Macular Scar/Macular Scar245.jpg,Macular Scar,edid,edid:Original Dataset/Diabetic Retinopathy/DR883.jpg,Diabetic Retinopathy,18,6,0.993794,True,14,11,0.78571,False
+Original Dataset/Macular Scar/Macular Scar245.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma958.jpg,Glaucoma,19,4,0.994329,True,13,11,0.84615,False
+Original Dataset/Macular Scar/Macular Scar245.jpg,Macular Scar,edid,edid:Original Dataset/Disc Edema/Disc Edema78.jpg,Disc Edema,20,12,0.990197,True,13,11,0.84615,False
+Original Dataset/Macular Scar/Macular Scar354.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma1337.jpg,Glaucoma,20,4,0.994392,True,15,11,0.73333,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa32.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Healthy/Healthy552.jpg,Healthy,19,12,0.994085,True,12,11,0.91667,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa60.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Diabetic Retinopathy/DR312.jpg,Diabetic Retinopathy,14,16,0.99025,True,14,11,0.78571,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa60.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Myopia/Myopia380.jpg,Myopia,19,16,0.993569,True,14,11,0.78571,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa77.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Myopia/Myopia312.jpg,Myopia,20,12,0.992306,True,12,11,0.91667,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa97.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Macular Scar/Macular Scar172.jpg,Macular Scar,19,12,0.990866,True,12,11,0.91667,False
+Original Dataset/Disc Edema/Disc Edema105.jpg,Disc Edema,edid,edid:Original Dataset/Healthy/Healthy746.jpg,Healthy,20,10,0.993957,True,11,10,0.90909,False
+Original Dataset/Disc Edema/Disc Edema105.jpg,Disc Edema,edid,edid:Original Dataset/Diabetic Retinopathy/DR541.jpg,Diabetic Retinopathy,20,14,0.991287,True,13,10,0.76923,False
+Original Dataset/Disc Edema/Disc Edema106.jpg,Disc Edema,edid,edid:Original Dataset/Macular Scar/Macular Scar354.jpg,Macular Scar,10,8,0.99359,True,12,10,0.83333,False
+Original Dataset/Disc Edema/Disc Edema106.jpg,Disc Edema,edid,edid:Original Dataset/Myopia/Myopia355.jpg,Myopia,16,12,0.991407,True,11,10,0.90909,False
+Original Dataset/Disc Edema/Disc Edema118.jpg,Disc Edema,edid,edid:Original Dataset/Healthy/Healthy267.jpg,Healthy,19,12,0.990911,True,12,10,0.83333,False
+Original Dataset/Disc Edema/Disc Edema28.jpg,Disc Edema,edid,edid:Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR87.jpg,Central Serous Chorioretinopathy [Color Fundus],19,6,0.991005,True,16,10,0.625,False
+Original Dataset/Disc Edema/Disc Edema50.jpg,Disc Edema,edid,edid:Original Dataset/Macular Scar/Macular Scar151.jpg,Macular Scar,12,8,0.992103,True,11,10,0.90909,False
+Original Dataset/Healthy/Healthy219.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma244.jpg,Glaucoma,16,6,0.991386,True,14,10,0.71429,False
+Original Dataset/Healthy/Healthy269.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy646.jpg,Healthy,19,6,0.99259,True,19,10,0.52632,False
+Original Dataset/Healthy/Healthy288.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy917.jpg,Healthy,20,10,0.992378,True,11,10,0.90909,False
+Original Dataset/Healthy/Healthy323.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar347.jpg,Macular Scar,17,10,0.991576,True,14,10,0.71429,False
+Original Dataset/Healthy/Healthy360.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy987.jpg,Healthy,20,8,0.990133,True,18,10,0.55556,False
+Original Dataset/Healthy/Healthy521.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar151.jpg,Macular Scar,20,10,0.990025,True,15,10,0.66667,False
+Original Dataset/Healthy/Healthy553.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma443.jpg,Glaucoma,15,6,0.99077,True,16,10,0.625,False
+Original Dataset/Healthy/Healthy553.jpg,Healthy,edid,edid:Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR87.jpg,Central Serous Chorioretinopathy [Color Fundus],16,6,0.992149,True,23,10,0.43478,False
+Original Dataset/Healthy/Healthy600.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR541.jpg,Diabetic Retinopathy,15,14,0.990628,True,14,10,0.71429,False
+Original Dataset/Healthy/Healthy645.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy746.jpg,Healthy,16,10,0.992829,True,11,10,0.90909,False
+Original Dataset/Healthy/Healthy645.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR848.jpg,Diabetic Retinopathy,18,6,0.992348,True,12,10,0.83333,False
+Original Dataset/Healthy/Healthy647.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy825.jpg,Healthy,16,8,0.997067,True,12,10,0.83333,False
+Original Dataset/Healthy/Healthy647.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy673.jpg,Healthy,18,4,0.994356,True,10,10,1.0,False
+Original Dataset/Healthy/Healthy647.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy818.jpg,Healthy,19,10,0.995878,True,11,10,0.90909,False
+Original Dataset/Healthy/Healthy665.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia330.jpg,Myopia,19,4,0.993061,True,12,10,0.83333,False
+Original Dataset/Healthy/Healthy672.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR614.jpg,Diabetic Retinopathy,16,12,0.990432,True,10,10,1.0,False
+Original Dataset/Healthy/Healthy674.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy665.jpg,Healthy,20,6,0.990584,True,23,10,0.43478,False
+Original Dataset/Healthy/Healthy676.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma541.jpg,Glaucoma,15,8,0.996235,True,11,10,0.90909,False
+Original Dataset/Healthy/Healthy680.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR519.jpg,Diabetic Retinopathy,15,8,0.994574,True,12,10,0.83333,False
+Original Dataset/Healthy/Healthy681.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma696.jpg,Glaucoma,17,6,0.99031,True,13,10,0.76923,False
+Original Dataset/Healthy/Healthy686.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1253.jpg,Glaucoma,19,6,0.991964,True,18,10,0.55556,False
+Original Dataset/Healthy/Healthy694.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma444.jpg,Glaucoma,25,6,0.995386,True,13,10,0.76923,False
+Original Dataset/Healthy/Healthy696.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma541.jpg,Glaucoma,14,10,0.994042,True,11,10,0.90909,False
+Original Dataset/Healthy/Healthy698.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma444.jpg,Glaucoma,16,8,0.996791,True,14,10,0.71429,False
+Original Dataset/Healthy/Healthy726.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR463.jpg,Diabetic Retinopathy,19,8,0.991919,True,11,10,0.90909,False
+Original Dataset/Healthy/Healthy726.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma967.jpg,Glaucoma,20,6,0.991684,True,13,10,0.76923,False
+Original Dataset/Healthy/Healthy727.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia344.jpg,Myopia,14,8,0.997495,True,12,10,0.83333,False
+Original Dataset/Healthy/Healthy727.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR312.jpg,Diabetic Retinopathy,20,16,0.993493,True,11,10,0.90909,False
+Original Dataset/Healthy/Healthy732.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR631.jpg,Diabetic Retinopathy,13,6,0.99191,True,12,10,0.83333,False
+Original Dataset/Healthy/Healthy733.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy645.jpg,Healthy,17,12,0.992166,True,10,10,1.0,False
+Original Dataset/Healthy/Healthy733.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR541.jpg,Diabetic Retinopathy,17,16,0.991009,True,12,10,0.83333,False
+Original Dataset/Healthy/Healthy733.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar154.jpg,Macular Scar,18,14,0.995096,True,10,10,1.0,False
+Original Dataset/Healthy/Healthy733.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar241.jpg,Macular Scar,18,14,0.993043,True,11,10,0.90909,False
+Original Dataset/Healthy/Healthy745.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma443.jpg,Glaucoma,19,4,0.993885,True,16,10,0.625,False
+Original Dataset/Healthy/Healthy745.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1213.jpg,Glaucoma,19,6,0.992632,True,17,10,0.58824,False
+Original Dataset/Healthy/Healthy747.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR463.jpg,Diabetic Retinopathy,18,8,0.99523,True,13,10,0.76923,False
+Original Dataset/Healthy/Healthy747.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma659.jpg,Glaucoma,19,8,0.996481,True,14,10,0.71429,False
+Original Dataset/Healthy/Healthy751.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR423.jpg,Diabetic Retinopathy,16,12,0.99451,True,13,10,0.76923,False
+Original Dataset/Healthy/Healthy818.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy825.jpg,Healthy,17,6,0.997628,True,12,10,0.83333,False
+Original Dataset/Healthy/Healthy823.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma501.jpg,Glaucoma,19,6,0.992581,True,16,10,0.625,False
+Original Dataset/Healthy/Healthy824.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR614.jpg,Diabetic Retinopathy,16,12,0.991853,True,11,10,0.90909,False
+Original Dataset/Healthy/Healthy824.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR681.jpg,Diabetic Retinopathy,18,16,0.990176,True,11,10,0.90909,False
+Original Dataset/Healthy/Healthy825.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia432.jpg,Myopia,25,4,0.996354,True,15,10,0.66667,False
+Original Dataset/Healthy/Healthy838.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR660.jpg,Diabetic Retinopathy,20,6,0.991677,True,12,10,0.83333,False
+Original Dataset/Healthy/Healthy918.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy955.jpg,Healthy,20,6,0.994081,True,12,10,0.83333,False
+Original Dataset/Healthy/Healthy957.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar347.jpg,Macular Scar,20,8,0.99058,True,11,10,0.90909,False
+Original Dataset/Macular Scar/Macular Scar135.jpg,Macular Scar,edid,edid:Original Dataset/Diabetic Retinopathy/DR748.jpg,Diabetic Retinopathy,18,14,0.995095,True,13,10,0.76923,False
+Original Dataset/Macular Scar/Macular Scar151.jpg,Macular Scar,edid,edid:Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR89.jpg,Central Serous Chorioretinopathy [Color Fundus],12,14,0.992561,True,15,10,0.66667,False
+Original Dataset/Macular Scar/Macular Scar186.jpg,Macular Scar,edid,edid:Original Dataset/Diabetic Retinopathy/DR255.jpg,Diabetic Retinopathy,18,10,0.993311,True,11,10,0.90909,False
+Original Dataset/Macular Scar/Macular Scar241.jpg,Macular Scar,edid,edid:Original Dataset/Diabetic Retinopathy/DR423.jpg,Diabetic Retinopathy,16,16,0.993989,True,11,10,0.90909,False
+Original Dataset/Macular Scar/Macular Scar241.jpg,Macular Scar,edid,edid:Original Dataset/Healthy/Healthy690.jpg,Healthy,18,8,0.993459,True,11,10,0.90909,False
+Original Dataset/Macular Scar/Macular Scar315.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma659.jpg,Glaucoma,23,8,0.995532,True,14,10,0.71429,False
+Original Dataset/Macular Scar/Macular Scar344.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma747.jpg,Glaucoma,20,8,0.991907,True,15,10,0.66667,False
+Original Dataset/Macular Scar/Macular Scar344.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma843.jpg,Glaucoma,27,4,0.995219,True,15,10,0.66667,False
+Original Dataset/Macular Scar/Macular Scar345.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma557.jpg,Glaucoma,14,14,0.991997,True,13,10,0.76923,False
+Original Dataset/Macular Scar/Macular Scar418.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma958.jpg,Glaucoma,19,2,0.991034,True,16,10,0.625,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa60.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa110.jpg,Retinitis Pigmentosa,20,14,0.991494,True,14,10,0.71429,False
+Original Dataset/Disc Edema/Disc Edema103.jpg,Disc Edema,edid,edid:Original Dataset/Diabetic Retinopathy/DR740.jpg,Diabetic Retinopathy,19,8,0.992205,True,11,9,0.81818,False
+Original Dataset/Disc Edema/Disc Edema28.jpg,Disc Edema,edid,edid:Original Dataset/Diabetic Retinopathy/DR1369.jpg,Diabetic Retinopathy,17,6,0.991045,True,15,9,0.6,False
+Original Dataset/Disc Edema/Disc Edema28.jpg,Disc Edema,edid,edid:Original Dataset/Healthy/Healthy673.jpg,Healthy,18,8,0.99299,True,34,9,0.26471,False
+Original Dataset/Disc Edema/Disc Edema29.jpg,Disc Edema,edid,edid:Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa110.jpg,Retinitis Pigmentosa,18,8,0.993191,True,14,9,0.64286,False
+Original Dataset/Disc Edema/Disc Edema50.jpg,Disc Edema,edid,edid:Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR89.jpg,Central Serous Chorioretinopathy [Color Fundus],12,6,0.993219,True,10,9,0.9,False
+Original Dataset/Disc Edema/Disc Edema50.jpg,Disc Edema,edid,edid:Original Dataset/Macular Scar/Macular Scar172.jpg,Macular Scar,12,8,0.993351,True,12,9,0.75,False
+Original Dataset/Disc Edema/Disc Edema64.jpg,Disc Edema,edid,edid:Original Dataset/Healthy/Healthy751.jpg,Healthy,18,12,0.99227,True,18,9,0.5,False
+Original Dataset/Disc Edema/Disc Edema78.jpg,Disc Edema,edid,edid:Original Dataset/Diabetic Retinopathy/DR833.jpg,Diabetic Retinopathy,17,6,0.995203,True,12,9,0.75,False
+Original Dataset/Disc Edema/Disc Edema78.jpg,Disc Edema,edid,edid:Original Dataset/Myopia/Myopia432.jpg,Myopia,18,6,0.994217,True,20,9,0.45,False
+Original Dataset/Disc Edema/Disc Edema85.jpg,Disc Edema,edid,edid:Original Dataset/Diabetic Retinopathy/DR805.jpg,Diabetic Retinopathy,28,6,0.99507,True,11,9,0.81818,False
+Original Dataset/Healthy/Healthy204.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR462.jpg,Diabetic Retinopathy,17,4,0.991909,True,15,9,0.6,False
+Original Dataset/Healthy/Healthy219.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR343.jpg,Diabetic Retinopathy,17,8,0.990088,True,12,9,0.75,False
+Original Dataset/Healthy/Healthy269.jpg,Healthy,edid,edid:Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR96.jpg,Central Serous Chorioretinopathy [Color Fundus],19,10,0.992438,True,14,9,0.64286,False
+Original Dataset/Healthy/Healthy270.jpg,Healthy,edid,edid:Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR89.jpg,Central Serous Chorioretinopathy [Color Fundus],14,8,0.991137,True,12,9,0.75,False
+Original Dataset/Healthy/Healthy270.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar151.jpg,Macular Scar,16,8,0.990912,True,14,9,0.64286,False
+Original Dataset/Healthy/Healthy270.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma303.jpg,Glaucoma,19,4,0.992363,True,17,9,0.52941,False
+Original Dataset/Healthy/Healthy329.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar245.jpg,Macular Scar,20,4,0.990129,True,11,9,0.81818,False
+Original Dataset/Healthy/Healthy518.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma288.jpg,Glaucoma,18,10,0.990775,True,13,9,0.69231,False
+Original Dataset/Healthy/Healthy552.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar148.jpg,Macular Scar,18,12,0.990214,True,10,9,0.9,False
+Original Dataset/Healthy/Healthy552.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy810.jpg,Healthy,19,14,0.9915,True,11,9,0.81818,False
+Original Dataset/Healthy/Healthy553.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR206.jpg,Diabetic Retinopathy,17,2,0.995339,True,11,9,0.81818,False
+Original Dataset/Healthy/Healthy576.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR504.jpg,Diabetic Retinopathy,19,20,0.990444,True,15,9,0.6,False
+Original Dataset/Healthy/Healthy584.jpg,Healthy,edid,edid:Original Dataset/Disc Edema/Disc Edema50.jpg,Disc Edema,16,10,0.990221,True,12,9,0.75,False
+Original Dataset/Healthy/Healthy645.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR1450.jpg,Diabetic Retinopathy,14,12,0.991706,True,20,9,0.45,False
+Original Dataset/Healthy/Healthy656.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR727.jpg,Diabetic Retinopathy,20,8,0.993645,True,12,9,0.75,False
+Original Dataset/Healthy/Healthy664.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy676.jpg,Healthy,19,8,0.990127,True,10,9,0.9,False
+Original Dataset/Healthy/Healthy671.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy676.jpg,Healthy,12,8,0.996435,True,9,9,1.0,False
+Original Dataset/Healthy/Healthy674.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR681.jpg,Diabetic Retinopathy,16,16,0.992131,True,13,9,0.69231,False
+Original Dataset/Healthy/Healthy675.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR583.jpg,Diabetic Retinopathy,16,12,0.994931,True,10,9,0.9,False
+Original Dataset/Healthy/Healthy681.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma618.jpg,Glaucoma,20,4,0.990794,True,12,9,0.75,False
+Original Dataset/Healthy/Healthy690.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR576.jpg,Diabetic Retinopathy,23,2,0.996422,True,12,9,0.75,False
+Original Dataset/Healthy/Healthy693.jpg,Healthy,edid,edid:Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa60.jpg,Retinitis Pigmentosa,18,12,0.991861,True,12,9,0.75,False
+Original Dataset/Healthy/Healthy693.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR312.jpg,Diabetic Retinopathy,18,16,0.994412,True,10,9,0.9,False
+Original Dataset/Healthy/Healthy694.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma442.jpg,Glaucoma,26,8,0.995335,True,10,9,0.9,False
+Original Dataset/Healthy/Healthy695.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar154.jpg,Macular Scar,18,18,0.993226,True,10,9,0.9,False
+Original Dataset/Healthy/Healthy696.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma601.jpg,Glaucoma,17,6,0.99287,True,11,9,0.81818,False
+Original Dataset/Healthy/Healthy726.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma444.jpg,Glaucoma,17,6,0.992155,True,12,9,0.75,False
+Original Dataset/Healthy/Healthy726.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma949.jpg,Glaucoma,20,6,0.991029,True,10,9,0.9,False
+Original Dataset/Healthy/Healthy726.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar155.jpg,Macular Scar,20,12,0.995032,True,12,9,0.75,False
+Original Dataset/Healthy/Healthy727.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia360.jpg,Myopia,17,8,0.995186,True,9,9,1.0,False
+Original Dataset/Healthy/Healthy727.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma100.jpg,Glaucoma,20,14,0.991483,True,11,9,0.81818,False
+Original Dataset/Healthy/Healthy727.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy690.jpg,Healthy,20,14,0.995898,True,11,9,0.81818,False
+Original Dataset/Healthy/Healthy728.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia360.jpg,Myopia,17,14,0.99346,True,9,9,1.0,False
+Original Dataset/Healthy/Healthy731.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma710.jpg,Glaucoma,21,4,0.995799,True,9,9,1.0,False
+Original Dataset/Healthy/Healthy732.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma912.jpg,Glaucoma,14,12,0.992956,True,11,9,0.81818,False
+Original Dataset/Healthy/Healthy732.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar354.jpg,Macular Scar,15,6,0.993656,True,9,9,1.0,False
+Original Dataset/Healthy/Healthy733.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR423.jpg,Diabetic Retinopathy,18,10,0.995973,True,10,9,0.9,False
+Original Dataset/Healthy/Healthy745.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma911.jpg,Glaucoma,19,8,0.990713,True,14,9,0.64286,False
+Original Dataset/Healthy/Healthy745.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma798.jpg,Glaucoma,20,4,0.990831,True,18,9,0.5,False
+Original Dataset/Healthy/Healthy747.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma245.jpg,Glaucoma,20,8,0.992101,True,13,9,0.69231,False
+Original Dataset/Healthy/Healthy747.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy829.jpg,Healthy,22,6,0.9953,True,11,9,0.81818,False
+Original Dataset/Healthy/Healthy751.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR610.jpg,Diabetic Retinopathy,16,16,0.993668,True,16,9,0.5625,False
+Original Dataset/Healthy/Healthy774.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia428.jpg,Myopia,25,6,0.995991,True,10,9,0.9,False
+Original Dataset/Healthy/Healthy806.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy838.jpg,Healthy,20,8,0.992976,True,11,9,0.81818,False
+Original Dataset/Healthy/Healthy809.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma863.jpg,Glaucoma,14,4,0.991357,True,14,9,0.64286,False
+Original Dataset/Healthy/Healthy809.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar418.jpg,Macular Scar,19,2,0.990408,True,14,9,0.64286,False
+Original Dataset/Healthy/Healthy809.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma842.jpg,Glaucoma,20,2,0.991498,True,18,9,0.5,False
+Original Dataset/Healthy/Healthy816.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia349.jpg,Myopia,28,8,0.99635,True,12,9,0.75,False
+Original Dataset/Healthy/Healthy823.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR534.jpg,Diabetic Retinopathy,19,8,0.991926,True,12,9,0.75,False
+Original Dataset/Healthy/Healthy825.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma501.jpg,Glaucoma,18,4,0.993426,True,14,9,0.64286,False
+Original Dataset/Healthy/Healthy828.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar182.jpg,Macular Scar,18,8,0.990092,True,11,9,0.81818,False
+Original Dataset/Healthy/Healthy828.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR427.jpg,Diabetic Retinopathy,19,6,0.994804,True,21,9,0.42857,False
+Original Dataset/Healthy/Healthy843.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar351.jpg,Macular Scar,18,4,0.991691,True,15,9,0.6,False
+Original Dataset/Healthy/Healthy863.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar264.jpg,Macular Scar,19,12,0.99041,True,10,9,0.9,False
+Original Dataset/Healthy/Healthy979.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR540.jpg,Diabetic Retinopathy,15,8,0.990265,True,15,9,0.6,False
+Original Dataset/Healthy/Healthy979.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma680.jpg,Glaucoma,20,8,0.992668,True,14,9,0.64286,False
+Original Dataset/Macular Scar/Macular Scar106.jpg,Macular Scar,edid,edid:Original Dataset/Myopia/Myopia330.jpg,Myopia,21,8,0.995357,True,15,9,0.6,False
+Original Dataset/Macular Scar/Macular Scar194.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar241.jpg,Macular Scar,20,14,0.991342,True,11,9,0.81818,False
+Original Dataset/Macular Scar/Macular Scar241.jpg,Macular Scar,edid,edid:Original Dataset/Myopia/Myopia394.jpg,Myopia,19,10,0.992931,True,11,9,0.81818,False
+Original Dataset/Macular Scar/Macular Scar368.jpg,Macular Scar,edid,edid:Original Dataset/Healthy/Healthy645.jpg,Healthy,17,14,0.99294,True,12,9,0.75,False
+Original Dataset/Macular Scar/Macular Scar418.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma850.jpg,Glaucoma,17,4,0.990924,True,15,9,0.6,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa104.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Glaucoma/Glaucoma910.jpg,Glaucoma,28,6,0.995947,True,15,9,0.6,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa78.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Glaucoma/Glaucoma710.jpg,Glaucoma,18,8,0.995356,True,11,9,0.81818,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa78.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Myopia/Myopia428.jpg,Myopia,23,6,0.996369,True,10,9,0.9,False
+Original Dataset/Disc Edema/Disc Edema105.jpg,Disc Edema,edid,edid:Original Dataset/Diabetic Retinopathy/DR519.jpg,Diabetic Retinopathy,19,10,0.992353,True,9,8,0.88889,False
+Original Dataset/Disc Edema/Disc Edema122.jpg,Disc Edema,edid,edid:Original Dataset/Macular Scar/Macular Scar245.jpg,Macular Scar,16,8,0.993549,True,10,8,0.8,False
+Original Dataset/Disc Edema/Disc Edema78.jpg,Disc Edema,edid,edid:Original Dataset/Glaucoma/Glaucoma618.jpg,Glaucoma,16,10,0.993317,True,9,8,0.88889,False
+Original Dataset/Disc Edema/Disc Edema78.jpg,Disc Edema,edid,edid:Original Dataset/Glaucoma/Glaucoma1336.jpg,Glaucoma,20,4,0.994625,True,15,8,0.53333,False
+Original Dataset/Disc Edema/Disc Edema99.jpg,Disc Edema,edid,edid:Original Dataset/Diabetic Retinopathy/DR244.jpg,Diabetic Retinopathy,18,8,0.991183,True,11,8,0.72727,False
+Original Dataset/Healthy/Healthy218.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy747.jpg,Healthy,18,10,0.992058,True,9,8,0.88889,False
+Original Dataset/Healthy/Healthy219.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1296.jpg,Glaucoma,18,6,0.994513,True,14,8,0.57143,False
+Original Dataset/Healthy/Healthy269.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR631.jpg,Diabetic Retinopathy,18,6,0.990405,True,9,8,0.88889,False
+Original Dataset/Healthy/Healthy269.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma288.jpg,Glaucoma,18,8,0.991886,True,13,8,0.61538,False
+Original Dataset/Healthy/Healthy298.jpg,Healthy,edid,edid:Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR56.jpg,Central Serous Chorioretinopathy [Color Fundus],18,8,0.991424,True,12,8,0.66667,False
+Original Dataset/Healthy/Healthy302.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy809.jpg,Healthy,17,8,0.992536,True,13,8,0.61538,False
+Original Dataset/Healthy/Healthy303.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar172.jpg,Macular Scar,16,14,0.993346,True,8,8,1.0,False
+Original Dataset/Healthy/Healthy466.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar151.jpg,Macular Scar,18,14,0.992033,True,11,8,0.72727,False
+Original Dataset/Healthy/Healthy551.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma916.jpg,Glaucoma,18,16,0.990056,True,10,8,0.8,False
+Original Dataset/Healthy/Healthy584.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar368.jpg,Macular Scar,17,10,0.991889,True,18,8,0.44444,False
+Original Dataset/Healthy/Healthy644.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy219.jpg,Healthy,19,8,0.991889,True,19,8,0.42105,False
+Original Dataset/Healthy/Healthy647.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy823.jpg,Healthy,19,8,0.993909,True,8,8,1.0,False
+Original Dataset/Healthy/Healthy647.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1290.jpg,Glaucoma,26,4,0.996096,True,11,8,0.72727,False
+Original Dataset/Healthy/Healthy655.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy664.jpg,Healthy,16,6,0.991947,True,16,8,0.5,False
+Original Dataset/Healthy/Healthy655.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR1369.jpg,Diabetic Retinopathy,16,8,0.990356,True,11,8,0.72727,False
+Original Dataset/Healthy/Healthy665.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1289.jpg,Glaucoma,17,10,0.990028,True,12,8,0.66667,False
+Original Dataset/Healthy/Healthy671.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma541.jpg,Glaucoma,17,10,0.998005,True,8,8,1.0,False
+Original Dataset/Healthy/Healthy671.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR680.jpg,Diabetic Retinopathy,18,16,0.990473,True,9,8,0.88889,False
+Original Dataset/Healthy/Healthy672.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR744.jpg,Diabetic Retinopathy,14,12,0.99115,True,8,8,1.0,False
+Original Dataset/Healthy/Healthy675.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia347.jpg,Myopia,19,8,0.991542,True,10,8,0.8,False
+Original Dataset/Healthy/Healthy675.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia219.jpg,Myopia,19,18,0.99456,True,9,8,0.88889,False
+Original Dataset/Healthy/Healthy676.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy696.jpg,Healthy,17,12,0.995097,True,8,8,1.0,False
+Original Dataset/Healthy/Healthy681.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma680.jpg,Glaucoma,20,6,0.990003,True,12,8,0.66667,False
+Original Dataset/Healthy/Healthy684.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma446.jpg,Glaucoma,20,14,0.992784,True,12,8,0.66667,False
+Original Dataset/Healthy/Healthy685.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR423.jpg,Diabetic Retinopathy,19,14,0.995394,True,10,8,0.8,False
+Original Dataset/Healthy/Healthy685.jpg,Healthy,edid,edid:Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa97.jpg,Retinitis Pigmentosa,19,16,0.993781,True,9,8,0.88889,False
+Original Dataset/Healthy/Healthy693.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy728.jpg,Healthy,20,12,0.994744,True,12,8,0.66667,False
+Original Dataset/Healthy/Healthy695.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR423.jpg,Diabetic Retinopathy,18,12,0.99599,True,10,8,0.8,False
+Original Dataset/Healthy/Healthy695.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy733.jpg,Healthy,18,18,0.992805,True,10,8,0.8,False
+Original Dataset/Healthy/Healthy696.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia428.jpg,Myopia,15,8,0.991106,True,10,8,0.8,False
+Original Dataset/Healthy/Healthy700.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy733.jpg,Healthy,19,4,0.993824,True,12,8,0.66667,False
+Original Dataset/Healthy/Healthy726.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma442.jpg,Glaucoma,20,8,0.994129,True,9,8,0.88889,False
+Original Dataset/Healthy/Healthy727.jpg,Healthy,edid,edid:Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa60.jpg,Retinitis Pigmentosa,20,12,0.99291,True,11,8,0.72727,False
+Original Dataset/Healthy/Healthy732.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR609.jpg,Diabetic Retinopathy,22,2,0.996202,True,11,8,0.72727,False
+Original Dataset/Healthy/Healthy733.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma303.jpg,Glaucoma,20,4,0.990216,True,9,8,0.88889,False
+Original Dataset/Healthy/Healthy737.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy872.jpg,Healthy,29,6,0.995567,True,15,8,0.53333,False
+Original Dataset/Healthy/Healthy746.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR519.jpg,Diabetic Retinopathy,17,6,0.994342,True,9,8,0.88889,False
+Original Dataset/Healthy/Healthy747.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR566.jpg,Diabetic Retinopathy,18,12,0.992323,True,10,8,0.8,False
+Original Dataset/Healthy/Healthy749.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma677.jpg,Glaucoma,20,10,0.99683,True,11,8,0.72727,False
+Original Dataset/Healthy/Healthy751.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia330.jpg,Myopia,16,12,0.993911,True,13,8,0.61538,False
+Original Dataset/Healthy/Healthy766.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy818.jpg,Healthy,19,12,0.994411,True,8,8,1.0,False
+Original Dataset/Healthy/Healthy823.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1313.jpg,Glaucoma,17,6,0.990851,True,8,8,1.0,False
+Original Dataset/Healthy/Healthy825.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma541.jpg,Glaucoma,17,6,0.99794,True,11,8,0.72727,False
+Original Dataset/Healthy/Healthy828.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR519.jpg,Diabetic Retinopathy,18,8,0.990854,True,14,8,0.57143,False
+Original Dataset/Healthy/Healthy828.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar355.jpg,Macular Scar,20,6,0.993535,True,11,8,0.72727,False
+Original Dataset/Healthy/Healthy913.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma753.jpg,Glaucoma,19,6,0.990501,True,9,8,0.88889,False
+Original Dataset/Healthy/Healthy917.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma878.jpg,Glaucoma,19,4,0.990108,True,11,8,0.72727,False
+Original Dataset/Healthy/Healthy956.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma878.jpg,Glaucoma,20,4,0.990902,True,12,8,0.66667,False
+Original Dataset/Macular Scar/Macular Scar154.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar172.jpg,Macular Scar,15,18,0.991015,True,8,8,1.0,False
+Original Dataset/Macular Scar/Macular Scar186.jpg,Macular Scar,edid,edid:Original Dataset/Healthy/Healthy750.jpg,Healthy,27,6,0.995748,True,11,8,0.72727,False
+Original Dataset/Macular Scar/Macular Scar344.jpg,Macular Scar,edid,edid:Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR96.jpg,Central Serous Chorioretinopathy [Color Fundus],20,8,0.991577,True,11,8,0.72727,False
+Original Dataset/Macular Scar/Macular Scar404.jpg,Macular Scar,edid,edid:Original Dataset/Myopia/Myopia306.jpg,Myopia,23,8,0.995531,True,11,8,0.72727,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa108.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Diabetic Retinopathy/DR827.jpg,Diabetic Retinopathy,19,8,0.991447,True,9,8,0.88889,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa59.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Glaucoma/Glaucoma860.jpg,Glaucoma,20,10,0.992413,True,11,8,0.72727,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa59.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Diabetic Retinopathy/DR813.jpg,Diabetic Retinopathy,22,12,0.995107,True,10,8,0.8,False
+Original Dataset/Disc Edema/Disc Edema122.jpg,Disc Edema,edid,edid:Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR87.jpg,Central Serous Chorioretinopathy [Color Fundus],18,4,0.992953,True,10,7,0.7,False
+Original Dataset/Disc Edema/Disc Edema61.jpg,Disc Edema,edid,edid:Original Dataset/Glaucoma/Glaucoma902.jpg,Glaucoma,19,8,0.99076,True,15,7,0.46667,False
+Original Dataset/Disc Edema/Disc Edema65.jpg,Disc Edema,edid,edid:Original Dataset/Diabetic Retinopathy/DR403.jpg,Diabetic Retinopathy,20,14,0.990801,True,16,7,0.4375,False
+Original Dataset/Disc Edema/Disc Edema66.jpg,Disc Edema,edid,edid:Original Dataset/Healthy/Healthy645.jpg,Healthy,20,8,0.990766,True,13,7,0.53846,False
+Original Dataset/Disc Edema/Disc Edema78.jpg,Disc Edema,edid,edid:Original Dataset/Glaucoma/Glaucoma1261.jpg,Glaucoma,13,10,0.994268,True,9,7,0.77778,False
+Original Dataset/Disc Edema/Disc Edema99.jpg,Disc Edema,edid,edid:Original Dataset/Healthy/Healthy466.jpg,Healthy,16,12,0.990748,True,8,7,0.875,False
+Original Dataset/Healthy/Healthy466.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy584.jpg,Healthy,14,16,0.990661,True,13,7,0.53846,False
+Original Dataset/Healthy/Healthy551.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR160.jpg,Diabetic Retinopathy,18,12,0.99257,True,9,7,0.77778,False
+Original Dataset/Healthy/Healthy552.jpg,Healthy,edid,edid:Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR57.jpg,Central Serous Chorioretinopathy [Color Fundus],17,10,0.991724,True,12,7,0.58333,False
+Original Dataset/Healthy/Healthy584.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR632.jpg,Diabetic Retinopathy,17,16,0.992642,True,13,7,0.53846,False
+Original Dataset/Healthy/Healthy585.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR1502.jpg,Diabetic Retinopathy,20,12,0.991501,True,14,7,0.5,False
+Original Dataset/Healthy/Healthy644.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma680.jpg,Glaucoma,18,10,0.990103,True,15,7,0.46667,False
+Original Dataset/Healthy/Healthy644.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma618.jpg,Glaucoma,20,10,0.990776,True,9,7,0.77778,False
+Original Dataset/Healthy/Healthy647.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma33.jpg,Glaucoma,19,8,0.99435,True,8,7,0.875,False
+Original Dataset/Healthy/Healthy655.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma33.jpg,Glaucoma,18,10,0.992343,True,9,7,0.77778,False
+Original Dataset/Healthy/Healthy672.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR423.jpg,Diabetic Retinopathy,17,12,0.992035,True,8,7,0.875,False
+Original Dataset/Healthy/Healthy672.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy824.jpg,Healthy,18,12,0.996572,True,9,7,0.77778,False
+Original Dataset/Healthy/Healthy673.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR239.jpg,Diabetic Retinopathy,19,6,0.993626,True,11,7,0.63636,False
+Original Dataset/Healthy/Healthy684.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR477.jpg,Diabetic Retinopathy,23,12,0.995066,True,8,7,0.875,False
+Original Dataset/Healthy/Healthy693.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR744.jpg,Diabetic Retinopathy,17,16,0.992111,True,10,7,0.7,False
+Original Dataset/Healthy/Healthy696.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma655.jpg,Glaucoma,23,4,0.996144,True,9,7,0.77778,False
+Original Dataset/Healthy/Healthy697.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR114.jpg,Diabetic Retinopathy,18,6,0.995373,True,11,7,0.63636,False
+Original Dataset/Healthy/Healthy745.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR1369.jpg,Diabetic Retinopathy,20,10,0.991589,True,10,7,0.7,False
+Original Dataset/Healthy/Healthy749.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy825.jpg,Healthy,19,8,0.996963,True,8,7,0.875,False
+Original Dataset/Healthy/Healthy750.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia349.jpg,Myopia,26,6,0.996049,True,10,7,0.7,False
+Original Dataset/Healthy/Healthy806.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy913.jpg,Healthy,20,6,0.992038,True,9,7,0.77778,False
+Original Dataset/Healthy/Healthy809.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR469.jpg,Diabetic Retinopathy,17,4,0.993016,True,13,7,0.53846,False
+Original Dataset/Healthy/Healthy824.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia306.jpg,Myopia,20,6,0.998085,True,10,7,0.7,False
+Original Dataset/Healthy/Healthy824.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia349.jpg,Myopia,21,8,0.997262,True,9,7,0.77778,False
+Original Dataset/Macular Scar/Macular Scar186.jpg,Macular Scar,edid,edid:Original Dataset/Myopia/Myopia330.jpg,Myopia,19,10,0.994293,True,9,7,0.77778,False
+Original Dataset/Macular Scar/Macular Scar194.jpg,Macular Scar,edid,edid:Original Dataset/Diabetic Retinopathy/DR157.jpg,Diabetic Retinopathy,20,8,0.993899,True,12,7,0.58333,False
+Original Dataset/Macular Scar/Macular Scar204.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar205.jpg,Macular Scar,26,4,0.997043,True,8,7,0.875,False
+Original Dataset/Macular Scar/Macular Scar241.jpg,Macular Scar,edid,edid:Original Dataset/Healthy/Healthy466.jpg,Healthy,19,16,0.99235,True,9,7,0.77778,False
+Original Dataset/Macular Scar/Macular Scar326.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma541.jpg,Glaucoma,22,12,0.997666,True,8,7,0.875,False
+Original Dataset/Macular Scar/Macular Scar355.jpg,Macular Scar,edid,edid:Original Dataset/Diabetic Retinopathy/DR279.jpg,Diabetic Retinopathy,16,12,0.990954,True,10,7,0.7,False
+Original Dataset/Disc Edema/Disc Edema105.jpg,Disc Edema,edid,edid:Original Dataset/Diabetic Retinopathy/DR726.jpg,Diabetic Retinopathy,17,14,0.990677,True,11,6,0.54545,False
+Original Dataset/Healthy/Healthy204.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1258.jpg,Glaucoma,16,4,0.99112,True,13,6,0.46154,False
+Original Dataset/Healthy/Healthy219.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma237.jpg,Glaucoma,16,4,0.992682,True,11,6,0.54545,False
+Original Dataset/Healthy/Healthy288.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy913.jpg,Healthy,19,12,0.990171,True,9,6,0.66667,False
+Original Dataset/Healthy/Healthy466.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR279.jpg,Diabetic Retinopathy,17,8,0.991009,True,8,6,0.75,False
+Original Dataset/Healthy/Healthy551.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma328.jpg,Glaucoma,18,10,0.991392,True,10,6,0.6,False
+Original Dataset/Healthy/Healthy553.jpg,Healthy,edid,edid:Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR66.jpg,Central Serous Chorioretinopathy [Color Fundus],16,12,0.99074,True,8,6,0.75,False
+Original Dataset/Healthy/Healthy584.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy645.jpg,Healthy,20,10,0.99285,True,12,6,0.5,False
+Original Dataset/Healthy/Healthy665.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR748.jpg,Diabetic Retinopathy,17,8,0.990337,True,9,6,0.66667,False
+Original Dataset/Healthy/Healthy681.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy219.jpg,Healthy,19,10,0.990516,True,11,6,0.54545,False
+Original Dataset/Healthy/Healthy696.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia348.jpg,Myopia,21,4,0.995381,True,9,6,0.66667,False
+Original Dataset/Healthy/Healthy729.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy691.jpg,Healthy,24,4,0.996959,True,8,6,0.75,False
+Original Dataset/Healthy/Healthy749.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma595.jpg,Glaucoma,16,10,0.993489,True,14,6,0.42857,False
+Original Dataset/Healthy/Healthy749.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia348.jpg,Myopia,29,4,0.995403,True,8,6,0.75,False
+Original Dataset/Healthy/Healthy765.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia454.jpg,Myopia,20,8,0.991303,True,11,6,0.54545,False
+Original Dataset/Healthy/Healthy823.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma250.jpg,Glaucoma,19,6,0.992319,True,12,6,0.5,False
+Original Dataset/Healthy/Healthy825.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia329.jpg,Myopia,18,12,0.995599,True,9,6,0.66667,False
+Original Dataset/Macular Scar/Macular Scar187.jpg,Macular Scar,edid,edid:Original Dataset/Diabetic Retinopathy/DR978.jpg,Diabetic Retinopathy,20,8,0.993051,True,13,6,0.46154,False
+Original Dataset/Macular Scar/Macular Scar290.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar291.jpg,Macular Scar,13,8,0.993932,True,8,6,0.75,False
+Original Dataset/Macular Scar/Macular Scar368.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar355.jpg,Macular Scar,16,14,0.991645,True,9,6,0.66667,False
+Original Dataset/Macular Scar/Macular Scar352.jpg,Macular Scar,rfmid_train,rfmid:training:1705,RFMiD training,47,8,0.929946,False,9,6,0.66667,False
+Original Dataset/Disc Edema/Disc Edema106.jpg,Disc Edema,edid,edid:Original Dataset/Diabetic Retinopathy/DR1399.jpg,Diabetic Retinopathy,14,8,0.992857,True,9,5,0.55556,False
+Original Dataset/Healthy/Healthy219.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR1369.jpg,Diabetic Retinopathy,17,8,0.991244,True,11,5,0.45455,False
+Original Dataset/Healthy/Healthy825.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma445.jpg,Glaucoma,24,4,0.995364,True,10,5,0.5,False
+Original Dataset/Macular Scar/Macular Scar153.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma250.jpg,Glaucoma,19,12,0.991344,True,10,5,0.5,False
+Original Dataset/Healthy/Healthy329.jpg,Healthy,rfmid_train,rfmid:training:1705,RFMiD training,57,4,0.928564,True,10,5,0.5,False
+Original Dataset/Macular Scar/Macular Scar317.jpg,Macular Scar,rfmid_train,rfmid:training:1519,RFMiD training,60,8,0.943174,False,8,5,0.625,False
+Original Dataset/Healthy/Healthy747.jpg,Healthy,rfmid_train,rfmid:training:1671,RFMiD training,75,8,0.94088,False,8,5,0.625,False
+Original Dataset/Disc Edema/Disc Edema78.jpg,Disc Edema,edid,edid:Original Dataset/Macular Scar/Macular Scar99.jpg,Macular Scar,16,10,0.990134,True,7,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema78.jpg,Disc Edema,edid,edid:Original Dataset/Myopia/Myopia428.jpg,Myopia,17,6,0.99567,True,7,0,0.0,False
+Original Dataset/Healthy/Healthy302.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR469.jpg,Diabetic Retinopathy,18,8,0.994071,True,7,0,0.0,False
+Original Dataset/Healthy/Healthy584.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar355.jpg,Macular Scar,15,14,0.990877,True,7,0,0.0,False
+Original Dataset/Healthy/Healthy664.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy671.jpg,Healthy,11,10,0.99575,True,4,0,0.0,False
+Original Dataset/Healthy/Healthy671.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia329.jpg,Myopia,24,4,0.996554,True,7,0,0.0,False
+Original Dataset/Healthy/Healthy675.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma12.jpg,Glaucoma,20,6,0.990277,True,7,0,0.0,False
+Original Dataset/Healthy/Healthy685.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy645.jpg,Healthy,18,18,0.991311,True,7,0,0.0,False
+Original Dataset/Healthy/Healthy685.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar172.jpg,Macular Scar,20,18,0.991829,True,6,0,0.0,False
+Original Dataset/Healthy/Healthy697.jpg,Healthy,edid,edid:Original Dataset/Macular Scar/Macular Scar345.jpg,Macular Scar,20,14,0.990145,True,7,0,0.0,False
+Original Dataset/Healthy/Healthy697.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia349.jpg,Myopia,20,14,0.992275,True,6,0,0.0,False
+Original Dataset/Healthy/Healthy713.jpg,Healthy,edid,edid:Original Dataset/Myopia/Myopia349.jpg,Myopia,22,10,0.995007,True,6,0,0.0,False
+Original Dataset/Healthy/Healthy751.jpg,Healthy,edid,edid:Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa65.jpg,Retinitis Pigmentosa,16,10,0.991183,True,7,0,0.0,False
+Original Dataset/Healthy/Healthy818.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma680.jpg,Glaucoma,16,8,0.994034,True,7,0,0.0,False
+Original Dataset/Healthy/Healthy834.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy873.jpg,Healthy,20,12,0.993783,True,7,0,0.0,False
+Original Dataset/Macular Scar/Macular Scar186.jpg,Macular Scar,edid,edid:Original Dataset/Healthy/Healthy672.jpg,Healthy,20,12,0.994445,True,5,0,0.0,False
+Original Dataset/Macular Scar/Macular Scar326.jpg,Macular Scar,edid,edid:Original Dataset/Healthy/Healthy696.jpg,Healthy,22,12,0.995247,True,5,0,0.0,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa57.jpg,Retinitis Pigmentosa,edid,edid:Original Dataset/Healthy/Healthy696.jpg,Healthy,29,8,0.996272,True,5,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema122.jpg,Disc Edema,rfmid_train,rfmid:training:1705,RFMiD training,49,8,0.918864,False,5,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema119.jpg,Disc Edema,rfmid_train,rfmid:training:1590,RFMiD training,50,8,0.916328,False,1,0,0.0,False
+Original Dataset/Healthy/Healthy267.jpg,Healthy,rfmid_train,rfmid:training:1705,RFMiD training,50,4,0.932382,True,7,0,0.0,False
+Original Dataset/Healthy/Healthy673.jpg,Healthy,rfmid_train,rfmid:training:1608,RFMiD training,50,8,0.936713,False,4,0,0.0,False
+Original Dataset/Macular Scar/Macular Scar352.jpg,Macular Scar,rfmid_train,rfmid:training:1594,RFMiD training,50,6,0.942197,False,7,0,0.0,False
+Original Dataset/Healthy/Healthy204.jpg,Healthy,rfmid_train,rfmid:training:1705,RFMiD training,51,6,0.929336,False,6,0,0.0,False
+Original Dataset/Healthy/Healthy681.jpg,Healthy,rfmid_train,rfmid:training:1705,RFMiD training,51,8,0.928513,False,6,0,0.0,False
+Original Dataset/Macular Scar/Macular Scar352.jpg,Macular Scar,rfmid_train,rfmid:training:1608,RFMiD training,51,8,0.942106,False,4,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema28.jpg,Disc Edema,rfmid_train,rfmid:training:1705,RFMiD training,52,8,0.909585,False,6,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema28.jpg,Disc Edema,rfmid_train,rfmid:training:1590,RFMiD training,52,8,0.893615,False,1,0,0.0,False
+Original Dataset/Macular Scar/Macular Scar245.jpg,Macular Scar,rfmid_train,rfmid:training:1705,RFMiD training,53,4,0.91751,True,4,0,0.0,False
+Original Dataset/Healthy/Healthy219.jpg,Healthy,rfmid_train,rfmid:training:1608,RFMiD training,54,8,0.941334,False,4,0,0.0,False
+Original Dataset/Healthy/Healthy583.jpg,Healthy,rfmid_train,rfmid:training:1705,RFMiD training,54,8,0.920878,False,7,0,0.0,False
+Original Dataset/Healthy/Healthy664.jpg,Healthy,rfmid_train,rfmid:training:1657,RFMiD training,54,8,0.944322,False,2,0,0.0,False
+Original Dataset/Healthy/Healthy809.jpg,Healthy,rfmid_train,rfmid:training:1705,RFMiD training,54,8,0.914435,False,5,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema28.jpg,Disc Edema,rfmid_train,rfmid:training:1594,RFMiD training,55,8,0.937975,False,2,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema28.jpg,Disc Edema,rfmid_train,rfmid:training:1628,RFMiD training,55,8,0.936307,False,3,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema87.jpg,Disc Edema,rfmid_train,rfmid:training:1657,RFMiD training,55,6,0.944623,False,4,0,0.0,False
+Original Dataset/Healthy/Healthy219.jpg,Healthy,rfmid_train,rfmid:training:1594,RFMiD training,55,8,0.937216,False,4,0,0.0,False
+Original Dataset/Healthy/Healthy553.jpg,Healthy,rfmid_train,rfmid:training:1705,RFMiD training,55,6,0.911734,False,4,0,0.0,False
+Original Dataset/Healthy/Healthy673.jpg,Healthy,rfmid_train,rfmid:training:1594,RFMiD training,55,8,0.931563,False,2,0,0.0,False
+Original Dataset/Healthy/Healthy673.jpg,Healthy,rfmid_train,rfmid:training:1599,RFMiD training,55,8,0.937215,False,3,0,0.0,False
+Original Dataset/Healthy/Healthy686.jpg,Healthy,rfmid_train,rfmid:training:1705,RFMiD training,55,6,0.91933,False,4,0,0.0,False
+Original Dataset/Healthy/Healthy745.jpg,Healthy,rfmid_train,rfmid:training:1590,RFMiD training,55,8,0.896346,False,4,0,0.0,False
+Original Dataset/Healthy/Healthy818.jpg,Healthy,rfmid_train,rfmid:training:1711,RFMiD training,55,8,0.924116,False,3,0,0.0,False
+Original Dataset/Macular Scar/Macular Scar370.jpg,Macular Scar,rfmid_train,rfmid:training:1623,RFMiD training,55,8,0.931377,False,2,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema119.jpg,Disc Edema,rfmid_train,rfmid:training:1705,RFMiD training,56,6,0.922223,False,6,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema87.jpg,Disc Edema,rfmid_train,rfmid:training:1519,RFMiD training,56,8,0.938776,False,11,0,0.0,False
+Original Dataset/Healthy/Healthy681.jpg,Healthy,rfmid_train,rfmid:training:1599,RFMiD training,56,8,0.93835,False,7,0,0.0,False
+Original Dataset/Healthy/Healthy745.jpg,Healthy,rfmid_train,rfmid:training:1544,RFMiD training,56,8,0.937889,False,5,0,0.0,False
+Original Dataset/Healthy/Healthy825.jpg,Healthy,rfmid_train,rfmid:training:1608,RFMiD training,56,8,0.938625,False,4,0,0.0,False
+Original Dataset/Macular Scar/Macular Scar149.jpg,Macular Scar,rfmid_train,rfmid:training:1599,RFMiD training,56,6,0.926554,False,4,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema46.jpg,Disc Edema,rfmid_train,rfmid:training:1590,RFMiD training,57,8,0.901577,False,2,0,0.0,False
+Original Dataset/Healthy/Healthy505.jpg,Healthy,rfmid_train,rfmid:training:1590,RFMiD training,57,8,0.910985,False,0,0,0.0,False
+Original Dataset/Healthy/Healthy671.jpg,Healthy,rfmid_train,rfmid:training:1657,RFMiD training,57,8,0.938002,False,3,0,0.0,False
+Original Dataset/Healthy/Healthy745.jpg,Healthy,rfmid_train,rfmid:training:1681,RFMiD training,57,8,0.9319,False,4,0,0.0,False
+Original Dataset/Healthy/Healthy823.jpg,Healthy,rfmid_train,rfmid:training:1705,RFMiD training,57,8,0.916672,False,4,0,0.0,False
+Original Dataset/Macular Scar/Macular Scar149.jpg,Macular Scar,rfmid_train,rfmid:training:1705,RFMiD training,57,8,0.914601,False,5,0,0.0,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa111.jpg,Retinitis Pigmentosa,rfmid_train,rfmid:training:1609,RFMiD training,58,6,0.947578,False,3,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema87.jpg,Disc Edema,rfmid_train,rfmid:training:1556,RFMiD training,64,6,0.945806,False,5,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema87.jpg,Disc Edema,rfmid_train,rfmid:training:1623,RFMiD training,59,6,0.945016,False,4,0,0.0,False
+Original Dataset/Healthy/Healthy823.jpg,Healthy,rfmid_train,rfmid:training:1657,RFMiD training,60,8,0.943659,False,2,0,0.0,False
+Original Dataset/Healthy/Healthy681.jpg,Healthy,rfmid_train,rfmid:training:1571,RFMiD training,59,8,0.943099,False,3,0,0.0,False
+Original Dataset/Retinitis Pigmentosa/Retinitis Pigmentosa111.jpg,Retinitis Pigmentosa,rfmid_train,rfmid:training:1597,RFMiD training,71,8,0.943082,False,4,0,0.0,False
+Original Dataset/Macular Scar/Macular Scar317.jpg,Macular Scar,rfmid_train,rfmid:training:1711,RFMiD training,60,8,0.943074,False,5,0,0.0,False
+Original Dataset/Healthy/Healthy732.jpg,Healthy,rfmid_train,rfmid:training:1606,RFMiD training,66,8,0.942829,False,3,0,0.0,False
+Original Dataset/Healthy/Healthy732.jpg,Healthy,rfmid_train,rfmid:training:1626,RFMiD training,85,8,0.94275,False,4,0,0.0,False
+Original Dataset/Healthy/Healthy818.jpg,Healthy,rfmid_train,rfmid:training:1670,RFMiD training,65,8,0.942538,False,1,0,0.0,False
+Original Dataset/Macular Scar/Macular Scar99.jpg,Macular Scar,rfmid_train,rfmid:training:1594,RFMiD training,60,8,0.942535,False,3,0,0.0,False
+Original Dataset/Healthy/Healthy679.jpg,Healthy,rfmid_train,rfmid:training:1609,RFMiD training,73,8,0.942373,False,4,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema87.jpg,Disc Edema,rfmid_train,rfmid:training:1544,RFMiD training,59,4,0.942371,True,4,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema83.jpg,Disc Edema,rfmid_train,rfmid:training:1608,RFMiD training,61,4,0.942287,True,5,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema97.jpg,Disc Edema,rfmid_train,rfmid:training:1608,RFMiD training,60,6,0.942197,False,4,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema87.jpg,Disc Edema,rfmid_train,rfmid:training:1711,RFMiD training,58,6,0.941532,False,3,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema28.jpg,Disc Edema,rfmid_train,rfmid:training:1571,RFMiD training,62,8,0.941523,False,3,0,0.0,False
+Original Dataset/Macular Scar/Macular Scar419.jpg,Macular Scar,rfmid_train,rfmid:training:1609,RFMiD training,73,8,0.941157,False,4,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema101.jpg,Disc Edema,rfmid_train,rfmid:training:1609,RFMiD training,72,8,0.941143,False,3,0,0.0,False
+Original Dataset/Healthy/Healthy825.jpg,Healthy,rfmid_train,rfmid:training:1599,RFMiD training,61,8,0.94105,False,3,0,0.0,False
+Original Dataset/Healthy/Healthy745.jpg,Healthy,rfmid_train,rfmid:training:1556,RFMiD training,69,8,0.941019,False,4,0,0.0,False
+Original Dataset/Healthy/Healthy204.jpg,Healthy,rfmid_train,rfmid:training:1608,RFMiD training,63,8,0.940994,False,1,0,0.0,False
+Original Dataset/Healthy/Healthy823.jpg,Healthy,rfmid_train,rfmid:training:1571,RFMiD training,67,8,0.940959,False,1,0,0.0,False
+Original Dataset/Healthy/Healthy979.jpg,Healthy,rfmid_train,rfmid:training:1608,RFMiD training,61,6,0.940951,False,6,0,0.0,False
+Original Dataset/Healthy/Healthy818.jpg,Healthy,rfmid_train,rfmid:training:1599,RFMiD training,58,8,0.940658,False,5,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema83.jpg,Disc Edema,rfmid_train,rfmid:training:1571,RFMiD training,73,8,0.940444,False,1,0,0.0,False
+Original Dataset/Healthy/Healthy747.jpg,Healthy,rfmid_train,rfmid:training:1626,RFMiD training,78,8,0.940122,False,4,0,0.0,False
+Original Dataset/Healthy/Healthy204.jpg,Healthy,rfmid_train,rfmid:training:1594,RFMiD training,58,6,0.940113,False,2,0,0.0,False
+Original Dataset/Healthy/Healthy647.jpg,Healthy,rfmid_train,rfmid:training:1657,RFMiD training,65,6,0.939979,False,5,0,0.0,False
+Original Dataset/Healthy/Healthy747.jpg,Healthy,rfmid_train,rfmid:training:1737,RFMiD training,81,8,0.939689,False,4,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema78.jpg,Disc Edema,rfmid_train,rfmid:training:1571,RFMiD training,69,8,0.939605,False,1,0,0.0,False
+Original Dataset/Healthy/Healthy753.jpg,Healthy,rfmid_train,rfmid:training:1626,RFMiD training,84,8,0.939543,False,2,0,0.0,False
+Original Dataset/Disc Edema/Disc Edema119.jpg,Disc Edema,rfmid_train,rfmid:training:1594,RFMiD training,59,8,0.939522,False,2,0,0.0,False

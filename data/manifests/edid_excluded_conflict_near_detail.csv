@@ -1,0 +1,71 @@
+query_member,query_class,candidate_source,candidate_id,candidate_class,dhash_hamming_256,phash_hamming_64,thumbnail_correlation,needs_detail_review,sift_ratio_matches,ransac_inliers,ransac_inlier_fraction,passes_local_geometry_screen
+Original Dataset/Healthy/Healthy284.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma66.jpg,EXCLUDED_EXACT_CROSS_CLASS,2,2,0.998272,True,246,241,0.97967,True
+Original Dataset/Macular Scar/Macular Scar10.jpg,Macular Scar,edid,edid:Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR6.jpg,EXCLUDED_EXACT_CROSS_CLASS,2,4,0.998259,True,227,225,0.99119,True
+Original Dataset/Macular Scar/Macular Scar405.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma1147.jpg,EXCLUDED_EXACT_CROSS_CLASS,7,4,0.996657,True,166,161,0.96988,True
+Original Dataset/Macular Scar/Macular Scar14.jpg,Macular Scar,edid,edid:Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR6.jpg,EXCLUDED_EXACT_CROSS_CLASS,10,6,0.990881,True,140,115,0.82143,True
+Original Dataset/Macular Scar/Macular Scar12.jpg,Macular Scar,edid,edid:Original Dataset/Central Serous Chorioretinopathy [Color Fundus]/CSCR6.jpg,EXCLUDED_EXACT_CROSS_CLASS,13,4,0.991637,True,136,113,0.83088,True
+Original Dataset/Macular Scar/Macular Scar268.jpg,Macular Scar,edid,edid:Original Dataset/Macular Scar/Macular Scar269.jpg,EXCLUDED_EXACT_CROSS_CLASS,4,2,0.997908,True,107,107,1.0,True
+Original Dataset/Healthy/Healthy242.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1317.jpg,EXCLUDED_EXACT_CROSS_CLASS,2,2,0.999096,True,99,99,1.0,True
+Original Dataset/Healthy/Healthy351.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma132.jpg,EXCLUDED_EXACT_CROSS_CLASS,5,2,0.997071,True,78,77,0.98718,True
+Original Dataset/Healthy/Healthy853.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma769.jpg,EXCLUDED_EXACT_CROSS_CLASS,7,2,0.998988,True,51,51,1.0,True
+Original Dataset/Healthy/Healthy869.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma791.jpg,EXCLUDED_EXACT_CROSS_CLASS,3,0,0.999364,True,35,34,0.97143,True
+Original Dataset/Macular Scar/Macular Scar387.jpg,Macular Scar,edid,edid:Original Dataset/Diabetic Retinopathy/DR820.jpg,EXCLUDED_EXACT_CROSS_CLASS,27,6,0.995557,True,18,16,0.88889,False
+Original Dataset/Disc Edema/Disc Edema106.jpg,Disc Edema,edid,edid:Original Dataset/Diabetic Retinopathy/DR760.jpg,EXCLUDED_EXACT_CROSS_CLASS,18,6,0.993308,True,18,14,0.77778,False
+Original Dataset/Healthy/Healthy267.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1306.jpg,EXCLUDED_EXACT_CROSS_CLASS,20,6,0.990252,True,18,14,0.77778,False
+Original Dataset/Healthy/Healthy838.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma786.jpg,EXCLUDED_EXACT_CROSS_CLASS,15,8,0.993778,True,21,13,0.61905,False
+Original Dataset/Healthy/Healthy918.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma791.jpg,EXCLUDED_EXACT_CROSS_CLASS,18,10,0.991009,True,14,13,0.92857,False
+Original Dataset/Macular Scar/Macular Scar195.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma13.jpg,EXCLUDED_EXACT_CROSS_CLASS,20,8,0.99461,True,22,13,0.59091,False
+Original Dataset/Disc Edema/Disc Edema122.jpg,Disc Edema,edid,edid:Original Dataset/Glaucoma/Glaucoma282.jpg,EXCLUDED_EXACT_CROSS_CLASS,13,6,0.991722,True,14,12,0.85714,False
+Original Dataset/Healthy/Healthy553.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1322.jpg,EXCLUDED_EXACT_CROSS_CLASS,20,6,0.992176,True,13,12,0.92308,False
+Original Dataset/Healthy/Healthy680.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR569.jpg,EXCLUDED_EXACT_CROSS_CLASS,18,10,0.991408,True,18,12,0.66667,False
+Original Dataset/Healthy/Healthy690.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma261.jpg,EXCLUDED_EXACT_CROSS_CLASS,19,8,0.995054,True,15,12,0.8,False
+Original Dataset/Healthy/Healthy732.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR760.jpg,EXCLUDED_EXACT_CROSS_CLASS,15,10,0.995107,True,15,12,0.8,False
+Original Dataset/Macular Scar/Macular Scar354.jpg,Macular Scar,edid,edid:Original Dataset/Diabetic Retinopathy/DR760.jpg,EXCLUDED_EXACT_CROSS_CLASS,20,8,0.993018,True,16,12,0.75,False
+Original Dataset/Disc Edema/Disc Edema122.jpg,Disc Edema,edid,edid:Original Dataset/Diabetic Retinopathy/DR761.jpg,EXCLUDED_EXACT_CROSS_CLASS,19,6,0.990799,True,14,11,0.78571,False
+Original Dataset/Disc Edema/Disc Edema122.jpg,Disc Edema,edid,edid:Original Dataset/Glaucoma/Glaucoma1322.jpg,EXCLUDED_EXACT_CROSS_CLASS,18,10,0.991008,True,13,11,0.84615,False
+Original Dataset/Disc Edema/Disc Edema28.jpg,Disc Edema,edid,edid:Original Dataset/Diabetic Retinopathy/DR761.jpg,EXCLUDED_EXACT_CROSS_CLASS,20,8,0.992968,True,15,11,0.73333,False
+Original Dataset/Healthy/Healthy330.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1256.jpg,EXCLUDED_EXACT_CROSS_CLASS,20,6,0.991298,True,20,11,0.55,False
+Original Dataset/Healthy/Healthy674.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma870.jpg,EXCLUDED_EXACT_CROSS_CLASS,23,8,0.995433,True,14,11,0.78571,False
+Original Dataset/Healthy/Healthy698.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma585.jpg,EXCLUDED_EXACT_CROSS_CLASS,20,10,0.990068,True,14,11,0.78571,False
+Original Dataset/Healthy/Healthy732.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR875.jpg,EXCLUDED_EXACT_CROSS_CLASS,20,10,0.991736,True,12,11,0.91667,False
+Original Dataset/Healthy/Healthy809.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1322.jpg,EXCLUDED_EXACT_CROSS_CLASS,15,6,0.990748,True,14,11,0.78571,False
+Original Dataset/Macular Scar/Macular Scar325.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma725.jpg,EXCLUDED_EXACT_CROSS_CLASS,28,8,0.995437,True,13,11,0.84615,False
+Original Dataset/Healthy/Healthy301.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma281.jpg,EXCLUDED_EXACT_CROSS_CLASS,14,12,0.993171,True,10,10,1.0,False
+Original Dataset/Healthy/Healthy656.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR875.jpg,EXCLUDED_EXACT_CROSS_CLASS,18,8,0.99122,True,14,10,0.71429,False
+Original Dataset/Healthy/Healthy672.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma725.jpg,EXCLUDED_EXACT_CROSS_CLASS,25,8,0.995334,True,10,10,1.0,False
+Original Dataset/Healthy/Healthy746.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma584.jpg,EXCLUDED_EXACT_CROSS_CLASS,19,6,0.992629,True,14,10,0.71429,False
+Original Dataset/Healthy/Healthy809.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma282.jpg,EXCLUDED_EXACT_CROSS_CLASS,18,6,0.990267,True,13,10,0.76923,False
+Original Dataset/Healthy/Healthy809.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma73.jpg,EXCLUDED_EXACT_CROSS_CLASS,18,6,0.991259,True,12,10,0.83333,False
+Original Dataset/Healthy/Healthy891.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma750.jpg,EXCLUDED_EXACT_CROSS_CLASS,17,10,0.991943,True,16,10,0.625,False
+Original Dataset/Macular Scar/Macular Scar245.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma282.jpg,EXCLUDED_EXACT_CROSS_CLASS,19,6,0.992815,True,12,10,0.83333,False
+Original Dataset/Healthy/Healthy219.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1306.jpg,EXCLUDED_EXACT_CROSS_CLASS,18,6,0.990728,True,12,9,0.75,False
+Original Dataset/Healthy/Healthy360.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma786.jpg,EXCLUDED_EXACT_CROSS_CLASS,18,8,0.990031,True,20,9,0.45,False
+Original Dataset/Healthy/Healthy647.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma869.jpg,EXCLUDED_EXACT_CROSS_CLASS,19,6,0.994758,True,11,9,0.81818,False
+Original Dataset/Healthy/Healthy656.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma743.jpg,EXCLUDED_EXACT_CROSS_CLASS,20,6,0.990329,True,15,9,0.6,False
+Original Dataset/Healthy/Healthy673.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR761.jpg,EXCLUDED_EXACT_CROSS_CLASS,18,6,0.990668,True,11,9,0.81818,False
+Original Dataset/Healthy/Healthy681.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1255.jpg,EXCLUDED_EXACT_CROSS_CLASS,20,2,0.990187,True,12,9,0.75,False
+Original Dataset/Healthy/Healthy690.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR597.jpg,EXCLUDED_EXACT_CROSS_CLASS,17,10,0.990842,True,10,9,0.9,False
+Original Dataset/Healthy/Healthy825.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma869.jpg,EXCLUDED_EXACT_CROSS_CLASS,15,6,0.994713,True,12,9,0.75,False
+Original Dataset/Macular Scar/Macular Scar99.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma1255.jpg,EXCLUDED_EXACT_CROSS_CLASS,12,8,0.991139,True,17,9,0.52941,False
+Original Dataset/Disc Edema/Disc Edema28.jpg,Disc Edema,edid,edid:Original Dataset/Glaucoma/Glaucoma869.jpg,EXCLUDED_EXACT_CROSS_CLASS,19,8,0.991399,True,12,8,0.66667,False
+Original Dataset/Healthy/Healthy600.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma584.jpg,EXCLUDED_EXACT_CROSS_CLASS,16,12,0.993694,True,11,8,0.72727,False
+Original Dataset/Healthy/Healthy672.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy762.jpg,EXCLUDED_EXACT_CROSS_CLASS,20,8,0.990254,True,9,8,0.88889,False
+Original Dataset/Healthy/Healthy686.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1263.jpg,EXCLUDED_EXACT_CROSS_CLASS,20,4,0.991184,True,12,8,0.66667,False
+Original Dataset/Healthy/Healthy691.jpg,Healthy,edid,edid:Original Dataset/Healthy/Healthy764.jpg,EXCLUDED_EXACT_CROSS_CLASS,30,6,0.995073,True,10,8,0.8,False
+Original Dataset/Healthy/Healthy733.jpg,Healthy,edid,edid:Original Dataset/Diabetic Retinopathy/DR819.jpg,EXCLUDED_EXACT_CROSS_CLASS,20,10,0.995861,True,9,8,0.88889,False
+Original Dataset/Healthy/Healthy751.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1264.jpg,EXCLUDED_EXACT_CROSS_CLASS,15,10,0.994799,True,9,8,0.88889,False
+Original Dataset/Macular Scar/Macular Scar368.jpg,Macular Scar,edid,edid:Original Dataset/Diabetic Retinopathy/DR819.jpg,EXCLUDED_EXACT_CROSS_CLASS,20,16,0.991296,True,10,8,0.8,False
+Original Dataset/Healthy/Healthy269.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma590.jpg,EXCLUDED_EXACT_CROSS_CLASS,20,8,0.990527,True,19,7,0.36842,False
+Original Dataset/Healthy/Healthy329.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma495.jpg,EXCLUDED_EXACT_CROSS_CLASS,14,12,0.990592,True,9,7,0.77778,False
+Original Dataset/Healthy/Healthy466.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma76.jpg,EXCLUDED_EXACT_CROSS_CLASS,16,16,0.990926,True,12,7,0.58333,False
+Original Dataset/Healthy/Healthy655.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma495.jpg,EXCLUDED_EXACT_CROSS_CLASS,14,8,0.990906,True,8,7,0.875,False
+Original Dataset/Healthy/Healthy745.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1255.jpg,EXCLUDED_EXACT_CROSS_CLASS,20,6,0.990031,True,11,7,0.63636,False
+Original Dataset/Healthy/Healthy818.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1263.jpg,EXCLUDED_EXACT_CROSS_CLASS,20,8,0.991541,True,10,7,0.7,False
+Original Dataset/Healthy/Healthy823.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma869.jpg,EXCLUDED_EXACT_CROSS_CLASS,20,8,0.990912,True,11,7,0.63636,False
+Original Dataset/Disc Edema/Disc Edema78.jpg,Disc Edema,edid,edid:Original Dataset/Glaucoma/Glaucoma1263.jpg,EXCLUDED_EXACT_CROSS_CLASS,16,10,0.992204,True,8,6,0.75,False
+Original Dataset/Healthy/Healthy204.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma1255.jpg,EXCLUDED_EXACT_CROSS_CLASS,14,4,0.990391,True,16,6,0.375,False
+Original Dataset/Healthy/Healthy404.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma721.jpg,EXCLUDED_EXACT_CROSS_CLASS,20,10,0.99154,True,9,6,0.66667,False
+Original Dataset/Macular Scar/Macular Scar186.jpg,Macular Scar,edid,edid:Original Dataset/Glaucoma/Glaucoma1264.jpg,EXCLUDED_EXACT_CROSS_CLASS,16,8,0.991828,True,11,6,0.54545,False
+Original Dataset/Healthy/Healthy219.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma869.jpg,EXCLUDED_EXACT_CROSS_CLASS,15,8,0.990403,True,8,5,0.625,False
+Original Dataset/Healthy/Healthy589.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma173.jpg,EXCLUDED_EXACT_CROSS_CLASS,19,10,0.991758,True,10,5,0.5,False
+Original Dataset/Healthy/Healthy806.jpg,Healthy,edid,edid:Original Dataset/Glaucoma/Glaucoma173.jpg,EXCLUDED_EXACT_CROSS_CLASS,20,8,0.991497,True,6,0,0.0,False
