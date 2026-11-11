@@ -1,4 +1,4 @@
-v2_split,v2_member,v1_record_id,v1_split,dhash_hamming_256,thumbnail_correlation,strong_candidate,sift_ratio_matches,ransac_inliers,candidate_same_retina
+v2_split,v2_member,v1_record_id,v1_split,dhash_hamming_256,thumbnail_correlation,strong_candidate,sift_ratio_matches,ransac_inliers,passes_local_geometry_screen
 train,771.jpg,rfmid:training:1787,train,9,0.978914,True,10,8,False
 validation,835.jpg,rfmid:training:1858,train,9,0.962317,True,14,11,False
 train,788.jpg,rfmid:training:1787,train,10,0.983242,True,11,9,False

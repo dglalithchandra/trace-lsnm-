@@ -73,17 +73,17 @@ def main() -> None:
                 _, mask = cv2.findHomography(a, b, cv2.RANSAC, 5.0)
                 inliers = int(mask.sum()) if mask is not None else 0
             result.append({**row, "sift_ratio_matches": len(good), "ransac_inliers": inliers,
-                           "candidate_same_retina": inliers >= 20 and inliers / max(len(good), 1) >= 0.35})
+                           "passes_local_geometry_screen": inliers >= 20 and inliers / max(len(good), 1) >= 0.35})
             if index % 100 == 0:
                 print(f"detail_pairs={index}", flush=True)
         for archive in inner.values():
             archive.close()
-    fields = list(result[0]) if result else ["v2_split", "v2_member", "v1_record_id", "v1_split", "dhash_hamming_256", "thumbnail_correlation", "strong_candidate", "sift_ratio_matches", "ransac_inliers", "candidate_same_retina"]
+    fields = list(result[0]) if result else ["v2_split", "v2_member", "v1_record_id", "v1_split", "dhash_hamming_256", "thumbnail_correlation", "strong_candidate", "sift_ratio_matches", "ransac_inliers", "passes_local_geometry_screen"]
     with OUTPUT.open("w", newline="", encoding="utf-8") as stream:
         writer = csv.DictWriter(stream, fieldnames=fields)
         writer.writeheader()
         writer.writerows(result)
-    print(json.dumps({"detail_pairs": len(result), "candidate_same_retina_pairs": sum(row["candidate_same_retina"] for row in result), "distinct_v2_candidates": len({(row["v2_split"], row["v2_member"]) for row in result if row["candidate_same_retina"]}), "protected_test_images_accessed": 0, "output": str(OUTPUT)}, indent=2))
+    print(json.dumps({"detail_pairs": len(result), "local_geometry_screen_pairs": sum(row["passes_local_geometry_screen"] for row in result), "distinct_v2_candidates": len({(row["v2_split"], row["v2_member"]) for row in result if row["passes_local_geometry_screen"]}), "protected_test_images_accessed": 0, "output": str(OUTPUT), "warning": "A local-geometry pass does not establish same-retina identity"}, indent=2))
 
 
 if __name__ == "__main__":

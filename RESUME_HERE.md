@@ -48,7 +48,7 @@ Protected-test records accessed across Experiment 5A: **0**.
 
 ## Next valid work
 
-RFMiD 2.0 official archive is downloaded and checksum-verified. A development-only audit found 38 shared abbreviation candidates, a nonbreaking-space `ON` header, an unnamed positive CSV column, and three probable shared-retina v2 validation images. See `data/RFMiD2_DEVELOPMENT_AUDIT.md`. Visually confirm the overlap candidates and resolve source label semantics before constructing a v2 transfer benchmark. The v2 test archive remains sealed.
+RFMiD 2.0 official archive is downloaded and checksum-verified. A development-only audit found 38 shared abbreviation candidates, a nonbreaking-space `ON` header, and an unnamed positive CSV column. Four local-feature overlap alarms were visually rejected as false positives, so this screen has zero verified cross-release duplicates. See `data/RFMiD2_DEVELOPMENT_AUDIT.md`. Resolve source label semantics and cohort eligibility before constructing a v2 transfer benchmark. The v2 test archive remains sealed.
 
 Do not deploy or further tune the rejected adapter on the same novel validation
 episodes. The next encoder experiment must be a separately specified method

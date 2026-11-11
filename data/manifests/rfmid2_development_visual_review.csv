@@ -1,0 +1,5 @@
+v2_split,v2_member,v1_record_id,visual_decision,reason,reviewer
+validation,810.jpg,rfmid:training:1811,different_retina,disc_and_vessel_branch_details_differ,AI_engineering_review
+validation,810.jpg,rfmid:validation:593,different_retina,disc_and_vessel_branch_details_differ,AI_engineering_review
+validation,828.jpg,rfmid:training:1759,different_retina,major_vessel_branch_pattern_differs,AI_engineering_review
+validation,847.jpg,rfmid:training:1759,different_retina,disc_and_vessel_branch_details_differ,AI_engineering_review
