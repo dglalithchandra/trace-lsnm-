@@ -359,3 +359,17 @@ abundant-negative protocol, novel-label macro AUPRC changed from 0.1233 to
 encoder. The adapter is therefore `not_selected`; frozen DINOv2-S remains the
 primary TRACE image encoder. No protected-test records were accessed. See
 `outputs/trace_rare_adapter_fewshot_v1/EXPERIMENT_5A_REPORT.md`.
+
+## Selected label-hidden A1 encoder — 13 November 2026
+
+The separately frozen source-balance study continued DINOv2-S with rank-8 LoRA, an EMA teacher and the existing contrastive queue for 9,580 updates on the 1,917 label-hidden RFMiD-v1 training photographs. Across three seeds, A1 improved fixed development macro AUPRC over its own frozen initialization by a mean **+0.0341 at K=3** and **+0.0474 at K=5**. All three seeds cleared the +0.02 screen, although EDN worsened consistently and the result remains development-only.
+
+The audited RFMiD+FIVES expansion did not justify a more complex model. Natural sampling added only +0.0040/+0.0052 AUPRC at K=3/5, and source balancing added only +0.0024/+0.0017 beyond that. Both uncertainty intervals crossed zero, so A2/A3 were stopped rather than replicated. See `data/protocols/trace_source_balance_v1/DEVELOPMENT_RESULT.md`, `EXPANDED_POOL_RESULT.md` and `MODEL_CARD.md`.
+
+The selected predeclared seed has a strict image-to-embedding interface:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\embed_trace_a1_image.py --image C:\path\to\fundus.jpg --output embedding.npy
+```
+
+It verifies the checkpoint/configuration, runs frozen geometry-only preprocessing and emits 384 values. A real-image smoke test produced a finite `(384,)` float32 vector. The embedding is not a calibrated probability or diagnostic confidence, and no camera-generalization or clinical-safety claim follows from this result.
