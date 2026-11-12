@@ -48,7 +48,7 @@ Existing epoch-20 A1 artifacts may support development context, but a mechanism 
 
 ## Screening and claim rules
 
-An arm advances only when the K=3 and K=5 macro-AUPRC point differences for its intended contrast are positive, clean macro AUROC decreases by no more than 0.01, and no eligible label loses more than 0.10 mean AUPRC. These are engineering screening rules, not proof of superiority.
+An arm advances only when the K=3 and K=5 macro-AUPRC point differences for its intended contrast are at least +0.02, clean macro AUROC decreases by no more than 0.01, and no eligible label loses more than 0.10 mean AUPRC. These are engineering screening rules, not proof of superiority.
 
 After three matched seeds, report the distribution across seeds and paired uncertainty. A superiority statement requires the predeclared paired interval for the primary contrast to exclude zero. Sign agreement alone is insufficient. If the evidence fails, retain A0 or the strongest simpler control and report the result.
 
