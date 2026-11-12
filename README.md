@@ -1,5 +1,9 @@
 # TRACE Preprocessing Module
 
+For the complete verified project status, completed experiments, test results,
+limitations and next work, see
+[`TRACE_VERIFIED_PROJECT_REPORT_2026-11-12.md`](TRACE_VERIFIED_PROJECT_REPORT_2026-11-12.md).
+
 The evidence-locked camera component is now frozen as
 `trace-camera-module-v1.0-research`. Run it with
 `scripts/run_trace_camera_module.py`; release notes and the immutable file
