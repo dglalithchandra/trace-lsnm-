@@ -88,6 +88,8 @@ def validate_graph(graph: Mapping[str, Any]) -> None:
         predicate = mapping.get("predicate")
         if predicate not in _MAPPING_PREDICATES:
             raise ExplanationGraphError(f"mappings[{index}].predicate is invalid")
+        if not isinstance(mapping.get("justification"), str) or not mapping["justification"]:
+            raise ExplanationGraphError(f"mappings[{index}].justification is required")
         source_node = nodes.get(str(mapping.get("source_node_id")))
         target_node = nodes.get(str(mapping.get("target_node_id")))
         if source_node is None or target_node is None:
@@ -114,6 +116,12 @@ def validate_graph(graph: Mapping[str, Any]) -> None:
         edge = _object(raw_edge, f"knowledge_edges[{index}]")
         if edge.get("subject_id") not in nodes or edge.get("object_id") not in nodes:
             raise ExplanationGraphError(f"knowledge_edges[{index}] references an unknown node")
+        if not isinstance(edge.get("predicate"), str) or not edge["predicate"]:
+            raise ExplanationGraphError(f"knowledge_edges[{index}].predicate is required")
+        if edge.get("assertion_scope") != "general_knowledge_only":
+            raise ExplanationGraphError(
+                f"knowledge_edges[{index}].assertion_scope must be general_knowledge_only"
+            )
         provenance = _provenance(edge.get("provenance"), f"knowledge_edges[{index}].provenance")
         if provenance["source_id"] not in source_ids:
             raise ExplanationGraphError(f"knowledge_edges[{index}] references an unknown source")
@@ -169,6 +177,23 @@ def lookup_explanations(
         trace_node_id = f"TRACE_LABEL:{output['label_id']}"
         node = nodes.get(trace_node_id)
         mappings = mappings_by_source.get(trace_node_id, [])
+        enriched_mappings = []
+        for mapping in mappings:
+            target = nodes[mapping["target_node_id"]]
+            enriched_mappings.append(
+                {
+                    **copy.deepcopy(mapping),
+                    "target": {
+                        "node_id": target["node_id"],
+                        "label": target["label"],
+                        "entity_type": target["entity_type"],
+                        "definition": target.get("definition"),
+                        "definition_provenance": copy.deepcopy(
+                            target.get("definition_provenance")
+                        ),
+                    },
+                }
+            )
         if node is None or (node.get("definition") is None and not mappings):
             missing.append(
                 {
@@ -183,7 +208,7 @@ def lookup_explanations(
                 "definition_provenance": (
                     copy.deepcopy(node.get("definition_provenance")) if node else None
                 ),
-                "mappings": copy.deepcopy(mappings),
+                "mappings": enriched_mappings,
                 "general_knowledge_edges": copy.deepcopy(
                     [
                         edge

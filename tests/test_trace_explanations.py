@@ -78,6 +78,9 @@ def test_mapping_predicates_remain_distinct(predicate):
     validate_graph(graph)
     result = lookup_explanations(graph, [{"label_id": "SYN", "score": 0.7}])
     assert result["explanations"][0]["mappings"][0]["predicate"] == predicate
+    assert result["explanations"][0]["mappings"][0]["target"]["definition"] == (
+        "A synthetic test definition."
+    )
 
 
 def test_graph_requires_complete_provenance():
