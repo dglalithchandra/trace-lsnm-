@@ -33,6 +33,7 @@ PROTOCOL = ROOT / "data/protocols/trace_final_v1"
 LOCK = PROTOCOL / "plan_lock.json"
 RELEASE = PROTOCOL / "scoring_release.json"
 DECISIONS = PROTOCOL / "audit_decisions.csv"
+QUEUE = PROTOCOL / "AUDIT_REVIEW_QUEUE.csv"
 OUTPUT = ROOT / "outputs/trace_final_v1"
 MODELS = (
     ("frozen_dinov2_s", 384),
@@ -48,6 +49,7 @@ EXPLICIT_CODE_PATHS = (
     "scripts/train_trace_ssl_v1.py",
     "scripts/run_dinov2_fewshot_benchmark.py",
     "scripts/freeze_trace_final_plan.py",
+    "scripts/freeze_trace_final_scoring_release.py",
 )
 REQUIRED_REVIEW_PAIRS = {
     ("rfmid:testing:377", "rfmid:training:835"),
@@ -93,13 +95,19 @@ def verify_release() -> tuple[list[str], dict[str, object]]:
         raise RuntimeError("Release has an invalid exclusion list")
     if release.get("audit_decisions_sha256") != sha256(DECISIONS):
         raise RuntimeError("Final overlap decisions are missing or changed")
+    if release.get("audit_review_queue_sha256") != sha256(QUEUE):
+        raise RuntimeError("Human review queue changed after release")
     with DECISIONS.open(newline="", encoding="utf-8") as stream:
         decisions = list(csv.DictReader(stream))
+    with QUEUE.open(newline="", encoding="utf-8") as stream:
+        reviewed_queue = list(csv.DictReader(stream))
     if not decisions or any(row.get("decision") not in {"duplicate", "distinct"} or not row.get("reviewer") for row in decisions):
         raise RuntimeError("Overlap decisions are incomplete or have no reviewer")
     reviewed_pairs = {(row["query_id"], row["reference_id"]) for row in decisions}
     if not REQUIRED_REVIEW_PAIRS.issubset(reviewed_pairs) or len(reviewed_pairs) != len(decisions):
         raise RuntimeError("Required overlap pairs are absent or repeated in review")
+    if {(row["query_id"], row["reference_id"], row["human_decision"], row["reviewer"].strip()) for row in reviewed_queue} != {(row["query_id"], row["reference_id"], row["decision"], row["reviewer"]) for row in decisions}:
+        raise RuntimeError("Reviewed queue and frozen decisions disagree")
     duplicates = {row["query_id"] for row in decisions if row["decision"] == "duplicate"}
     if duplicates != set(excluded):
         raise RuntimeError("Release exclusions disagree with reviewed duplicate decisions")

@@ -46,21 +46,34 @@ def load_test(path: Path) -> tuple[np.ndarray, np.ndarray, np.ndarray, tuple[str
     return ids, x, y, classes
 
 
-def weighted_ap_for_all_episodes(orders: np.ndarray, truth: np.ndarray, query_weights: np.ndarray) -> np.ndarray:
-    """AP for resampled queries, using pre-sorted continuous episode scores."""
+def score_groups(scores: np.ndarray) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """Sort scores once and identify equal-score groups for exact weighted AP."""
+    orders = np.argsort(-scores, axis=1, kind="mergesort")
+    sorted_scores = np.take_along_axis(scores, orders, axis=1)
+    starts = np.ones_like(sorted_scores, dtype=bool)
+    ends = np.ones_like(sorted_scores, dtype=bool)
+    starts[:, 1:] = sorted_scores[:, 1:] != sorted_scores[:, :-1]
+    ends[:, :-1] = sorted_scores[:, :-1] != sorted_scores[:, 1:]
+    return orders, starts, ends
+
+
+def weighted_ap_for_all_episodes(orders: np.ndarray, starts: np.ndarray, ends: np.ndarray, truth: np.ndarray, query_weights: np.ndarray) -> np.ndarray:
+    """Exact AP for resampled queries, including mixed-label score ties."""
     weighted_positive = (query_weights * truth)[orders]
     weighted_total = query_weights[orders]
     cumulative_positive = np.cumsum(weighted_positive, axis=1)
     cumulative_total = np.cumsum(weighted_total, axis=1)
     precision = np.divide(cumulative_positive, cumulative_total, out=np.zeros_like(cumulative_positive, dtype=np.float64), where=cumulative_total > 0)
-    return np.sum(precision * weighted_positive, axis=1) / weighted_positive.sum(axis=1)
+    positive_before_group = np.maximum.accumulate(np.where(starts, cumulative_positive - weighted_positive, 0.0), axis=1)
+    positive_in_group = cumulative_positive - positive_before_group
+    return np.sum(np.where(ends, precision * positive_in_group, 0.0), axis=1) / weighted_positive.sum(axis=1)
 
 
-def primary_bootstrap(scores: dict[str, dict[str, np.ndarray]], truths: dict[str, np.ndarray], labels: list[str]) -> dict[str, object]:
+def primary_bootstrap(scores: dict[str, dict[str, np.ndarray]], truths: dict[str, np.ndarray], labels: list[str], *, resamples: int = 5000) -> dict[str, object]:
     """Resample labels, support draws and within-label positive/negative queries."""
     rng = np.random.default_rng(BOOTSTRAP_SEED)
-    sorted_indices = {model: {label: np.argsort(-scores[model][label], axis=1, kind="mergesort") for label in labels} for model in PRIMARY}
-    deltas = np.empty(5000, dtype=np.float64)
+    grouped_scores = {model: {label: score_groups(scores[model][label]) for label in labels} for model in PRIMARY}
+    deltas = np.empty(resamples, dtype=np.float64)
     for iteration in range(len(deltas)):
         chosen_labels = rng.integers(0, len(labels), size=len(labels))
         label_differences = []
@@ -71,13 +84,13 @@ def primary_bootstrap(scores: dict[str, dict[str, np.ndarray]], truths: dict[str
             negative = np.flatnonzero(truth == 0)
             weights = np.bincount(np.concatenate((rng.choice(positive, len(positive), replace=True), rng.choice(negative, len(negative), replace=True))), minlength=len(truth)).astype(np.float64)
             support_draws = rng.integers(0, 50, size=50)
-            newer = weighted_ap_for_all_episodes(sorted_indices[PRIMARY[0]][label], truth, weights)[support_draws].mean()
-            older = weighted_ap_for_all_episodes(sorted_indices[PRIMARY[1]][label], truth, weights)[support_draws].mean()
+            newer = weighted_ap_for_all_episodes(*grouped_scores[PRIMARY[0]][label], truth, weights)[support_draws].mean()
+            older = weighted_ap_for_all_episodes(*grouped_scores[PRIMARY[1]][label], truth, weights)[support_draws].mean()
             label_differences.append(newer - older)
         deltas[iteration] = float(np.mean(label_differences))
         if (iteration + 1) % 500 == 0:
             print(f"primary bootstrap {iteration + 1}/{len(deltas)}", flush=True)
-    return {"resamples": len(deltas), "seed": BOOTSTRAP_SEED, "paired_95_percentile_interval": np.quantile(deltas, [0.025, 0.975]).tolist(), "resampling_units": "labels; support draws within sampled label; positive and negative test queries within label", "tie_note": "Weighted-AP bootstrap assumes distinct continuous episode scores; tied scores require a separately declared tie-aware implementation"}
+    return {"resamples": len(deltas), "seed": BOOTSTRAP_SEED, "paired_95_percentile_interval": np.quantile(deltas, [0.025, 0.975]).tolist(), "resampling_units": "labels; support draws within sampled label; positive and negative test queries within label", "ties": "Equal-score groups receive the same precision, matching scikit-learn average_precision_score with sample weights"}
 
 
 def main() -> None:
@@ -172,6 +185,7 @@ def main() -> None:
         decision = "PRIMARY_COMPARISON_COMPUTED"
     primary_table = per_label[per_label.k.eq(3) & per_label.label.isin(eligible)]
     primary_macro = primary_table.groupby("model", as_index=False).agg(macro_auprc=("auprc", "mean"), macro_auroc=("auroc", "mean"), macro_auprc_over_prevalence=("auprc_over_prevalence", "mean"))
+    learning_curve = per_label[per_label.label.isin(eligible)].groupby(["model", "k"], as_index=False).agg(macro_auprc=("auprc", "mean"), macro_auroc=("auroc", "mean"), macro_auprc_over_prevalence=("auprc_over_prevalence", "mean"))
     observed = None
     effect_at_least_point_02_supported = False
     if len(eligible) >= 8:
@@ -186,6 +200,7 @@ def main() -> None:
     label_counts.to_csv(OUTPUT / "label_counts.csv", index=False)
     per_label.to_csv(OUTPUT / "per_label_metrics.csv", index=False)
     primary_macro.to_csv(OUTPUT / "primary_macro_metrics.csv", index=False)
+    learning_curve.to_csv(OUTPUT / "descriptive_learning_curve.csv", index=False)
     result = {"status": decision, "primary_contrast": f"{PRIMARY[0]} minus {PRIMARY[1]}", "eligible_labels": eligible, "eligible_label_count": len(eligible), "observed_macro_auprc_difference": observed, "primary_bootstrap": bootstrap, "effect_at_least_point_02_supported": effect_at_least_point_02_supported, "secondary_observed_paired_macro_deltas": secondary_paired_deltas, "query_count": len(pairs[2]), "excluded_record_ids": excluded, "model_feature_hashes": model_files, "episode_schedule_sha256": sha256(episode_path), "per_image_episode_scores_sha256": sha256(OUTPUT / "per_image_episode_scores.npz"), "software_versions": {"numpy": np.__version__, "pandas": pd.__version__, "sklearn": __import__("sklearn").__version__}, "caveats": ["Patient IDs unavailable", "Operational low-support labels are not clinical rarity estimates", "RFMiD 2.0 secondary scoring remains blocked"]}
     (OUTPUT / "evaluation_summary.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
     print(json.dumps({"status": decision, "eligible_labels": eligible, "primary_delta": observed, "primary_interval": bootstrap["paired_95_percentile_interval"] if bootstrap else None}, indent=2))
