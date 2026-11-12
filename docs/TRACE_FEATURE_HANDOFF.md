@@ -1,8 +1,10 @@
 # TRACE feature workstream handoff
 
-Date: 12 November 2026  
-Branch: `feature`  
-Starting point: `397ff54`  
+Date: 12 November 2026
+
+Branch: `feature`
+
+Starting point: `397ff54`
 Scope: development-only benchmark, recalibration analysis and explanation-only graph
 
 ## Delivered commits
@@ -13,8 +15,9 @@ Scope: development-only benchmark, recalibration analysis and explanation-only g
 | `78eb88e` | Deterministic episodes, metrics, macro summaries and paired hierarchical uncertainty |
 | `55d6a05` | Separated calibration/evaluation and repeated label-budget analysis |
 | `3b8d536` | Explanation-only graph validator, lookup, conservative graph and curation queue |
+| `9ef23bb` | Synthetic smoke command, final tests and handoff |
 
-The final smoke/test/handoff commit is recorded below after the final verification run.
+The follow-up documentation commit only removes Markdown trailing whitespace and records `9ef23bb` in this table.
 
 ## Changed files and interfaces
 
