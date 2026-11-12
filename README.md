@@ -5,6 +5,11 @@ Current two-laptop assignments: [sprint order](TRACE_CURRENT_SPRINT_ORDER.md) an
 older broad collaboration plan; friend work is on `feature`, with an
 explanation-only graph.
 
+The current PC-side model study is frozen under
+`data/protocols/trace_source_balance_v1/`. Its core-only manifest and separate
+fixed-update trainer are ready; expanded-pool arms remain blocked until
+record-level dataset admission is complete.
+
 For the complete verified project status, completed experiments, test results,
 limitations and next work, see
 [`TRACE_VERIFIED_PROJECT_REPORT_2026-11-12.md`](TRACE_VERIFIED_PROJECT_REPORT_2026-11-12.md).

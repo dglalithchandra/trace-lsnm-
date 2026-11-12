@@ -1,0 +1,29 @@
+{
+  "version": "trace-ssl-pool-v2-core",
+  "status": "CORE_ONLY_EXPANSION_BLOCKED",
+  "record_count": 1917,
+  "dataset_counts": {
+    "rfmid_v1": 1917
+  },
+  "source_counts": {
+    "rfmid_v1_train": 1917
+  },
+  "preprocessing_status_counts": {
+    "accept": 1901,
+    "accept_with_warning": 16
+  },
+  "camera_domain_counts_for_audit_only": {
+    "rfmid_camera_topcon_3d_oct_2000": 1493,
+    "rfmid_resolution_4288x2848_unresolved": 274,
+    "rfmid_camera_topcon_trc_nw300": 150
+  },
+  "patient_ids_available": 0,
+  "eye_ids_available": 0,
+  "disease_label_fields_present": false,
+  "input_cache_index_sha256": "6ab2e4315724799f8e475b1ab8bc24e4c0ce9518e36b62126f8a3d8021eec575",
+  "input_analysis_manifest_sha256": "2c90ee4bfa0a2799f8a78ba73b14d6485f10830000f82ce1ec5889fd083cd201",
+  "output_manifest_sha256": "3c04c6af7930a9983570d1402d1e5815204167e89592f5957bf0b69fa03dceb2",
+  "protected_test_records_admitted": 0,
+  "development_query_records_admitted": 0,
+  "warning": "RFMiD provides no patient IDs; split-group controls cannot prove patient independence."
+}

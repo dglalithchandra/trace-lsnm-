@@ -1,0 +1,53 @@
+{
+  "version": "trace-source-balance-v1",
+  "status": "CORE_READY_EXPANDED_POOL_BLOCKED",
+  "frozen_at_local_date": "2026-11-12",
+  "separate_from_locked_protocol": "trace_final_v1",
+  "backbone": {
+    "name": "DINOv2-S/14",
+    "checkpoint_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+    "input_pixels": 448,
+    "photometric_correction": false
+  },
+  "training": {
+    "objective": "existing_trace_moco_style_ema_teacher_queue",
+    "view": "plain_crop_matched",
+    "screen_seed": 20261111,
+    "replication_seeds": [20261111, 20261112, 20261113],
+    "optimizer_updates_per_arm": 9580,
+    "lora_rank": 8,
+    "lora_alpha": 8.0,
+    "queue_size": 4096,
+    "temperature": 0.2,
+    "ema_momentum": 0.996,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.01,
+    "micro_batch_size": 4,
+    "gradient_accumulation_steps": 1,
+    "effective_batch_size": 4,
+    "precision": "torch_autocast_cuda_float16_with_grad_scaler"
+  },
+  "arms": {
+    "A0": "frozen_dinov2_s",
+    "A1": "core_rfmid_train_ssl",
+    "A2": "expanded_pool_natural_frequency_ssl",
+    "A3": "same_expanded_pool_source_balanced_ssl"
+  },
+  "development_evaluation": {
+    "query_cohort": "RFMiD_v1_validation_639_fixed",
+    "support_schedule": "trace_fewshot_v1_existing_fixed",
+    "primary": "K3_macro_AUPRC",
+    "secondary": ["K5_macro_AUPRC", "per_label_AUPRC", "per_label_AUROC", "macro_AUROC", "AP_divided_by_prevalence"],
+    "descriptive": ["K1"],
+    "excluded": ["K0", "K10", "K20"]
+  },
+  "expanded_pool_gate": {
+    "record_level_role": true,
+    "source_id": true,
+    "image_sha256": true,
+    "known_group_exclusion": true,
+    "query_and_test_exclusion": true,
+    "licence_basis": true
+  },
+  "claim_limit": "development_only_without_fresh_confirmation"
+}
