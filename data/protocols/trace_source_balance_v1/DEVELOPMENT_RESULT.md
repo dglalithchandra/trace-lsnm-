@@ -1,6 +1,6 @@
 # TRACE source-balance v1 development result
 
-Status: **A1 three-seed replication complete; A2/A3 blocked pending an audited multi-source pool**. This is development evidence only. No protected RFMiD test image was opened.
+Status: **A1 three-seed replication complete and selected; A2/A3 later screened and not advanced**. This is development evidence only. No protected RFMiD test image was opened.
 
 ## Experiment
 
@@ -50,4 +50,4 @@ The result supports one narrow claim: on RFMiD development data, continued label
 
 It does **not** yet establish improvement on fresh data, cross-camera or cross-site generalisation, calibration, clinical safety, or patient-independent performance. The within-seed intervals resample labels and support episodes while holding the same validation queries fixed; they are not independent clinical confidence intervals. Patient identifiers are unavailable. Three seeds are too few for a reliable seed-level confidence interval.
 
-A2/A3 are still blocked. IDRiD and FIVES already serve development/preservation roles and cannot be silently moved into SSL training, while EyePACS and APTOS are absent. A legal, record-audited, query-excluded multi-source pool is required before testing source-balanced sampling.
+After this replication, 595 exact-deduplicated official FIVES training images were formally admitted under an amended role ledger. Matched A2 natural-pool and A3 source-balanced screens then failed the +0.02 advancement gates, so neither was replicated. A1 remains the strongest justified development arm. See `EXPANDED_POOL_RESULT.md` for the complete negative result and limits.

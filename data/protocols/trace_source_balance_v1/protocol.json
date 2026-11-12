@@ -1,6 +1,6 @@
 {
   "version": "trace-source-balance-v1",
-  "status": "A1_REPLICATED_EXPANDED_POOL_READY",
+  "status": "A1_REPLICATED_A2_A3_SCREENED_NOT_ADVANCED",
   "frozen_at_local_date": "2026-11-12",
   "separate_from_locked_protocol": "trace_final_v1",
   "backbone": {
@@ -60,6 +60,17 @@
     "perceptual_candidates_at_or_below_32": 0,
     "role_amendment_date": "2026-11-13",
     "role_limit": "FIVES is training-only and retired from future encoder evaluation"
+  },
+  "development_decision": {
+    "selected_arm": "A1",
+    "selected_evidence": "three_seed_development_replication",
+    "a1_mean_delta_macro_auprc": {"k3": 0.0341, "k5": 0.0474},
+    "a2_minus_a1_delta_macro_auprc": {"k3": 0.004020, "k5": 0.005214},
+    "a3_minus_a2_delta_macro_auprc": {"k3": 0.002408, "k5": 0.001728},
+    "a2_advanced": false,
+    "a3_advanced": false,
+    "protected_test_records_accessed": 0,
+    "result_report": "data/protocols/trace_source_balance_v1/EXPANDED_POOL_RESULT.md"
   },
   "claim_limit": "development_only_without_fresh_confirmation"
 }

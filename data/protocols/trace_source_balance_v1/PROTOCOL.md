@@ -1,8 +1,8 @@
 # TRACE source-balance development protocol v1
 
-Current execution status: A1 completed all three predeclared seeds and passed the development replication rule; see `DEVELOPMENT_RESULT.md`. The RFMiD+FIVES expanded pool passed its admission audit, so A2/A3 may now run.
+Current execution status: A1 completed all three predeclared seeds and passed the development replication rule; see `DEVELOPMENT_RESULT.md`. A2 and A3 then completed on the audited RFMiD+FIVES pool but failed the +0.02 advancement gates; see `EXPANDED_POOL_RESULT.md`. A1 remains the selected development arm.
 
-Status: **A1 replicated; expanded pool ready**. Frozen 12 November 2026 before any A2/A3 training. On 13 November, before any A2/A3 run, the role ledger was amended to admit only the exact-deduplicated official FIVES training split after the predeclared licence, split, exact-overlap and perceptual-overlap gates passed. This is a development study and does not modify `trace_final_v1`.
+Status: **A1 replicated; A2/A3 screened and not advanced**. Frozen 12 November 2026 before any A2/A3 training. On 13 November, before any A2/A3 run, the role ledger was amended to admit only the exact-deduplicated official FIVES training split after the predeclared licence, split, exact-overlap and perceptual-overlap gates passed. This is a development study and does not modify `trace_final_v1`.
 
 ## Question
 
@@ -70,6 +70,6 @@ The TRACE graph is explanation-only in this sprint. It preserves input scores an
 
 ## Current gate result
 
-The expanded pool is ready. FIVES contributes 595 unique official-training photographs under CC BY 4.0. All 200 official FIVES test rows remain unopened and excluded, and FIVES is retired from future encoder evaluation. A frozen 3,200-record RFMiD signature ledger from the earlier no-model-score contamination audit found zero exact overlaps and no perceptual candidate at dHash distance 32 or below; the minimum distance was 73. The build opened zero protected RFMiD or FIVES test images. See `pool_fives_summary.json`.
+The expanded pool contains 595 unique official-training FIVES photographs under CC BY 4.0. All 200 official FIVES test rows remain unopened and excluded, and FIVES is retired from future encoder evaluation. A frozen 3,200-record RFMiD signature ledger from the earlier no-model-score contamination audit found zero exact overlaps and no perceptual candidate at dHash distance 32 or below; the minimum distance was 73. The build opened zero protected RFMiD or FIVES test images. A2 and A3 used this pool once and did not advance. See `pool_fives_summary.json` and `EXPANDED_POOL_RESULT.md`.
 
 EyePACS/APTOS remain absent locally; FDR26 is incomplete; EyeQ contains labels without photographs. PALM, Paraguay, EDID and JSIEC retain evaluation roles. RFMiD 2.0 test remains blocked. IDRiD is not admitted.
