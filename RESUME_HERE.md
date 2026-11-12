@@ -71,3 +71,7 @@ The label-hidden 1,917-image RFMiD-v1-training manifest is frozen at `data/proto
 
 The two adapted encoders were also evaluated on the existing 177-image RFMiD 2.0 **validation** split against three frozen encoders using identical K=3 support draws and head. On provisional mapped labels CRS/MS/RT (only 7/6/8 positives), neither adaptation showed a clear cross-release gain. See `data/protocols/trace_ssl_v1/RFMID2_CROSS_RELEASE_DEV.md`. No RFMiD v1 or v2 protected-test member was opened. Next, lock a single final comparison and audit the sealed test archive before a one-time test run; stop retuning on development episodes.
 
+## Final evaluation plan
+
+`data/protocols/trace_final_v1/ANALYSIS_PLAN.md` fixes the primary full-field SSL versus frozen DINOv2-L comparison, K=3 support draws, the 11-label eligibility rule, uncertainty method, secondary RFMiD 2.0 cross-release cohort, duplicate audit and stop conditions. `plan_lock.json` hashes the plan, training features, checkpoints, manifests, episode schedule and source archives without opening test members. Status: plan locked locally; test audit and final evaluation implementation pending. Do not change the plan in response to test labels or scores.
+

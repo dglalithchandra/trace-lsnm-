@@ -1,0 +1,22 @@
+{
+  "version": "trace-final-v1",
+  "status": "LOCAL_ANALYSIS_PLAN_LOCKED_IMPLEMENTATION_AND_TEST_AUDIT_PENDING",
+  "date_local": "2026-11-12",
+  "inputs_sha256": {
+    "data/protocols/trace_final_v1/ANALYSIS_PLAN.md": "b07e2c79cf690592e39c44bd45295a65614e884ecba60fea9810114ec22bb84c",
+    "data/protocols/trace_fewshot_v1/protocol.json": "926401298b143cb7a45fc3f3eafde71285ce22a4fe742f117ae3574078d2b4e2",
+    "data/protocols/trace_fewshot_v1/episode_plan.csv": "3648805b98d9c21d62bd7c0e56b550b3aae99d7f1c9f27f9ea5fb3e8955e8ae8",
+    "data/manifests/trace_analysis_manifest.csv": "2c90ee4bfa0a2799f8a78ba73b14d6485f10830000f82ce1ec5889fd083cd201",
+    "data/features/rfmid_train_dinov2_vits14_geometry_v1.npz": "d961e9f00cc667fbad36899660be0acd5384a33030f9489214eec1a0453629fc",
+    "data/features/rfmid_train_dinov2_vitl14_geometry448_v1.npz": "08c2fc0ce1220d7231ac2d6c64f9de6afafdee27e51dec0ea16376ff5660b54a",
+    "data/features/rfmid_train_retfound_dinov2_meh_geometry448_v1.npz": "9cca0b651eebe0bc2ddbffdaaaa17258a9e0c144e39141eeb4bc3ceda3d8f55f",
+    "data/features/rfmid_train_trace_ssl_plain_crop_matched_epoch5.npz": "ead2d1c64a56c649a8336237360bd11ff932595aa649d6ce43c232c177da8c15",
+    "data/features/rfmid_train_trace_ssl_full_field_epoch5.npz": "e266065ffbcfd968c4a3517eda2aecab044374fe82f3de452e630b3fbb075392",
+    "models/trace_ssl_v1/plain_crop_matched/last.pt": "4a241d7f76e5cd451c194bfd2987a8486911b1947e9647dd9f2e7f8dc6f9153d",
+    "models/trace_ssl_v1/full_field/last.pt": "3c6b17c70f4224803c9e945bde89479df220e5114146554a4d354494e3335da7",
+    "A. RFMiD_All_Classes_Dataset.zip": "6ebdfeede87052751089cf1b8322cbebdd34f37686dcc919267424fc7e647c58",
+    "data/external/RFMiD2.0/RFMiD2_0.zip": "f979241706e334e1db1a56635c2d0c0e08ecdcc44a2b19cd7b614a133ea00f74"
+  },
+  "protected_test_members_opened_by_this_script": 0,
+  "note": "Hashing the outer ZIP bytes is not decoding or inspecting test members. Final extraction and evaluation code must be hashed separately before scoring."
+}
