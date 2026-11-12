@@ -16,6 +16,7 @@ Scope: development-only benchmark, recalibration analysis and explanation-only g
 | `55d6a05` | Separated calibration/evaluation and repeated label-budget analysis |
 | `3b8d536` | Explanation-only graph validator, lookup, conservative graph and curation queue |
 | `9ef23bb` | Synthetic smoke command, final tests and handoff |
+| `60036ef` | Patient/duplicate connected support units, stricter exchange hashes and macro provenance |
 
 The follow-up documentation commit only removes Markdown trailing whitespace and records `9ef23bb` in this table.
 
@@ -86,9 +87,9 @@ The smoke output is written under ignored `outputs/trace_bench_v2/`.
 
 ## Verification results
 
-- Focused suite: `28 passed in 0.10s`.
-- Complete applicable suite: `56 passed, 4 deselected in 1.78s`.
-- Unfiltered complete suite: `56 passed, 4 failed in 2.04s`. The four failures are `test_palm_loader_uses_effective_split_and_palm_masks`, `test_manifest_loader_blocks_test_and_streams_training_image`, `test_manifest_loader_reads_idrid_annotation_masks` and `test_fives_loader_reads_image_and_vessel_mask`. Each fails with `FileNotFoundError` because the ignored PALM, IDRiD or FIVES image archive is absent from this clone. No failure was silently skipped or changed in source.
+- Focused suite: `29 passed in 0.11s`.
+- Complete applicable suite: `57 passed, 4 deselected in 1.82s`.
+- Unfiltered complete suite: `57 passed, 4 failed in 1.94s`. The four failures are `test_palm_loader_uses_effective_split_and_palm_masks`, `test_manifest_loader_blocks_test_and_streams_training_image`, `test_manifest_loader_reads_idrid_annotation_masks` and `test_fives_loader_reads_image_and_vessel_mask`. Each fails with `FileNotFoundError` because the ignored PALM, IDRiD or FIVES image archive is absent from this clone. No failure was silently skipped or changed in source.
 - Synthetic smoke: `PASS synthetic TRACE-Bench v2 smoke: 12 episodes, 10 recalibration rows`.
 - Graph validation: `PASS_GRAPH_SCHEMA`, 21 unresolved curation items, zero asserted mappings, zero knowledge edges, and all four pinned source snapshots reported absent.
 - `compileall` over every new package, script and test: pass with no output.
