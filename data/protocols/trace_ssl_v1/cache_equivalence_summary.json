@@ -1,0 +1,18 @@
+{
+  "status": "CACHE_EQUIVALENT_TO_FROZEN_BASELINE_ON_SAMPLED_IMAGES",
+  "checks": {
+    "train": {
+      "sampled_images": 24,
+      "min_cosine_to_original_extraction": 0.9999998807907104,
+      "mean_cosine_to_original_extraction": 1.0,
+      "max_absolute_embedding_difference": 0.0
+    },
+    "validation": {
+      "sampled_images": 24,
+      "min_cosine_to_original_extraction": 0.999998927116394,
+      "mean_cosine_to_original_extraction": 1.0,
+      "max_absolute_embedding_difference": 0.010912984609603882
+    }
+  },
+  "test_records_accessed": 0
+}

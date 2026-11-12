@@ -35,6 +35,8 @@ def view_plain(image: np.ndarray, mask: np.ndarray, rng: np.random.Generator) ->
     y = int(rng.integers(0, side - crop + 1))
     kept = float((mask[y:y + crop, x:x + crop] > 0).sum() / max((mask > 0).sum(), 1))
     out = cv2.resize(image[y:y + crop, x:x + crop], (side, side), interpolation=cv2.INTER_LINEAR)
+    channel_gain = rng.uniform(0.97, 1.03, size=(1, 1, 3))
+    out = np.clip(out.astype(np.float32) * channel_gain, 0, 255).astype(np.uint8)
     return out, kept
 
 
