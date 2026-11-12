@@ -28,7 +28,7 @@ No byte-identical v1 test-to-development image was found. Six strong local-featu
 
 Two other strong SIFT alarms, test `377`/train `835` and test `506`/train `1577`, had weak aligned detail correlation (0.219 and 0.184) and did not visually match; they are false alarms. This demonstrates why SIFT inliers alone are insufficient for exclusion.
 
-A sensitivity screen of 98 pairs below the original 20-inlier alarm threshold found additional uncertain candidates. Test `226`/train `1292` is especially difficult because both images are heavily blurred; the aligned detail correlation is 0.650, but the visible retinal detail does not independently establish identity. Test `36`/validation `186`, `261`/train `347`, and `175`/train `709` also require a second review. Test `113`/validation `79` and `8`/train `1201` were visually different despite moderate correlations. A high correlation in low-quality images can reflect shared coarse structures or acquisition artifacts.
+A sensitivity screen of 98 pairs below the original 20-inlier alarm threshold found additional uncertain candidates. Test `226`/train `1292` is especially difficult because both images are heavily blurred; the aligned detail correlation is 0.650, but the visible retinal detail does not independently establish identity. Test `175`/train `709` is also unresolved because the training photograph has very little discernible retinal detail. Test `36`/validation `186`, `261`/train `347`, `113`/validation `79`, and `8`/train `1201` were visually different despite moderate correlations. A high correlation in low-quality images can reflect shared coarse structures or acquisition artifacts.
 
 ## Decision and next gate
 
