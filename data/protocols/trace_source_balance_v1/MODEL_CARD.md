@@ -34,3 +34,11 @@ Adding 595 FIVES training images produced only +0.0040 and +0.0052 at K=3/5. Sou
 ```
 
 The loader verifies the base DINOv2 checkpoint, the A1 configuration, completion step and the selected checkpoint SHA-256 before inference.
+
+To apply the locked few-shot ranking head, save positive-support, negative-support and query embeddings as NumPy matrices and run:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\score_trace_fewshot_embeddings.py --positive positive.npy --negative negative.npy --query query.npy --output scores.csv
+```
+
+The output is a signed ranking margin. It is deliberately not labelled as a probability, confidence or diagnosis. Support labels must come from the permitted adaptation set and must not include evaluation queries or related patient/eye records.

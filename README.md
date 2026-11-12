@@ -373,3 +373,5 @@ The selected predeclared seed has a strict image-to-embedding interface:
 ```
 
 It verifies the checkpoint/configuration, runs frozen geometry-only preprocessing and emits 384 values. A real-image smoke test produced a finite `(384,)` float32 vector. The embedding is not a calibrated probability or diagnostic confidence, and no camera-generalization or clinical-safety claim follows from this result.
+
+`scripts/score_trace_fewshot_embeddings.py` fits the same balanced `C=1` logistic head used in the locked evaluation from positive and negative support matrices, then writes query ranking margins. A real-feature smoke test with three positives, 20 negatives and five queries passed. These margins are intentionally not presented as probabilities.
