@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRACE image identity review</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; }
+    body { max-width: 1320px; margin: auto; padding: 20px; color: #17212b; background: #f7f9fb; }
+    h1 { margin: 0 0 8px; font-size: 1.6rem; }
+    p { line-height: 1.5; }
+    .muted { color: #52606d; }
+    .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; flex-wrap: wrap; }
+    .progress { font-weight: 700; white-space: nowrap; }
+    .images { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 20px 0; }
+    figure { margin: 0; min-width: 0; }
+    figcaption { font-weight: 700; margin-bottom: 8px; }
+    figure a { display: block; background: #091015; border-radius: 8px; }
+    img { display: block; width: 100%; max-height: 660px; object-fit: contain; border-radius: 8px; }
+    .controls, .nav, .finish { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    button { padding: 10px 16px; border-radius: 7px; border: 1px solid #8b9aa8; background: white; color: #17212b; font: inherit; cursor: pointer; min-height: 44px; }
+    button:hover { background: #e9f1f8; }
+    button[aria-pressed="true"] { background: #105b9a; border-color: #105b9a; color: white; }
+    button:disabled { opacity: .55; cursor: not-allowed; }
+    .nav { justify-content: space-between; margin: 18px 0; }
+    .finish { border-top: 1px solid #cfd9e2; padding-top: 18px; }
+    label { font-weight: 700; }
+    input { padding: 11px; border: 1px solid #8b9aa8; border-radius: 7px; font: inherit; min-width: 220px; }
+    #message { min-height: 1.6em; font-weight: 600; }
+    @media (max-width: 720px) { .images { grid-template-columns: 1fr; } img { max-height: 520px; } }
+  </style>
+</head>
+<body>
+  <div class="top">
+    <div>
+      <h1>TRACE image identity review</h1>
+      <p class="muted">Compare retinal vessel branches and stable marks. Colour and blur can change between photos. If you cannot tell, choose Unsure. This is an image match check, not a disease diagnosis.</p>
+    </div>
+    <div class="progress" id="progress" aria-live="polite"></div>
+  </div>
+  <h2 id="pairTitle"></h2>
+  <div class="images">
+    <figure><figcaption>Image A · test</figcaption><a id="imageALink" target="_blank" rel="noopener"><img id="imageA" alt="Test retinal photograph"></a></figure>
+    <figure><figcaption id="imageBTitle">Image B · development</figcaption><a id="imageBLink" target="_blank" rel="noopener"><img id="imageB" alt="Development retinal photograph"></a></figure>
+  </div>
+  <p class="muted">Click an image to open it at full size.</p>
+  <div class="controls" role="group" aria-label="Do the photos show the same retinal image or eye?">
+    <button type="button" id="same">Same</button>
+    <button type="button" id="different">Different</button>
+    <button type="button" id="unsure">Unsure</button>
+  </div>
+  <div class="nav">
+    <button type="button" id="previous">← Previous pair</button>
+    <button type="button" id="next">Next pair →</button>
+  </div>
+  <div class="finish">
+    <label for="reviewer">Reviewer name</label>
+    <input id="reviewer" autocomplete="name" placeholder="Your name">
+    <button type="button" id="download" disabled>Download review CSV</button>
+  </div>
+  <p id="message" role="status" aria-live="polite"></p>
+  <p class="muted">The download does not release scoring. Return the CSV so it can be checked and placed in the project. No choice is filled in automatically.</p>
+  <script>
+    const root = '../../../tmp/trace_final_v1_alarm_images/';
+    const rows = [
+      ['rfmid:testing:377','rfmid:training:835','visually_distinct','0.219'],
+      ['rfmid:testing:506','rfmid:training:1577','visually_distinct','0.184'],
+      ['rfmid:testing:541','rfmid:training:1877','likely_duplicate','0.669'],
+      ['rfmid:testing:571','rfmid:training:1818','likely_duplicate','0.795'],
+      ['rfmid:testing:617','rfmid:training:1852','likely_duplicate','0.674'],
+      ['rfmid:testing:620','rfmid:training:1787','likely_duplicate','0.805'],
+      ['rfmid:testing:226','rfmid:training:1292','unresolved_blurry','0.650'],
+      ['rfmid:testing:175','rfmid:training:709','unresolved_blurry','0.559'],
+      ['rfmid:testing:36','rfmid:validation:186','visually_distinct','0.604'],
+      ['rfmid:testing:261','rfmid:training:347','visually_distinct','0.597'],
+      ['rfmid:testing:113','rfmid:validation:79','visually_distinct','0.538'],
+      ['rfmid:testing:8','rfmid:training:1201','visually_distinct','0.508']
+    ].map(([query_id,reference_id,ai_engineering_assessment,aligned_highpass_correlation]) => ({
+      query_id, reference_id, ai_engineering_assessment, aligned_highpass_correlation,
+      query_image: 'tmp/trace_final_v1_alarm_images/' + query_id.replaceAll(':','_') + '.png',
+      reference_image: 'tmp/trace_final_v1_alarm_images/' + reference_id.replaceAll(':','_') + '.png'
+    }));
+    let current = 0;
+    const choices = Array(rows.length).fill('');
+    const $ = id => document.getElementById(id);
+    function saveDraft() {
+      try { localStorage.setItem('trace-v1-image-review', JSON.stringify({choices, reviewer: $('reviewer').value})); } catch (_) {}
+    }
+    function loadDraft() {
+      try {
+        const saved = JSON.parse(localStorage.getItem('trace-v1-image-review') || '{}');
+        if (Array.isArray(saved.choices) && saved.choices.length === rows.length) {
+          saved.choices.forEach((value, index) => { if (['duplicate','distinct','unsure'].includes(value)) choices[index] = value; });
+        }
+        if (typeof saved.reviewer === 'string') $('reviewer').value = saved.reviewer;
+      } catch (_) {}
+    }
+    function render() {
+      const row = rows[current];
+      const a = root + row.query_id.replaceAll(':','_') + '.png';
+      const b = root + row.reference_id.replaceAll(':','_') + '.png';
+      $('pairTitle').textContent = `Pair ${current + 1} of ${rows.length}`;
+      $('imageA').src = a; $('imageALink').href = a;
+      $('imageB').src = b; $('imageBLink').href = b;
+      $('imageBTitle').textContent = `Image B · ${row.reference_id.includes(':validation:') ? 'validation' : 'training'}`;
+      for (const [id, value] of [['same','duplicate'],['different','distinct'],['unsure','unsure']]) $(''+id).setAttribute('aria-pressed', String(choices[current] === value));
+      $('previous').disabled = current === 0;
+      $('next').disabled = current === rows.length - 1;
+      const decided = choices.filter(value => value === 'duplicate' || value === 'distinct').length;
+      const uncertain = choices.filter(value => value === 'unsure').length;
+      $('progress').textContent = `${decided}/${rows.length} decided${uncertain ? ` · ${uncertain} unsure` : ''}`;
+      $('download').disabled = !choices.some(Boolean) || !$('reviewer').value.trim();
+    }
+    function choose(value) {
+      choices[current] = value;
+      saveDraft(); render();
+      $('message').textContent = value === 'unsure' ? 'This pair remains unresolved. The final review cannot be exported yet.' : '';
+    }
+    $('same').addEventListener('click', () => choose('duplicate'));
+    $('different').addEventListener('click', () => choose('distinct'));
+    $('unsure').addEventListener('click', () => choose('unsure'));
+    $('previous').addEventListener('click', () => { current--; render(); });
+    $('next').addEventListener('click', () => { current++; render(); });
+    $('reviewer').addEventListener('input', () => { saveDraft(); render(); });
+    function csvValue(value) { return '"' + String(value).replaceAll('"','""') + '"'; }
+    $('download').addEventListener('click', () => {
+      if ($('download').disabled) return;
+      const header = ['query_id','reference_id','ai_engineering_assessment','aligned_highpass_correlation','query_image','reference_image','human_decision','reviewer'];
+      const reviewer = $('reviewer').value.trim();
+      const lines = [header.join(',')];
+      rows.forEach((row, index) => lines.push(header.map(key => csvValue(key === 'human_decision' ? (choices[index] === 'unsure' ? '' : choices[index]) : key === 'reviewer' ? (choices[index] && choices[index] !== 'unsure' ? reviewer : '') : row[key])).join(',')));
+      const url = URL.createObjectURL(new Blob([lines.join('\r\n') + '\r\n'], {type:'text/csv;charset=utf-8'}));
+      const link = document.createElement('a'); link.href = url; link.download = 'AUDIT_REVIEW_QUEUE.csv'; link.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      $('message').textContent = decidedCount() === rows.length ? 'Completed CSV downloaded. Return it for verification; scoring is still closed.' : 'Draft CSV downloaded with unresolved pairs. Return it for review; scoring remains closed.';
+    });
+    function decidedCount() { return choices.filter(value => value === 'duplicate' || value === 'distinct').length; }
+    loadDraft(); render();
+  </script>
+</body>
+</html>
