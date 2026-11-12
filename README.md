@@ -1,5 +1,10 @@
 # TRACE Preprocessing Module
 
+Current two-laptop assignments: [sprint order](TRACE_CURRENT_SPRINT_ORDER.md) and
+[paste-ready friend prompt](TRACE_FRIEND_FEATURE_PROMPT.md). These supersede the
+older broad collaboration plan; friend work is on `feature`, with an
+explanation-only graph.
+
 For the complete verified project status, completed experiments, test results,
 limitations and next work, see
 [`TRACE_VERIFIED_PROJECT_REPORT_2026-11-12.md`](TRACE_VERIFIED_PROJECT_REPORT_2026-11-12.md).

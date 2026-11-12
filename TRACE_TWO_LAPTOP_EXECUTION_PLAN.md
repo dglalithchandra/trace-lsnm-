@@ -1,5 +1,7 @@
 # TRACE two-laptop execution plan
 
+> Historical broad plan. For the current sprint, follow [TRACE_CURRENT_SPRINT_ORDER.md](TRACE_CURRENT_SPRINT_ORDER.md) and [TRACE_FRIEND_FEATURE_PROMPT.md](TRACE_FRIEND_FEATURE_PROMPT.md). The friend uses only `feature`; the graph is explanation-only. No change to the locked final analysis is implied.
+
 Status date: 2026-11-12
 
 ## 1. The project in one sentence
