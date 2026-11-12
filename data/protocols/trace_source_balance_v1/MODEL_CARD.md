@@ -42,3 +42,11 @@ To apply the locked few-shot ranking head, save positive-support, negative-suppo
 ```
 
 The output is a signed ranking margin. It is deliberately not labelled as a probability, confidence or diagnosis. Support labels must come from the permitted adaptation set and must not include evaluation queries or related patient/eye records.
+
+For the complete image-folder workflow:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\run_trace_fewshot_images.py --positive-dir support_positive --negative-dir support_negative --query-dir queries --output-dir trace_run
+```
+
+The command rejects exact duplicate files across all roles, refuses rejected support images, preserves query QC/rejection status, and writes `query_scores.csv` plus `run_summary.json`. Exact-hash checking does not detect altered copies or guarantee patient/eye independence; the caller must enforce those stronger data boundaries.
