@@ -17,14 +17,14 @@ Three RFMiD 2.0 test images are byte-identical to RFMiD 2.0 development images: 
 
 ## RFMiD v1 cross-split candidate review
 
-No byte-identical v1 test-to-development image was found. Six strong local-feature alarms were reviewed against the original images, and the alarm images were registered and compared using high-frequency image detail. Four test/training pairs appear to be duplicate photographs with matching retinal vessel and lesion patterns:
+No byte-identical v1 test-to-development image was found. Six strong local-feature alarms were reviewed against the original images, and the alarm images were registered and compared using high-frequency image detail. Four test/training pairs appear to be duplicate photographs with matching retinal vessel and lesion patterns. Visual inspection was performed by the AI assistant; this is an engineering assessment, not independent human adjudication:
 
 | Test ID | Training ID | Aligned high-pass correlation | Current audit decision |
 | --- | --- | ---: | --- |
-| `541` | `1877` | 0.669 | visually confirmed duplicate photograph |
-| `571` | `1818` | 0.795 | visually confirmed duplicate photograph |
-| `617` | `1852` | 0.674 | visually confirmed duplicate photograph |
-| `620` | `1787` | 0.805 | visually confirmed duplicate photograph |
+| `541` | `1877` | 0.669 | highly likely duplicate photograph |
+| `571` | `1818` | 0.795 | highly likely duplicate photograph |
+| `617` | `1852` | 0.674 | highly likely duplicate photograph |
+| `620` | `1787` | 0.805 | highly likely duplicate photograph |
 
 Two other strong SIFT alarms, test `377`/train `835` and test `506`/train `1577`, had weak aligned detail correlation (0.219 and 0.184) and did not visually match; they are false alarms. This demonstrates why SIFT inliers alone are insufficient for exclusion.
 
@@ -32,7 +32,7 @@ A sensitivity screen of 98 pairs below the original 20-inlier alarm threshold fo
 
 ## Decision and next gate
 
-Do **not** use the four confirmed duplicate v1 test records as evaluation queries. Do not treat the uncertain pairs as confirmed duplicates or silently exclude them. The locked plan requires human review of ambiguous local-detail matches, so the primary v1 scoring gate remains closed pending documented adjudication. Since patient IDs are absent, even a completed image-duplicate audit cannot prove patient independence.
+Do **not** use the four likely duplicate v1 test records as evaluation queries. Do not treat the uncertain pairs as confirmed duplicates or silently exclude them. The locked plan requires human review of ambiguous local-detail matches, so the primary v1 scoring gate remains closed pending documented adjudication. Since patient IDs are absent, even a completed image-duplicate audit cannot prove patient independence.
 
 For a clean resumption: review the uncertain v1 pairs against original images and registration evidence, record a fixed decision for each before any scoring, then freeze/hash the extraction and evaluation code. Score v1 once only if the audit gate passes. Keep v2 secondary scoring blocked unless an authoritative image-to-label mapping is obtained and its exact overlaps are handled under the fixed rule. No encoder or preprocessing setting may be retuned from this audit.
 

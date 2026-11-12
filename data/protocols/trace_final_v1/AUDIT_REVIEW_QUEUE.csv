@@ -1,0 +1,13 @@
+query_id,reference_id,ai_engineering_assessment,aligned_highpass_correlation,query_image,reference_image,human_decision,reviewer
+rfmid:testing:377,rfmid:training:835,visually_distinct,0.219,tmp/trace_final_v1_alarm_images/rfmid_testing_377.png,tmp/trace_final_v1_alarm_images/rfmid_training_835.png,,
+rfmid:testing:506,rfmid:training:1577,visually_distinct,0.184,tmp/trace_final_v1_alarm_images/rfmid_testing_506.png,tmp/trace_final_v1_alarm_images/rfmid_training_1577.png,,
+rfmid:testing:541,rfmid:training:1877,likely_duplicate,0.669,tmp/trace_final_v1_alarm_images/rfmid_testing_541.png,tmp/trace_final_v1_alarm_images/rfmid_training_1877.png,,
+rfmid:testing:571,rfmid:training:1818,likely_duplicate,0.795,tmp/trace_final_v1_alarm_images/rfmid_testing_571.png,tmp/trace_final_v1_alarm_images/rfmid_training_1818.png,,
+rfmid:testing:617,rfmid:training:1852,likely_duplicate,0.674,tmp/trace_final_v1_alarm_images/rfmid_testing_617.png,tmp/trace_final_v1_alarm_images/rfmid_training_1852.png,,
+rfmid:testing:620,rfmid:training:1787,likely_duplicate,0.805,tmp/trace_final_v1_alarm_images/rfmid_testing_620.png,tmp/trace_final_v1_alarm_images/rfmid_training_1787.png,,
+rfmid:testing:226,rfmid:training:1292,unresolved_blurry,0.650,tmp/trace_final_v1_alarm_images/rfmid_testing_226.png,tmp/trace_final_v1_alarm_images/rfmid_training_1292.png,,
+rfmid:testing:175,rfmid:training:709,unresolved_blurry,0.559,tmp/trace_final_v1_alarm_images/rfmid_testing_175.png,tmp/trace_final_v1_alarm_images/rfmid_training_709.png,,
+rfmid:testing:36,rfmid:validation:186,visually_distinct,0.604,tmp/trace_final_v1_alarm_images/rfmid_testing_36.png,tmp/trace_final_v1_alarm_images/rfmid_validation_186.png,,
+rfmid:testing:261,rfmid:training:347,visually_distinct,0.597,tmp/trace_final_v1_alarm_images/rfmid_testing_261.png,tmp/trace_final_v1_alarm_images/rfmid_training_347.png,,
+rfmid:testing:113,rfmid:validation:79,visually_distinct,0.538,tmp/trace_final_v1_alarm_images/rfmid_testing_113.png,tmp/trace_final_v1_alarm_images/rfmid_validation_79.png,,
+rfmid:testing:8,rfmid:training:1201,visually_distinct,0.508,tmp/trace_final_v1_alarm_images/rfmid_testing_8.png,tmp/trace_final_v1_alarm_images/rfmid_training_1201.png,,
