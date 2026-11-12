@@ -1,5 +1,7 @@
 # TRACE source-balance development protocol v1
 
+Current execution status: A1 seed 20261111 completed and passed the development screen; see `DEVELOPMENT_RESULT.md`. Replication seeds 20261112 and 20261113 are required before the effect is treated as established.
+
 Status: **core arm ready; expanded-pool arms blocked pending record-level admission**. Frozen 12 November 2026 before any A2/A3 training. This is a development study and does not modify `trace_final_v1`.
 
 ## Question
