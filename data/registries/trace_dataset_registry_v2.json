@@ -1,0 +1,211 @@
+{
+  "registry_version": "trace_dataset_registry_v2",
+  "snapshot_date": "2026-11-12",
+  "source_commit": "397ff54",
+  "scope": "Evidence-backed development registry. A proposed role is not record-level admission approval.",
+  "approval_policy": {
+    "training_admission_owner": "Lalith",
+    "default_for_new_training_sources": "proposed_not_approved",
+    "unknown_value_policy": "Keep unsupported source, licence, identity, overlap and pretraining-exposure facts unknown."
+  },
+  "datasets": [
+    {
+      "dataset_id": "rfmid_v1",
+      "dataset_version": "1.0",
+      "source_reference": "https://www.mdpi.com/2306-5729/6/2/14",
+      "licence": {"status": "unknown", "reference": null},
+      "access": {"status": "available_locally", "evidence": "data/DATASET_ACQUISITION_STATUS.md#ready-locally"},
+      "proposed_role": "existing_core_development_training_and_evaluation_under_frozen_protocols",
+      "training_admission": "existing_1917_record_core_only",
+      "verified_metadata": {
+        "patient_id": "not_available",
+        "eye_id": "unknown",
+        "group_id": "known_duplicate_and_related_groups_only",
+        "device_id": "partially_available_with_497_unresolved_records"
+      },
+      "overlap_risk": {"status": "known_and_partially_controlled", "detail": "Known duplicate and related groups are split-grouped; patient independence remains unverifiable."},
+      "pretraining_exposure_risk": {"status": "unknown", "detail": "No complete exposure audit is recorded for every candidate encoder."},
+      "evidence": ["README.md#current-verified-data", "TRACE_VERIFIED_PROJECT_REPORT_2026-11-12.md#data-work-completed"]
+    },
+    {
+      "dataset_id": "idrid",
+      "dataset_version": "grading_localisation_and_segmentation_archives",
+      "source_reference": "https://idrid.grand-challenge.org/",
+      "licence": {"status": "known", "value": "CC-BY-4.0", "reference": "data/manifests/master_manifest.csv"},
+      "access": {"status": "available_locally", "evidence": "data/DATASET_ACQUISITION_STATUS.md#ready-locally"},
+      "proposed_role": "development_lesion_preservation_and_dr_dme_analysis",
+      "training_admission": "not_approved_requires_explicit_role_and_overlap_decision",
+      "verified_metadata": {
+        "patient_id": "not_available",
+        "eye_id": "unknown",
+        "group_id": "known_duplicate_and_related_groups_only",
+        "device_id": "dataset_level_camera_specification"
+      },
+      "overlap_risk": {"status": "known", "detail": "Confirmed overlaps with RFMiD mean IDRiD is not an independent cohort."},
+      "pretraining_exposure_risk": {"status": "unknown"},
+      "evidence": ["README.md#current-verified-data", "TRACE_CURRENT_SPRINT_ORDER.md#file-ownership-and-exchange-contract"]
+    },
+    {
+      "dataset_id": "fives",
+      "dataset_version": "figshare_19688169_v1",
+      "source_reference": "https://doi.org/10.6084/m9.figshare.19688169.v1",
+      "licence": {"status": "known", "value": "CC-BY-4.0", "reference": "data/manifests/fives_manifest.csv"},
+      "access": {"status": "available_locally", "evidence": "data/DATASET_ACQUISITION_STATUS.md#ready-locally"},
+      "proposed_role": "development_vessel_preservation_and_quality_proxy",
+      "training_admission": "not_approved_requires_explicit_role_and_overlap_decision",
+      "verified_metadata": {
+        "patient_id": "not_available",
+        "eye_id": "unknown",
+        "group_id": "exact_duplicate_groups_audited",
+        "device_id": "not_available"
+      },
+      "overlap_risk": {"status": "partially_audited", "detail": "Six exact image pairs and two empty masks are recorded locally."},
+      "pretraining_exposure_risk": {"status": "unknown"},
+      "evidence": ["README.md#current-verified-data", "data/manifests/fives_manifest.csv"]
+    },
+    {
+      "dataset_id": "palm",
+      "dataset_version": "figshare_21299148_v1",
+      "source_reference": "https://doi.org/10.6084/m9.figshare.21299148.v1",
+      "licence": {"status": "known", "value": "CC0-1.0", "reference": "data/manifests/palm_manifest.csv"},
+      "access": {"status": "available_locally", "evidence": "data/DATASET_ACQUISITION_STATUS.md#ready-locally"},
+      "proposed_role": "development_evaluation_only_pathologic_myopia_camera_transfer_and_trust",
+      "training_admission": "prohibited_by_current_sprint_role",
+      "verified_metadata": {
+        "patient_id": "source_reports_split_level_patient_disjointness_but_no_per_image_id",
+        "eye_id": "unknown",
+        "group_id": "exact_duplicate_groups_audited",
+        "device_id": "available"
+      },
+      "overlap_risk": {"status": "known_and_controlled_for_primary_analysis", "detail": "Sixteen exact pairs were found, including eleven crossing official splits; 1,184 primary records remain."},
+      "pretraining_exposure_risk": {"status": "unknown"},
+      "evidence": ["README.md#current-verified-data", "TRACE_CURRENT_SPRINT_ORDER.md#decisions-and-limits"]
+    },
+    {
+      "dataset_id": "paraguay_dr_v03",
+      "dataset_version": "V03_zenodo_4891308",
+      "source_reference": "https://doi.org/10.5281/zenodo.4891308",
+      "licence": {"status": "known", "value": "CC-BY-4.0", "reference": "data/manifests/paraguay_dr_manifest.csv"},
+      "access": {"status": "available_locally", "evidence": "data/DATASET_ACQUISITION_STATUS.md#ready-locally"},
+      "proposed_role": "development_evaluation_only_external_dr_shift_and_trust",
+      "training_admission": "prohibited_by_current_sprint_role",
+      "verified_metadata": {
+        "patient_id": "not_available",
+        "eye_id": "unknown",
+        "group_id": "exact_duplicates_audited",
+        "device_id": "dataset_level_camera_available"
+      },
+      "overlap_risk": {"status": "partially_audited", "detail": "Exact matches against existing manifests and within-dataset duplicates are recorded."},
+      "pretraining_exposure_risk": {"status": "unknown"},
+      "evidence": ["README.md#current-verified-data", "data/manifests/paraguay_dr_manifest.csv"]
+    },
+    {
+      "dataset_id": "jsiec_1000",
+      "dataset_version": "1000_image_release",
+      "source_reference": "unknown",
+      "licence": {"status": "partially_known", "value": "other-open", "reference": "README.md#current-verified-data"},
+      "access": {"status": "available_locally", "evidence": "data/DATASET_ACQUISITION_STATUS.md#ready-locally"},
+      "proposed_role": "development_evaluation_only_label_coverage_and_mapping",
+      "training_admission": "prohibited_by_current_sprint_role",
+      "verified_metadata": {
+        "patient_id": "not_available",
+        "eye_id": "unknown",
+        "group_id": "exact_groups_audited",
+        "device_id": "not_available"
+      },
+      "overlap_risk": {"status": "partially_audited", "detail": "Exact-group screening exists; patient and cross-source reuse remain unverified."},
+      "pretraining_exposure_risk": {"status": "unknown"},
+      "evidence": ["README.md#current-verified-data", "data/manifests/jsiec_exploratory_manifest.csv"]
+    },
+    {
+      "dataset_id": "edid",
+      "dataset_version": "mendeley_v1_original_dataset_only",
+      "source_reference": "https://doi.org/10.17632/s9bfhswzjb.1",
+      "licence": {"status": "known", "value": "CC-BY-4.0", "reference": "data/EDID_SOURCE.md"},
+      "access": {"status": "available_locally", "evidence": "data/EDID_SOURCE.md"},
+      "proposed_role": "development_evaluation_only_exploratory_folder_label_transfer",
+      "training_admission": "prohibited_by_current_sprint_role",
+      "verified_metadata": {
+        "patient_id": "not_available",
+        "eye_id": "unknown",
+        "group_id": "exact_and_near_duplicate_groups_audited",
+        "device_id": "not_available"
+      },
+      "overlap_risk": {"status": "high_and_partially_controlled", "detail": "Cross-folder exact and near duplicates were removed conservatively; cross-dataset screening was not exhaustive."},
+      "pretraining_exposure_risk": {"status": "unknown"},
+      "evidence": ["data/EDID_SOURCE.md", "TRACE_VERIFIED_PROJECT_REPORT_2026-11-12.md#external-and-cross-release-evaluations"]
+    },
+    {
+      "dataset_id": "rfmid_2_0",
+      "dataset_version": "zenodo_7505822",
+      "source_reference": "https://zenodo.org/records/7505822",
+      "licence": {"status": "unknown", "reference": null},
+      "access": {"status": "development_splits_available_test_sealed", "evidence": "data/RFMiD2_SOURCE.md"},
+      "proposed_role": "development_evaluation_only_cross_release_diagnostic",
+      "training_admission": "not_approved",
+      "verified_metadata": {
+        "patient_id": "unknown",
+        "eye_id": "unknown",
+        "group_id": "development_overlap_screen_available",
+        "device_id": "dataset_level_devices_known_per_image_mapping_unverified"
+      },
+      "overlap_risk": {"status": "test_blocked", "detail": "Test image/label identifiers do not align reliably and three exact development overlaps are reported."},
+      "pretraining_exposure_risk": {"status": "unknown"},
+      "evidence": ["data/RFMiD2_SOURCE.md", "data/RFMiD2_DEVELOPMENT_AUDIT.md"]
+    },
+    {
+      "dataset_id": "eyepacs_eyeq",
+      "dataset_version": "eyeq_metadata_with_eyepacs_images_absent",
+      "source_reference": "Kaggle EyePACS competition plus local EyeQ metadata",
+      "licence": {"status": "access_terms_require_acceptance", "reference": "data/DATASET_ACQUISITION_STATUS.md#access-or-licence-blocked"},
+      "access": {"status": "metadata_only_images_absent", "evidence": "data/DATASET_ACQUISITION_STATUS.md"},
+      "proposed_role": "future_training_or_quality_analysis_after_access_overlap_and_role_review",
+      "training_admission": "not_ready_not_approved",
+      "verified_metadata": {
+        "patient_id": "unknown",
+        "eye_id": "unknown",
+        "group_id": "unknown",
+        "device_id": "unknown"
+      },
+      "overlap_risk": {"status": "unknown"},
+      "pretraining_exposure_risk": {"status": "likely_public_exposure_requires_model_specific_audit", "detail": "No model-specific exposure conclusion is recorded."},
+      "evidence": ["data/DATASET_ACQUISITION_STATUS.md", "TRACE_CURRENT_SPRINT_ORDER.md#pc-work-order"]
+    },
+    {
+      "dataset_id": "aptos_2019",
+      "dataset_version": "2019_blindness_detection",
+      "source_reference": "Kaggle APTOS 2019 Blindness Detection competition",
+      "licence": {"status": "access_terms_require_acceptance", "reference": "data/DATASET_ACQUISITION_STATUS.md#access-or-licence-blocked"},
+      "access": {"status": "not_available_locally", "evidence": "TRACE_CURRENT_SPRINT_ORDER.md#pc-work-order"},
+      "proposed_role": "unassigned_until_access_licence_overlap_and_role_review",
+      "training_admission": "not_ready_not_approved",
+      "verified_metadata": {
+        "patient_id": "unknown",
+        "eye_id": "unknown",
+        "group_id": "unknown",
+        "device_id": "unknown"
+      },
+      "overlap_risk": {"status": "unknown"},
+      "pretraining_exposure_risk": {"status": "unknown"},
+      "evidence": ["data/DATASET_ACQUISITION_STATUS.md", "TRACE_CURRENT_SPRINT_ORDER.md#pc-work-order"]
+    },
+    {
+      "dataset_id": "brset",
+      "dataset_version": "physionet_1_0_0",
+      "source_reference": "https://physionet.org/content/brazilian-ophthalmological/1.0.0/",
+      "licence": {"status": "credentialed_terms", "reference": "PhysioNet credentialed access"},
+      "access": {"status": "not_available_credentialing_required", "evidence": "data/DATASET_ACQUISITION_STATUS.md#access-or-licence-blocked"},
+      "proposed_role": "candidate_future_metadata_rich_evaluation_after_access_and_audit",
+      "training_admission": "not_ready_not_approved",
+      "verified_metadata": {
+        "patient_id": "source_reports_available_not_locally_verified",
+        "eye_id": "unknown",
+        "group_id": "unknown",
+        "device_id": "source_reports_available_not_locally_verified"
+      },
+      "overlap_risk": {"status": "unknown"},
+      "pretraining_exposure_risk": {"status": "unknown"},
+      "evidence": ["data/DATASET_ACQUISITION_STATUS.md", "data/protocols/trace_bench_v2/EXTERNAL_MIMIC_FEASIBILITY.md"]
+    }
+  ]
+}

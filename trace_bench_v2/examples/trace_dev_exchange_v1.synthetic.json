@@ -1,0 +1,112 @@
+{
+  "contract_version": "trace_dev_exchange_v1",
+  "data_scope": "synthetic",
+  "created_utc": "2026-11-12T00:00:00Z",
+  "synthetic": true,
+  "row_order": "explicit_zero_based_row_index",
+  "class_order": ["SYN_FINDING_A", "SYN_DISEASE_B"],
+  "label_definitions": [
+    {
+      "label_id": "SYN_FINDING_A",
+      "display_name": "Synthetic finding A",
+      "task_type": "finding",
+      "definition_status": "mapping_pending",
+      "definition_source": null
+    },
+    {
+      "label_id": "SYN_DISEASE_B",
+      "display_name": "Synthetic disease B",
+      "task_type": "disease",
+      "definition_status": "mapping_pending",
+      "definition_source": null
+    }
+  ],
+  "model": {
+    "model_id": "synthetic-model-v1",
+    "architecture": "synthetic-linear-example",
+    "checkpoint_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "code_commit": "397ff54",
+    "precision": "float32",
+    "software_versions": {
+      "python": "3.12",
+      "trace": "synthetic-example"
+    },
+    "feature_spec": {
+      "implementation": "synthetic-example",
+      "width": 3,
+      "pooling": "synthetic_mean",
+      "normalisation": "l2"
+    },
+    "output": {
+      "type": "ranking_score",
+      "calibration_status": "not_probability"
+    }
+  },
+  "preprocessing": {
+    "pipeline_id": "synthetic-no-image-v1",
+    "config_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "implementation": "synthetic-example",
+    "input_shape": [3, 448, 448]
+  },
+  "feature_artifact": {
+    "uri": "outputs/trace_bench_v2/synthetic_features.npy",
+    "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "format": "npy",
+    "dtype": "float32",
+    "shape": [2, 3],
+    "row_index_field": "row_index"
+  },
+  "records": [
+    {
+      "row_index": 0,
+      "record_id": "synthetic:source_a:0001",
+      "split": "synthetic",
+      "dataset_id": "synthetic_dataset_v1",
+      "source_id": "synthetic_source_a",
+      "identities": {
+        "patient": {"value": "synthetic_patient_01", "status": "verified"},
+        "eye": {"value": "left", "status": "source_reported"},
+        "group": {"value": "synthetic_group_01", "status": "verified"},
+        "device": {"value": "synthetic_device_a", "status": "source_reported"}
+      },
+      "targets": [
+        {"label_id": "SYN_FINDING_A", "value": 1},
+        {"label_id": "SYN_DISEASE_B", "value": 0}
+      ],
+      "outputs": [
+        {"label_id": "SYN_FINDING_A", "value": 1.5},
+        {"label_id": "SYN_DISEASE_B", "value": -0.2}
+      ],
+      "qc_measurements": [
+        {
+          "name": "retinal_coverage_fraction",
+          "value": 0.91,
+          "unit": "fraction",
+          "measurement_source": "synthetic-generator"
+        }
+      ]
+    },
+    {
+      "row_index": 1,
+      "record_id": "synthetic:source_b:0002",
+      "split": "synthetic",
+      "dataset_id": "synthetic_dataset_v1",
+      "source_id": "synthetic_source_b",
+      "identities": {
+        "patient": {"value": null, "status": "not_available"},
+        "eye": {"value": null, "status": "unknown"},
+        "group": {"value": "synthetic_group_02", "status": "verified"},
+        "device": {"value": null, "status": "not_available"}
+      },
+      "targets": [
+        {"label_id": "SYN_FINDING_A", "value": 0},
+        {"label_id": "SYN_DISEASE_B", "value": 1}
+      ],
+      "outputs": [
+        {"label_id": "SYN_FINDING_A", "value": -0.4},
+        {"label_id": "SYN_DISEASE_B", "value": 2.1}
+      ],
+      "qc_measurements": []
+    }
+  ]
+}
