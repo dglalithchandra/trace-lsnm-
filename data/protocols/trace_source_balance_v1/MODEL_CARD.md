@@ -49,4 +49,4 @@ For the complete image-folder workflow:
 .\.venv\Scripts\python.exe scripts\run_trace_fewshot_images.py --positive-dir support_positive --negative-dir support_negative --query-dir queries --output-dir trace_run
 ```
 
-The command rejects exact duplicate files across all roles, refuses rejected support images, preserves query QC/rejection status, and writes `query_scores.csv` plus `run_summary.json`. Exact-hash checking does not detect altered copies or guarantee patient/eye independence; the caller must enforce those stronger data boundaries.
+The command rejects exact duplicate files across all roles, refuses rejected support images, preserves query QC/rejection status, and writes `query_scores.csv`, `retrieval.csv` and `run_summary.json`. Retrieval reports the nearest labelled support images and cosine similarity without changing the few-shot ranking score. Exact-hash checking does not detect altered copies or guarantee patient/eye independence; the caller must enforce those stronger data boundaries.

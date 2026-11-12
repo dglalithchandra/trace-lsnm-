@@ -17,7 +17,7 @@ WORKSPACE = Path(__file__).resolve().parents[1]
 if str(WORKSPACE) not in sys.path:
     sys.path.insert(0, str(WORKSPACE))
 
-from trace_models import TraceA1Encoder, TraceFewShotHead
+from trace_models import TraceA1Encoder, TraceFewShotHead, TraceRetrievalIndex
 
 
 IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".bmp", ".tif", ".tiff"}
@@ -74,6 +74,7 @@ def main() -> None:
     parser.add_argument("--query-dir", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--checkpoint", type=Path)
+    parser.add_argument("--retrieval-k", type=int, default=5)
     args = parser.parse_args()
 
     roles = {
@@ -112,6 +113,20 @@ def main() -> None:
     head = TraceFewShotHead().fit(
         np.stack(support["positive_support"]), np.stack(support["negative_support"])
     )
+    support_paths = roles["positive_support"] + roles["negative_support"]
+    retrieval = TraceRetrievalIndex(
+        np.stack(support["positive_support"] + support["negative_support"]),
+        [
+            {
+                "support_role": (
+                    "positive_support" if index < len(roles["positive_support"]) else "negative_support"
+                ),
+                "support_path": str(path.resolve()),
+                "support_image_sha256": image_hashes[str(path.resolve())],
+            }
+            for index, path in enumerate(support_paths)
+        ],
+    )
     query_paths: list[Path] = []
     query_embeddings: list[np.ndarray] = []
     rejected: list[Path] = []
@@ -123,6 +138,14 @@ def main() -> None:
             query_paths.append(path)
             query_embeddings.append(value)
     scores = head.score(np.stack(query_embeddings)) if query_embeddings else np.empty(0)
+    if args.retrieval_k < 1:
+        raise ValueError("--retrieval-k must be positive")
+    effective_retrieval_k = min(args.retrieval_k, len(support_paths))
+    neighbors = (
+        retrieval.search(np.stack(query_embeddings), top_k=effective_retrieval_k)
+        if query_embeddings
+        else []
+    )
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
     score_path = args.output_dir / "query_scores.csv"
@@ -135,6 +158,22 @@ def main() -> None:
                 (str(path.resolve()), "scored" if path in score_by_path else "rejected", score_by_path.get(path, ""))
             )
 
+    retrieval_path = args.output_dir / "retrieval.csv"
+    with retrieval_path.open("w", newline="", encoding="utf-8") as stream:
+        fieldnames = (
+            "query_path",
+            "rank",
+            "cosine_similarity",
+            "support_role",
+            "support_path",
+            "support_image_sha256",
+        )
+        writer = csv.DictWriter(stream, fieldnames=fieldnames, lineterminator="\n")
+        writer.writeheader()
+        for query_path, query_neighbors in zip(query_paths, neighbors, strict=True):
+            for item in query_neighbors:
+                writer.writerow({"query_path": str(query_path.resolve()), **item})
+
     summary = {
         "status": "RESEARCH_ONLY_COMPLETE",
         "model_id": f"trace_a1_seed_{encoder.config['seed']}",
@@ -144,10 +183,14 @@ def main() -> None:
         "query_scored": len(query_paths),
         "query_rejected": len(rejected),
         "scores_file": str(score_path.resolve()),
+        "retrieval_file": str(retrieval_path.resolve()),
+        "retrieval_k_requested": args.retrieval_k,
+        "retrieval_k_effective": effective_retrieval_k,
         "image_audit": audit_rows,
         "interpretation": (
             "Ranking margins are conditional on these support images and are not calibrated "
-            "probabilities, diagnostic certainty or clinical decisions."
+            "probabilities, diagnostic certainty or clinical decisions. Retrieval is an "
+            "inspectable cosine-similarity aid and does not alter the ranking margin."
         ),
         "research_only": True,
     }
