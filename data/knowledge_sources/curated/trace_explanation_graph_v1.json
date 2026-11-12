@@ -1,0 +1,89 @@
+{
+  "schema_version": "trace_explanation_graph_v1",
+  "graph_version": "1.0.0",
+  "purpose": "explanation_only_preserve_model_ranking",
+  "clinical_verification_status": "not_clinician_verified",
+  "source_availability_note": "Pinned raw ontology snapshots are intentionally ignored by Git and are absent from this clone. No ontology mapping or medical relationship is asserted until those files are hash-verified and curated.",
+  "sources": [
+    {
+      "source_id": "MONDO_RARE",
+      "source_version": "2026-11-03",
+      "relative_path": "data/knowledge_sources/raw/mondo-rare.json",
+      "expected_sha256": "63e23ea2ecddfd0ed47f5eb6be886f15d9e3b1ac36f2380b09700c79542f6cc4",
+      "available_in_clone": false,
+      "licence": "CC-BY-4.0"
+    },
+    {
+      "source_id": "HPO",
+      "source_version": "2026-09-01",
+      "relative_path": "data/knowledge_sources/raw/hp.json",
+      "expected_sha256": "a7b3a012e7b4007a35a7cf8da35f2373b54cc16907f80d13d62470d31f833501",
+      "available_in_clone": false,
+      "licence": "preserve HPO attribution and current project terms"
+    },
+    {
+      "source_id": "ORPHANET_NOMENCLATURE",
+      "source_version": "2026-06-23",
+      "relative_path": "data/knowledge_sources/raw/orphanet_nomenclature_en_product1.xml",
+      "expected_sha256": "df8d562a0c6011af36a74eb4000ce81ca7d723e8031010819fb71727c0962bbb",
+      "available_in_clone": false,
+      "licence": "CC-BY-4.0"
+    },
+    {
+      "source_id": "ORPHANET_PHENOTYPES",
+      "source_version": "2026-06-23",
+      "relative_path": "data/knowledge_sources/raw/orphanet_phenotypes_en_product4.xml",
+      "expected_sha256": "4f44e8a61201399911aa1ba44a293c0ccaa5ce11272c47d40862255cb72f6b32",
+      "available_in_clone": false,
+      "licence": "CC-BY-4.0"
+    }
+  ],
+  "nodes": [
+    {"node_id": "TRACE_LABEL:DR", "label": "DR", "entity_type": "pending_definition", "definition": null},
+    {"node_id": "TRACE_LABEL:ARMD", "label": "ARMD", "entity_type": "pending_definition", "definition": null},
+    {"node_id": "TRACE_LABEL:MH", "label": "MH", "entity_type": "pending_definition", "definition": null},
+    {"node_id": "TRACE_LABEL:DN", "label": "DN", "entity_type": "pending_definition", "definition": null},
+    {"node_id": "TRACE_LABEL:MYA", "label": "MYA", "entity_type": "pending_definition", "definition": null},
+    {"node_id": "TRACE_LABEL:BRVO", "label": "BRVO", "entity_type": "pending_definition", "definition": null},
+    {"node_id": "TRACE_LABEL:TSLN", "label": "TSLN", "entity_type": "pending_definition", "definition": null},
+    {"node_id": "TRACE_LABEL:ODC", "label": "ODC", "entity_type": "pending_definition", "definition": null},
+    {"node_id": "TRACE_LABEL:ODP", "label": "ODP", "entity_type": "pending_definition", "definition": null},
+    {"node_id": "TRACE_LABEL:ODE", "label": "ODE", "entity_type": "pending_definition", "definition": null},
+    {"node_id": "TRACE_LABEL:ERM", "label": "ERM", "entity_type": "pending_definition", "definition": null},
+    {"node_id": "TRACE_LABEL:LS", "label": "LS", "entity_type": "pending_definition", "definition": null},
+    {"node_id": "TRACE_LABEL:MS", "label": "MS", "entity_type": "finding", "definition": null},
+    {"node_id": "TRACE_LABEL:CSR", "label": "CSR", "entity_type": "pending_definition", "definition": null},
+    {"node_id": "TRACE_LABEL:CRVO", "label": "CRVO", "entity_type": "pending_definition", "definition": null},
+    {"node_id": "TRACE_LABEL:AION", "label": "AION", "entity_type": "pending_definition", "definition": null},
+    {"node_id": "TRACE_LABEL:RT", "label": "RT", "entity_type": "finding", "definition": null},
+    {"node_id": "TRACE_LABEL:RS", "label": "RS", "entity_type": "pending_definition", "definition": null},
+    {"node_id": "TRACE_LABEL:CRS", "label": "CRS", "entity_type": "pending_definition", "definition": null},
+    {"node_id": "TRACE_LABEL:EDN", "label": "EDN", "entity_type": "pending_definition", "definition": null},
+    {"node_id": "TRACE_LABEL:RPEC", "label": "RPEC", "entity_type": "pending_definition", "definition": null}
+  ],
+  "mappings": [],
+  "knowledge_edges": [],
+  "curation_queue": [
+    {"label_id": "DR", "target_namespace": "MONDO_OR_ORPHA_OR_HPO_after_definition_review", "reason": "pinned_source_absent"},
+    {"label_id": "ARMD", "target_namespace": "MONDO_OR_ORPHA_OR_HPO_after_definition_review", "reason": "pinned_source_absent"},
+    {"label_id": "MH", "target_namespace": "MONDO_OR_ORPHA_OR_HPO_after_definition_review", "reason": "pinned_source_absent"},
+    {"label_id": "DN", "target_namespace": "MONDO_OR_ORPHA_OR_HPO_after_definition_review", "reason": "pinned_source_absent"},
+    {"label_id": "MYA", "target_namespace": "MONDO_OR_ORPHA_OR_HPO_after_definition_review", "reason": "pinned_source_absent"},
+    {"label_id": "BRVO", "target_namespace": "MONDO_OR_ORPHA_OR_HPO_after_definition_review", "reason": "pinned_source_absent"},
+    {"label_id": "TSLN", "target_namespace": "MONDO_OR_ORPHA_OR_HPO_after_definition_review", "reason": "pinned_source_absent"},
+    {"label_id": "ODC", "target_namespace": "MONDO_OR_ORPHA_OR_HPO_after_definition_review", "reason": "pinned_source_absent"},
+    {"label_id": "ODP", "target_namespace": "MONDO_OR_ORPHA_OR_HPO_after_definition_review", "reason": "pinned_source_absent"},
+    {"label_id": "ODE", "target_namespace": "MONDO_OR_ORPHA_OR_HPO_after_definition_review", "reason": "pinned_source_absent"},
+    {"label_id": "ERM", "target_namespace": "MONDO_OR_ORPHA_OR_HPO_after_definition_review", "reason": "pinned_source_absent"},
+    {"label_id": "LS", "target_namespace": "MONDO_OR_ORPHA_OR_HPO_after_definition_review", "reason": "pinned_source_absent"},
+    {"label_id": "MS", "target_namespace": "HPO", "reason": "pinned_source_absent"},
+    {"label_id": "CSR", "target_namespace": "MONDO_OR_ORPHA_OR_HPO_after_definition_review", "reason": "pinned_source_absent"},
+    {"label_id": "CRVO", "target_namespace": "MONDO_OR_ORPHA_OR_HPO_after_definition_review", "reason": "pinned_source_absent"},
+    {"label_id": "AION", "target_namespace": "MONDO_OR_ORPHA_OR_HPO_after_definition_review", "reason": "pinned_source_absent"},
+    {"label_id": "RT", "target_namespace": "HPO", "reason": "pinned_source_absent"},
+    {"label_id": "RS", "target_namespace": "MONDO_OR_ORPHA_OR_HPO_after_definition_review", "reason": "pinned_source_absent"},
+    {"label_id": "CRS", "target_namespace": "MONDO_OR_ORPHA_OR_HPO_after_definition_review", "reason": "pinned_source_absent"},
+    {"label_id": "EDN", "target_namespace": "MONDO_OR_ORPHA_OR_HPO_after_definition_review", "reason": "source_code_conflict_and_pinned_source_absent"},
+    {"label_id": "RPEC", "target_namespace": "MONDO_OR_ORPHA_OR_HPO_after_definition_review", "reason": "pinned_source_absent"}
+  ]
+}
