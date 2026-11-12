@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import math
+import re
 from pathlib import Path
 from typing import Any, Mapping
 
@@ -26,6 +27,9 @@ _DEVELOPMENT_SPLITS = {
 }
 _KNOWN_ID_STATUSES = {"verified", "source_reported"}
 _MISSING_ID_STATUSES = {"not_available", "unknown"}
+_IDENTITY_STATUSES = _KNOWN_ID_STATUSES | _MISSING_ID_STATUSES
+_SHA256 = re.compile(r"^[a-f0-9]{64}$")
+_COMMIT = re.compile(r"^[a-f0-9]{7,40}$")
 
 
 def _reject_non_json_constant(value: str) -> None:
@@ -56,6 +60,8 @@ def _require_list(value: Any, location: str) -> list[Any]:
 def _check_identity(identity: Mapping[str, Any], location: str) -> None:
     status = identity.get("status")
     value = identity.get("value")
+    if status not in _IDENTITY_STATUSES:
+        raise ExchangeValidationError(f"{location}.status is invalid")
     if status in _KNOWN_ID_STATUSES and not isinstance(value, str):
         raise ExchangeValidationError(f"{location}.value is required for status {status}")
     if status in _MISSING_ID_STATUSES and value is not None:
@@ -119,6 +125,10 @@ def validate_exchange(payload: Mapping[str, Any]) -> None:
         raise ExchangeValidationError("label_definitions must exactly match class_order")
 
     model = _require_mapping(root.get("model"), "model")
+    if not _SHA256.fullmatch(str(model.get("checkpoint_sha256", ""))):
+        raise ExchangeValidationError("model.checkpoint_sha256 must be lowercase SHA-256")
+    if not _COMMIT.fullmatch(str(model.get("code_commit", ""))):
+        raise ExchangeValidationError("model.code_commit must be a Git commit hash")
     output = _require_mapping(model.get("output"), "model.output")
     output_type = output.get("type")
     calibration_status = output.get("calibration_status")
@@ -134,6 +144,10 @@ def validate_exchange(payload: Mapping[str, Any]) -> None:
     if isinstance(feature_width, bool) or not isinstance(feature_width, int) or feature_width < 1:
         raise ExchangeValidationError("model.feature_spec.width must be a positive integer")
 
+    preprocessing = _require_mapping(root.get("preprocessing"), "preprocessing")
+    if not _SHA256.fullmatch(str(preprocessing.get("config_sha256", ""))):
+        raise ExchangeValidationError("preprocessing.config_sha256 must be lowercase SHA-256")
+
     records = _require_list(root.get("records"), "records")
     record_ids: list[str] = []
     for index, raw_record in enumerate(records):
@@ -148,6 +162,9 @@ def validate_exchange(payload: Mapping[str, Any]) -> None:
             raise ExchangeValidationError(
                 f"records[{index}].split is not a permitted development split"
             )
+        for field in ("dataset_id", "source_id"):
+            if not isinstance(record.get(field), str) or not record[field]:
+                raise ExchangeValidationError(f"records[{index}].{field} must be non-empty")
         identities = _require_mapping(record.get("identities"), f"records[{index}].identities")
         for name in ("patient", "eye", "group", "device"):
             identity = _require_mapping(
@@ -170,6 +187,8 @@ def validate_exchange(payload: Mapping[str, Any]) -> None:
         raise ExchangeValidationError("record_id values must be unique")
 
     artifact = _require_mapping(root.get("feature_artifact"), "feature_artifact")
+    if not _SHA256.fullmatch(str(artifact.get("sha256", ""))):
+        raise ExchangeValidationError("feature_artifact.sha256 must be lowercase SHA-256")
     shape = _require_list(artifact.get("shape"), "feature_artifact.shape")
     if shape != [len(records), feature_width]:
         raise ExchangeValidationError(

@@ -80,11 +80,50 @@ def _stable_seed(global_seed: int, label_id: str, k: int, replicate: int) -> int
     return int.from_bytes(hashlib.sha256(value).digest()[:8], "big") % (2**32)
 
 
-def _unique_by_sampling_unit(records: Sequence[CandidateRecord]) -> list[CandidateRecord]:
-    selected: dict[str, CandidateRecord] = {}
-    for record in sorted(records, key=lambda item: item.record_id):
-        selected.setdefault(record.sampling_unit(), record)
-    return list(selected.values())
+def _support_units(
+    records: Sequence[CandidateRecord], label_id: str
+) -> tuple[list[CandidateRecord], list[CandidateRecord]]:
+    """Collapse records connected by any known patient or duplicate-group ID."""
+
+    ordered = sorted(records, key=lambda item: item.record_id)
+    parent = list(range(len(ordered)))
+
+    def find(index: int) -> int:
+        while parent[index] != index:
+            parent[index] = parent[parent[index]]
+            index = parent[index]
+        return index
+
+    def union(left: int, right: int) -> None:
+        left_root = find(left)
+        right_root = find(right)
+        if left_root != right_root:
+            parent[right_root] = left_root
+
+    owners: dict[str, int] = {}
+    for index, record in enumerate(ordered):
+        keys = record.known_separation_keys() or {f"record:{record.record_id}"}
+        for key in keys:
+            if key in owners:
+                union(index, owners[key])
+            else:
+                owners[key] = index
+
+    components: dict[int, list[CandidateRecord]] = {}
+    for index, record in enumerate(ordered):
+        components.setdefault(find(index), []).append(record)
+
+    positive: list[CandidateRecord] = []
+    negative: list[CandidateRecord] = []
+    for component in components.values():
+        values = {record.labels.get(label_id) for record in component}
+        representative = component[0]
+        if values == {1}:
+            positive.append(representative)
+        elif values == {0}:
+            negative.append(representative)
+        # Unknown or conflicting groups are intentionally ineligible.
+    return positive, negative
 
 
 def _validate_records(records: Sequence[CandidateRecord]) -> None:
@@ -146,12 +185,7 @@ def build_episode_plan(
     unsupported: list[UnsupportedSetting] = []
     query_ids = tuple(record.record_id for record in sorted(query, key=lambda item: item.record_id))
     for label_id in label_ids:
-        positive = _unique_by_sampling_unit(
-            [record for record in support if record.labels.get(label_id) == 1]
-        )
-        negative = _unique_by_sampling_unit(
-            [record for record in support if record.labels.get(label_id) == 0]
-        )
+        positive, negative = _support_units(support, label_id)
         query_positive = sum(record.labels.get(label_id) == 1 for record in query)
         query_negative = sum(record.labels.get(label_id) == 0 for record in query)
         for k in k_grid:

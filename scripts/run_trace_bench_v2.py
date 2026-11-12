@@ -126,19 +126,26 @@ def main() -> None:
         replicates=2,
         global_seed=args.seed,
     )
+    plan_sha256 = episode_plan_hash(plan)
     per_label = [
-        evaluate_binary(
+        {
+            "label_id": "SYN_A",
+            "result": evaluate_binary(
             [0, 1, 0, 1, 0, 1],
             [0.1, 0.9, 0.25, 0.75, 0.4, 0.6],
             score_type="probability",
             calibration_status="uncalibrated_probability",
         ),
-        evaluate_binary(
+        },
+        {
+            "label_id": "SYN_B",
+            "result": evaluate_binary(
             [0, 0, 1, 1, 0, 1],
             [0.2, 0.3, 0.8, 0.7, 0.4, 0.6],
             score_type="probability",
             calibration_status="uncalibrated_probability",
         ),
+        },
     ]
     paired = paired_bootstrap_difference(
         synthetic_paired_observations(), resamples=100, seed=args.seed
@@ -170,12 +177,17 @@ def main() -> None:
         "seed": args.seed,
         "exchange_contract_version": exchange["contract_version"],
         "episode_plan": {
-            "hash": episode_plan_hash(plan),
+            "hash": plan_sha256,
             "episode_count": len(plan.episodes),
             "unsupported": [asdict(item) for item in plan.unsupported],
             "patient_independence": plan.patient_independence,
         },
-        "macro_metrics": macro_metrics(per_label),
+        "per_label_metrics": per_label,
+        "macro_metrics": macro_metrics(
+            [item["result"] for item in per_label],
+            episode_plan_sha256=plan_sha256,
+            seeds=[episode.seed for episode in plan.episodes],
+        ),
         "paired_uncertainty": paired,
         "recalibration": {
             "budgets": recalibration["budgets"],

@@ -184,7 +184,12 @@ def evaluate_binary(
     }
 
 
-def macro_metrics(results: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
+def macro_metrics(
+    results: Sequence[Mapping[str, Any]],
+    *,
+    episode_plan_sha256: str | None = None,
+    seeds: Sequence[int] = (),
+) -> dict[str, Any]:
     """Average defined per-label/episode metrics and retain exclusions."""
 
     names = sorted(
@@ -208,4 +213,8 @@ def macro_metrics(results: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
             "total_count": len(results),
             "undefined_reasons": dict(sorted(reasons.items())),
         }
+    output["_provenance"] = {
+        "episode_plan_sha256": episode_plan_sha256,
+        "seeds": [int(seed) for seed in seeds],
+    }
     return output

@@ -150,6 +150,22 @@ def test_episode_plan_rejects_known_group_leakage():
         build_episode_plan(records, ["A"], k_values=(1,), replicates=1)
 
 
+def test_support_collapses_records_connected_by_patient_or_duplicate_group():
+    records = episode_records()
+    records[1] = CandidateRecord(
+        record_id=records[1].record_id,
+        split=records[1].split,
+        labels=records[1].labels,
+        patient_id=records[1].patient_id,
+        group_id=records[0].group_id,
+    )
+    plan = build_episode_plan(records, ["A"], k_values=(5, 6), replicates=1)
+    assert len(plan.episodes) == 1
+    assert plan.episodes[0].k == 5
+    assert plan.unsupported[0].k == 6
+    assert plan.unsupported[0].available_positive_units == 5
+
+
 def test_metrics_match_independently_computed_small_example():
     result = evaluate_binary(
         [1, 0, 1],
@@ -178,6 +194,7 @@ def test_non_probability_and_one_class_metrics_retain_failure_reasons():
     macro = macro_metrics([result])
     assert macro["auroc"]["defined_count"] == 0
     assert macro["auroc"]["undefined_reasons"] == {"requires_both_evaluation_classes": 1}
+    assert macro["_provenance"] == {"episode_plan_sha256": None, "seeds": []}
 
 
 def test_threshold_metrics_require_a_separate_partition():
