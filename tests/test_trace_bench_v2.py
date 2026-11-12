@@ -7,6 +7,8 @@ import pytest
 from trace_bench_v2 import ExchangeValidationError, load_exchange, validate_exchange
 from trace_bench_v2 import (
     CandidateRecord,
+    CalibrationRecord,
+    CalibrationSeparationError,
     EpisodeConfigurationError,
     PairedObservation,
     build_episode_plan,
@@ -14,6 +16,7 @@ from trace_bench_v2 import (
     evaluate_binary,
     macro_metrics,
     paired_bootstrap_difference,
+    run_label_budget_analysis,
 )
 
 
@@ -234,3 +237,85 @@ def test_paired_bootstrap_falls_back_to_image_level_with_a_limit():
     result = paired_bootstrap_difference(observations, resamples=20, seed=3)
     assert result["query_resampling_unit"] == "image_record"
     assert "image-level" in result["limitation"]
+
+
+def calibration_records(calibration_targets=(0, 1) * 30):
+    records = [
+        CalibrationRecord(
+            record_id=f"cal:{index}",
+            partition="calibration",
+            target=target,
+            score=0.15 + 0.7 * target + (index % 3) * 0.01,
+            group_id=f"cal_group:{index}",
+        )
+        for index, target in enumerate(calibration_targets)
+    ]
+    records.extend(
+        CalibrationRecord(
+            record_id=f"eval:{index}",
+            partition="evaluation",
+            target=target,
+            score=(0.2, 0.8, 0.3, 0.7)[index],
+            group_id=f"eval_group:{index}",
+        )
+        for index, target in enumerate((0, 1, 0, 1))
+    )
+    return records
+
+
+def test_label_budget_analysis_separates_fit_and_evaluation():
+    result = run_label_budget_analysis(
+        calibration_records(), budgets=(0, 5, 10, 20, 50), repeats=2, global_seed=5
+    )
+    assert result["evaluation_labels_used_for_fitting"] == 0
+    assert len(result["rows"]) == 10
+    zero = [row for row in result["rows"] if row["budget"] == 0]
+    assert all(row["status"] == "feasible_no_target_fit" for row in zero)
+    assert all(row["fit"]["calibration_method"] == "none_frozen_source_rule" for row in zero)
+    repaired = [row for row in result["rows"] if row["budget"] == 50]
+    assert all(row["status"] == "feasible" for row in repaired)
+    assert all(row["calibration_positive"] + row["calibration_negative"] == 50 for row in repaired)
+
+
+def test_evaluation_labels_cannot_change_the_fitted_threshold():
+    first_records = calibration_records()
+    second_records = [
+        CalibrationRecord(
+            record_id=item.record_id,
+            partition=item.partition,
+            target=(1 - item.target if item.partition == "evaluation" else item.target),
+            score=item.score,
+            group_id=item.group_id,
+        )
+        for item in first_records
+    ]
+    first = run_label_budget_analysis(first_records, budgets=(20,), repeats=1, global_seed=17)
+    second = run_label_budget_analysis(second_records, budgets=(20,), repeats=1, global_seed=17)
+    assert first["rows"][0]["fit"]["threshold"] == second["rows"][0]["fit"]["threshold"]
+    assert first["rows"][0]["fit"]["calibration_slope"] == second["rows"][0]["fit"]["calibration_slope"]
+
+
+def test_one_class_and_insufficient_calibration_draws_are_infeasible():
+    one_class = run_label_budget_analysis(
+        calibration_records((0,) * 10), budgets=(5,), repeats=1, global_seed=1
+    )
+    assert one_class["rows"][0]["status"] == "infeasible"
+    assert "both_classes" in one_class["rows"][0]["reason"]
+
+    insufficient = run_label_budget_analysis(
+        calibration_records((0, 1) * 3), budgets=(10,), repeats=1, global_seed=1
+    )
+    assert insufficient["rows"][0]["reason"] == "insufficient_distinct_calibration_units"
+
+
+def test_calibration_rejects_known_group_overlap():
+    records = calibration_records()
+    records[-1] = CalibrationRecord(
+        record_id=records[-1].record_id,
+        partition="evaluation",
+        target=records[-1].target,
+        score=records[-1].score,
+        group_id="cal_group:0",
+    )
+    with pytest.raises(CalibrationSeparationError, match="known_group_overlap"):
+        run_label_budget_analysis(records, budgets=(0,), repeats=1)

@@ -12,9 +12,16 @@ from .episodes import (
 )
 from .metrics import evaluate_binary, macro_metrics
 from .paired import PairedObservation, paired_bootstrap_difference
+from .calibration import (
+    CalibrationRecord,
+    CalibrationSeparationError,
+    run_label_budget_analysis,
+)
 
 __all__ = [
     "CandidateRecord",
+    "CalibrationRecord",
+    "CalibrationSeparationError",
     "Episode",
     "EpisodeConfigurationError",
     "EpisodePlan",
@@ -27,5 +34,6 @@ __all__ = [
     "load_exchange",
     "macro_metrics",
     "paired_bootstrap_difference",
+    "run_label_budget_analysis",
     "validate_exchange",
 ]
