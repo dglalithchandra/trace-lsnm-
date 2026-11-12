@@ -7,9 +7,11 @@ data/processed/
 data/external/
 data/features/
 outputs/
+output/
 models/
 *.zip
 *.rar
 tmp/
 data/knowledge_sources/raw/
+release/trace_camera_module_v1/freeze.log
 
