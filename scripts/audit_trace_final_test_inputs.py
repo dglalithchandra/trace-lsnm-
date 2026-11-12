@@ -24,6 +24,7 @@ MANIFEST = ROOT / "data/manifests/trace_analysis_manifest.csv"
 V1_ARCHIVE = ROOT / "A. RFMiD_All_Classes_Dataset.zip"
 V2_ARCHIVE = ROOT / "data/external/RFMiD2.0/RFMiD2_0.zip"
 OUTPUT = ROOT / "outputs/trace_final_v1_audit"
+V1_CACHE = ROOT / "tmp/trace_final_v1_audit_v1_signatures.json"
 
 
 def hamming(a: int, b: int) -> int:
@@ -46,7 +47,7 @@ def main() -> None:
     args = parser.parse_args()
     if not args.open_test_for_audit:
         raise RuntimeError("Pass --open-test-for-audit only after the analysis plan is committed")
-    if OUTPUT.exists():
+    if (OUTPUT / "summary.json").exists():
         raise RuntimeError(f"Audit output exists; do not overwrite an earlier test read: {OUTPUT}")
     lock = json.loads(LOCK.read_text(encoding="utf-8"))
     for path in (MANIFEST, V1_ARCHIVE, V2_ARCHIVE):
@@ -65,17 +66,28 @@ def main() -> None:
         split_groups[row["split_group_id"]].add(row["final_split"])
     if any(len(splits) != 1 for splits in split_groups.values()):
         raise RuntimeError("Known duplicate group crosses final splits")
-    v1 = []
-    with zipfile.ZipFile(V1_ARCHIVE) as archive:
-        for i, row in enumerate(records, 1):
-            raw = archive.read(row["archive_member"])
-            computed_code, _ = signature(raw)
-            recorded_code = row["perceptual_hash_dhash256"]
-            if recorded_code and (len(recorded_code) != 64 or int(recorded_code, 16) != computed_code):
-                raise RuntimeError(f"Recorded v1 dHash differs for {row['record_id']}")
-            v1.append({"id": row["record_id"], "pool": f"v1_{row['final_split']}", "sha256": hashlib.sha256(raw).hexdigest(), "dhash": computed_code, "member": row["archive_member"]})
-            if i % 500 == 0:
-                print(f"v1 audit images {i}/{len(records)}", flush=True)
+    if V1_CACHE.exists():
+        cached = json.loads(V1_CACHE.read_text(encoding="utf-8"))
+        if cached["archive_sha256"] != lock["inputs_sha256"]["A. RFMiD_All_Classes_Dataset.zip"] or cached["manifest_sha256"] != lock["inputs_sha256"]["data/manifests/trace_analysis_manifest.csv"]:
+            raise RuntimeError("Staged v1 signature cache does not match locked inputs")
+        v1 = cached["records"]
+        if len(v1) != 3200 or {item["id"] for item in v1} != {row["record_id"] for row in records}:
+            raise RuntimeError("Staged v1 signature cache is incomplete")
+        print(f"Reusing {len(v1)} locked-input v1 audit signatures", flush=True)
+    else:
+        v1 = []
+        with zipfile.ZipFile(V1_ARCHIVE) as archive:
+            for i, row in enumerate(records, 1):
+                raw = archive.read(row["archive_member"])
+                computed_code, _ = signature(raw)
+                recorded_code = row["perceptual_hash_dhash256"]
+                if recorded_code and (len(recorded_code) != 64 or int(recorded_code, 16) != computed_code):
+                    raise RuntimeError(f"Recorded v1 dHash differs for {row['record_id']}")
+                v1.append({"id": row["record_id"], "pool": f"v1_{row['final_split']}", "sha256": hashlib.sha256(raw).hexdigest(), "dhash": computed_code, "member": row["archive_member"]})
+                if i % 500 == 0:
+                    print(f"v1 audit images {i}/{len(records)}", flush=True)
+        V1_CACHE.parent.mkdir(parents=True, exist_ok=True)
+        V1_CACHE.write_text(json.dumps({"archive_sha256": lock["inputs_sha256"]["A. RFMiD_All_Classes_Dataset.zip"], "manifest_sha256": lock["inputs_sha256"]["data/manifests/trace_analysis_manifest.csv"], "records": v1}), encoding="utf-8")
     v2 = []
     v2_schema = {}
     with zipfile.ZipFile(V2_ARCHIVE) as outer:
@@ -88,8 +100,8 @@ def main() -> None:
                 text = inner.read(csv_members[0]).decode("cp1252")
                 rows = list(csv.DictReader(io.StringIO(text)))
                 image_by_id = {Path(name).stem: name for name in jpg_members}
-                if len(image_by_id) != len(jpg_members) or len(rows) != len(jpg_members):
-                    raise RuntimeError(f"v2 {split} image/label count mismatch")
+                if len(image_by_id) != len(jpg_members):
+                    raise RuntimeError(f"v2 {split} duplicate JPG stems")
                 header = list(rows[0])
                 if split == "test" and any(label not in header for label in ("CRS", "MS", "RT")):
                     raise RuntimeError("Mapped v2 test labels missing")
@@ -100,14 +112,13 @@ def main() -> None:
                         if any(value not in {"0", "1"} for value in values):
                             raise RuntimeError(f"Nonbinary v2 test label: {label}")
                         counts[label] = sum(value == "1" for value in values)
-                v2_schema[split] = {"images": len(jpg_members), "label_rows": len(rows), "headers": header, "mapped_test_positive_counts": counts}
-                seen_ids = set()
-                for j, row in enumerate(rows, 1):
-                    image_id = row["ID"].strip()
-                    if image_id in seen_ids or image_id not in image_by_id:
-                        raise RuntimeError(f"v2 {split} ID mismatch: {image_id}")
-                    seen_ids.add(image_id)
-                    name = image_by_id[image_id]
+                label_ids = [row["ID"].strip() for row in rows]
+                if len(set(label_ids)) != len(label_ids):
+                    raise RuntimeError(f"v2 {split} duplicate CSV IDs")
+                missing_images = sorted(set(label_ids) - set(image_by_id))
+                unlabeled_images = sorted(set(image_by_id) - set(label_ids))
+                v2_schema[split] = {"images": len(jpg_members), "label_rows": len(rows), "headers": header, "mapped_test_positive_counts": counts, "csv_ids_without_images": missing_images, "image_ids_without_csv_rows": unlabeled_images}
+                for j, (image_id, name) in enumerate(image_by_id.items(), 1):
                     raw = inner.read(name)
                     code, _ = signature(raw)
                     v2.append({"id": f"v2_{split}:{image_id}", "pool": f"v2_{split}", "sha256": hashlib.sha256(raw).hexdigest(), "dhash": code, "member": name})
@@ -127,14 +138,14 @@ def main() -> None:
     for item in v1 + v2:
         exact_index[item["sha256"]].append(item)
     exact_groups = [[{"id": item["id"], "pool": item["pool"]} for item in group] for group in exact_index.values() if len(group) > 1 and any(item["pool"].endswith("test") for item in group)]
-    OUTPUT.mkdir(parents=True)
+    OUTPUT.mkdir(parents=True, exist_ok=True)
     fields = list(candidates[0])
     with (OUTPUT / "coarse_candidates.csv").open("w", newline="", encoding="utf-8") as stream:
         writer = csv.DictWriter(stream, fieldnames=fields)
         writer.writeheader()
         writer.writerows(candidates)
     (OUTPUT / "exact_overlap_groups.json").write_text(json.dumps(exact_groups, indent=2), encoding="utf-8")
-    summary = {"status": "TEST_INPUT_AUDIT_COARSE_STAGE_ONLY_NO_MODEL_SCORES", "plan_sha256": lock["inputs_sha256"]["data/protocols/trace_final_v1/ANALYSIS_PLAN.md"], "v1_split_counts": dict(by_split), "v2_schema": v2_schema, "test_images_read": {"v1": len(v1_test), "v2": len(v2_test)}, "exact_overlap_groups_involving_test": len(exact_groups), "coarse_candidate_pairs": len(candidates), "high_priority_pairs": sum(row["detail_review_priority"] in {"exact", "high"} for row in candidates), "next_gate": "SIFT local-detail review and visual adjudication before any model scoring"}
+    summary = {"status": "TEST_INPUT_AUDIT_COARSE_STAGE_ONLY_NO_MODEL_SCORES", "plan_sha256": lock["inputs_sha256"]["data/protocols/trace_final_v1/ANALYSIS_PLAN.md"], "v1_split_counts": dict(by_split), "v2_schema": v2_schema, "test_images_read": {"v1": len(v1_test), "v2": len(v2_test)}, "exact_overlap_groups_involving_test": len(exact_groups), "coarse_candidate_pairs": len(candidates), "high_priority_pairs": sum(row["detail_review_priority"] in {"exact", "high"} for row in candidates), "test_schema_ready_for_scoring": not v2_schema["test"]["csv_ids_without_images"] and not v2_schema["test"]["image_ids_without_csv_rows"], "next_gate": "SIFT local-detail review and visual adjudication before any model scoring"}
     (OUTPUT / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     print(json.dumps({key: value for key, value in summary.items() if key != "v2_schema"}, indent=2))
 
