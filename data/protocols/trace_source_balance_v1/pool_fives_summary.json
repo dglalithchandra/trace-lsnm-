@@ -1,0 +1,40 @@
+{
+  "version": "trace-ssl-pool-v2-rfmid-fives",
+  "status": "EXPANDED_POOL_READY_FOR_A2_A3",
+  "records": 2512,
+  "source_counts": {
+    "rfmid_v1_train": 1917,
+    "fives_train": 595
+  },
+  "fives_release_rows": 800,
+  "fives_train_rows": 600,
+  "fives_train_unique_primary_rows_admitted": 595,
+  "fives_test_rows_opened": 0,
+  "fives_test_rows_admitted": 0,
+  "fives_licence": "CC-BY-4.0",
+  "fives_source_doi": "10.6084/m9.figshare.19688169.v1",
+  "cross_source_exact_matches": 0,
+  "minimum_fives_to_trace_dhash256_distance": 73,
+  "perceptual_candidates_at_or_below_32": 0,
+  "trace_hash_metadata_rows_screened_by_final_split": {
+    "test": 644,
+    "train": 1917,
+    "validation": 639
+  },
+  "protected_trace_test_images_opened": 0,
+  "fives_preprocessing_status_counts": {
+    "accept": 562,
+    "accept_with_warning": 33
+  },
+  "disease_label_fields_present": false,
+  "patient_ids_available_for_fives": false,
+  "camera_ids_available_for_fives": false,
+  "core_manifest_sha256": "3c04c6af7930a9983570d1402d1e5815204167e89592f5957bf0b69fa03dceb2",
+  "fives_manifest_sha256": "b6d047efec47409d6902596e10eea67f35d9fdcd1ea0d2c11c5b35d967ada17d",
+  "trace_manifest_sha256": "2c90ee4bfa0a2799f8a78ba73b14d6485f10830000f82ce1ec5889fd083cd201",
+  "rfmid_signature_cache_sha256": "aa874318471b98f5c0134c767d1458e68ea4c0016f92eb4d0b751407e2079e4e",
+  "rfmid_signature_cache_records_reused": 3200,
+  "protected_trace_test_images_opened_during_this_build": 0,
+  "output_manifest_sha256": "d03badaddbf591b177180c2b9c1c24ea8b06670b2cc68611c0c40d0029f5e272",
+  "role_decision": "FIVES train is encoder-SSL training only; FIVES test remains unopened and excluded. FIVES is retired from future encoder evaluation. Earlier preprocessing/QC analyses are separate."
+}

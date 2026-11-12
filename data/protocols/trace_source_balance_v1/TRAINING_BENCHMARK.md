@@ -1,5 +1,16 @@
 # TRACE source-balance training benchmark
 
+## Expanded RFMiD+FIVES smoke check (13 November 2026)
+
+The admitted 2,512-record manifest was exercised for 50 updates in each sampling mode before any A2/A3 full run.
+
+| Mode | Steps/s | FIVES draws | RFMiD draws | Peak reserved CUDA memory |
+|---|---:|---:|---:|---:|
+| Natural frequency | 5.3248 | 43 | 157 | 503,316,480 bytes |
+| Source balanced | 5.2804 | 100 | 100 | 503,316,480 bytes |
+
+Natural sampling produced 21.5% FIVES draws in this small deterministic smoke sample, close to the manifest share of 23.7%. Source-balanced sampling produced the required exact 50:50 draw count. Both runs stayed finite and opened zero protected-test images.
+
 Run date: 12 November 2026. Device: NVIDIA GeForce RTX 4060 Laptop GPU, 8,188 MiB reported total memory. This measures the existing DINOv2-S LoRA/EMA/queue recipe on the frozen 1,917-image cache. It does not measure full-backbone DINO/iBOT or a future multi-source dataloader.
 
 ## Commanded work

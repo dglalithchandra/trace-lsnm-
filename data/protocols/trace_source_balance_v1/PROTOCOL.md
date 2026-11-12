@@ -1,8 +1,8 @@
 # TRACE source-balance development protocol v1
 
-Current execution status: A1 completed all three predeclared seeds and passed the development replication rule; see `DEVELOPMENT_RESULT.md`. A2/A3 remain blocked until a legal, leakage-audited multi-source pool is admitted.
+Current execution status: A1 completed all three predeclared seeds and passed the development replication rule; see `DEVELOPMENT_RESULT.md`. The RFMiD+FIVES expanded pool passed its admission audit, so A2/A3 may now run.
 
-Status: **core arm ready; expanded-pool arms blocked pending record-level admission**. Frozen 12 November 2026 before any A2/A3 training. This is a development study and does not modify `trace_final_v1`.
+Status: **A1 replicated; expanded pool ready**. Frozen 12 November 2026 before any A2/A3 training. On 13 November, before any A2/A3 run, the role ledger was amended to admit only the exact-deduplicated official FIVES training split after the predeclared licence, split, exact-overlap and perceptual-overlap gates passed. This is a development study and does not modify `trace_final_v1`.
 
 ## Question
 
@@ -22,7 +22,7 @@ The objective remains the implemented TRACE SSL recipe: rank-8 LoRA in the final
 | A2 | Same recipe and updates on an admitted expanded pool with natural-frequency sampling | Added-pool effect, A2 minus A1 |
 | A3 | Same admitted expanded pool and updates with equal expected source contribution per draw | Balancing effect, A3 minus A2 |
 
-A2 and A3 cannot start until every record has an allowed role, source ID, hash and related-group exclusion decision. A source folder or aggregate image count is not admission.
+A2 and A3 use `trace_ssl_pool_v2_fives.csv`: 1,917 RFMiD training records plus 595 exact-deduplicated FIVES training photographs. Every admitted row has an allowed role, source ID, source/cache hash and split decision. A source folder or aggregate image count alone is not admission.
 
 ## Fixed model and training controls
 
@@ -70,4 +70,6 @@ The TRACE graph is explanation-only in this sprint. It preserves input scores an
 
 ## Current gate result
 
-Only A0 and the existing core A1 are ready. EyePACS/APTOS images are absent locally; FDR26 is incomplete; EyeQ contains labels without photographs. Local PALM, Paraguay, EDID and JSIEC retain evaluation roles. RFMiD 2.0 test is blocked. IDRiD and FIVES are not admitted to SSL v2 until their overlaps, intended future evaluation roles and record-level exclusions are resolved.
+The expanded pool is ready. FIVES contributes 595 unique official-training photographs under CC BY 4.0. All 200 official FIVES test rows remain unopened and excluded, and FIVES is retired from future encoder evaluation. A frozen 3,200-record RFMiD signature ledger from the earlier no-model-score contamination audit found zero exact overlaps and no perceptual candidate at dHash distance 32 or below; the minimum distance was 73. The build opened zero protected RFMiD or FIVES test images. See `pool_fives_summary.json`.
+
+EyePACS/APTOS remain absent locally; FDR26 is incomplete; EyeQ contains labels without photographs. PALM, Paraguay, EDID and JSIEC retain evaluation roles. RFMiD 2.0 test remains blocked. IDRiD is not admitted.

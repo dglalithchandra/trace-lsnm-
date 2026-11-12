@@ -1,7 +1,7 @@
 dataset_id,local_state,current_role,ssl_v2_admission,reason
 rfmid_v1,verified,core_training_and_locked_evaluation,core_training_split_only,"1917 training records already frozen; validation is development query; test remains gated"
 idrid,verified,preservation_and_dr_development,blocked_pending_record_audit,"known RFMiD overlap and future preservation/evaluation role must be resolved"
-fives,verified,vessel_preservation_and_qc_development,blocked_pending_role_decision,"currently supplies real-image QC and vessel evidence"
+fives,verified,encoder_ssl_training_train_split_only,expanded_training_admitted,"595 exact-deduplicated official training photographs admitted under CC-BY-4.0; all 200 official test rows unopened and excluded; retired from future encoder evaluation"
 palm,verified,external_device_shift_development,excluded,"used repeatedly for camera/source transfer and trust development"
 paraguay_dr,verified,external_site_shift_development,excluded,"used repeatedly for ranking threshold calibration and coverage analysis"
 edid,verified,external_exploratory_transfer,excluded,"used for exploratory low-support transfer and duplicate review"

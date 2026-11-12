@@ -1,6 +1,6 @@
 {
   "version": "trace-source-balance-v1",
-  "status": "CORE_READY_EXPANDED_POOL_BLOCKED",
+  "status": "A1_REPLICATED_EXPANDED_POOL_READY",
   "frozen_at_local_date": "2026-11-12",
   "separate_from_locked_protocol": "trace_final_v1",
   "backbone": {
@@ -48,6 +48,18 @@
     "known_group_exclusion": true,
     "query_and_test_exclusion": true,
     "licence_basis": true
+  },
+  "expanded_pool": {
+    "manifest": "data/manifests/trace_ssl_pool_v2_fives.csv",
+    "manifest_sha256": "d03badaddbf591b177180c2b9c1c24ea8b06670b2cc68611c0c40d0029f5e272",
+    "records": 2512,
+    "source_counts": {"rfmid_v1_train": 1917, "fives_train": 595},
+    "fives_test_records_opened": 0,
+    "fives_test_records_admitted": 0,
+    "minimum_fives_to_rfmid_dhash256_distance": 73,
+    "perceptual_candidates_at_or_below_32": 0,
+    "role_amendment_date": "2026-11-13",
+    "role_limit": "FIVES is training-only and retired from future encoder evaluation"
   },
   "claim_limit": "development_only_without_fresh_confirmation"
 }
