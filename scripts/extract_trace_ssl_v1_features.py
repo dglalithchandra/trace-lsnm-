@@ -6,6 +6,7 @@ import argparse
 import csv
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -66,16 +67,23 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--mode", choices=("plain_crop", "plain_crop_matched", "full_field"), required=True)
     parser.add_argument("--batch-size", type=int, default=8)
+    parser.add_argument("--checkpoint", default="", help="Checkpoint under models/; default is original mode checkpoint")
+    parser.add_argument("--output-tag", default="", help="Unique feature tag for a separate development run")
     args = parser.parse_args()
     if args.batch_size < 1 or not torch.cuda.is_available():
         raise RuntimeError("Positive batch size and CUDA required")
-    checkpoint = ROOT / "models/trace_ssl_v1" / args.mode / "last.pt"
+    checkpoint = (ROOT / args.checkpoint if args.checkpoint else ROOT / "models/trace_ssl_v1" / args.mode / "last.pt").resolve()
+    if not checkpoint.is_relative_to((ROOT / "models").resolve()):
+        raise RuntimeError("Checkpoint must be under models/")
     if not checkpoint.is_file():
         raise FileNotFoundError(checkpoint)
     state = torch.load(checkpoint, map_location="cpu", weights_only=False)
     if state["config"]["mode"] != args.mode or int(state["epoch"]) < 1 or int(state["cursor"]) != 0:
         raise RuntimeError("Only completed-epoch checkpoints may be evaluated")
     epoch = int(state["epoch"])
+    tag = args.output_tag or f"{args.mode}_epoch{epoch}"
+    if not re.fullmatch(r"[a-z0-9_]+", tag):
+        raise RuntimeError("Output tag must use lowercase letters, digits and underscores")
     device = torch.device("cuda")
     encoder = load_dinov2_vits14(ROOT, device=device)
     add_lora(encoder)
@@ -83,10 +91,12 @@ def main() -> None:
     encoder.eval().requires_grad_(False).to(device)
     reports = []
     for split in ("train", "validation"):
-        out = ROOT / "data/features" / f"rfmid_{split}_trace_ssl_{args.mode}_epoch{epoch}.npz"
+        out = ROOT / "data/features" / f"rfmid_{split}_trace_ssl_{tag}.npz"
+        if out.exists():
+            raise RuntimeError(f"Refusing to overwrite existing features: {out}")
         reports.append(extract_cached_split(split, encoder, device, args.batch_size, out))
-    summary = {"status": "FROZEN_STUDENT_FEATURES_DEVELOPMENT_ONLY", "mode": args.mode, "epoch": epoch, "checkpoint_sha256": sha256_file(checkpoint), "splits": reports, "test_records_accessed": 0}
-    (ROOT / "data/features" / f"trace_ssl_{args.mode}_epoch{epoch}_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    summary = {"status": "FROZEN_STUDENT_FEATURES_DEVELOPMENT_ONLY", "mode": args.mode, "epoch": epoch, "output_tag": tag, "checkpoint_sha256": sha256_file(checkpoint), "splits": reports, "test_records_accessed": 0}
+    (ROOT / "data/features" / f"trace_ssl_{tag}_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     print(json.dumps(summary, indent=2))
 
 

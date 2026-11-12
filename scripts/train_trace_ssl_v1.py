@@ -119,6 +119,7 @@ def main() -> None:
     parser.add_argument("--learning-rate", type=float, default=0.0001)
     parser.add_argument("--max-steps", type=int, default=0, help="Smoke-test stop after this many global steps; 0 runs to epoch target")
     parser.add_argument("--resume", action="store_true")
+    parser.add_argument("--run-dir", default="", help="Checkpoint directory under models/; default is the original trace_ssl_v1 mode directory")
     args = parser.parse_args()
     if args.epochs < 1 or args.batch_size < 2 or args.learning_rate <= 0 or args.max_steps < 0:
         raise ValueError("Invalid training configuration")
@@ -147,7 +148,9 @@ def main() -> None:
     epoch = 0
     cursor = 0
     step = 0
-    run_dir = ROOT / "models/trace_ssl_v1" / args.mode
+    run_dir = (ROOT / args.run_dir if args.run_dir else ROOT / "models/trace_ssl_v1" / args.mode).resolve()
+    if not run_dir.is_relative_to((ROOT / "models").resolve()):
+        raise RuntimeError("Training run directory must be under models/")
     checkpoint = run_dir / "last.pt"
     config = {"mode": args.mode, "batch_size": args.batch_size, "learning_rate": args.learning_rate, "seed": seed, "cache_index_sha256": index_hash, "rank": RANK, "alpha": ALPHA, "queue_size": QUEUE_SIZE, "temperature": TEMPERATURE, "momentum": MOMENTUM, "backbone_trainable_parameters": trainable_backbone}
     if args.resume:
