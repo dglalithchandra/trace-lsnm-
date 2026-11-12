@@ -81,3 +81,7 @@ The pre-scoring input audit has now run and opened the RFMiD v1 and RFMiD 2.0 te
 
 The five-model training feature pairing check has passed. Guarded v1 final-test extraction and evaluation scripts have been written but not released or run on test images. Their status and remaining gate are in `data/protocols/trace_final_v1/IMPLEMENTATION_STATUS.md`. There is no `scoring_release.json`. Do not create one while ambiguous duplicate pairs are unresolved.
 
+## Development-only retrieval component — 12 November 2026
+
+A provenance-bearing top-five retrieval index has been configured on RFMiD v1 training DINOv2-L embeddings and checked on validation queries. It is descriptive and does not alter the locked final encoder comparison. The unrestricted index clusters strongly by the reported acquisition domain, while different-domain retrieval loses recorded-label matches for several low-support labels; some labels have no positive support outside their own reported domain. See `data/protocols/trace_retrieval_v1/DEVELOPMENT_REPORT.md`. No final-test image was accessed by this retrieval work. Keep retrieval as an inspectable demo; do not claim cross-camera success or patient-independent matching from it.
+
