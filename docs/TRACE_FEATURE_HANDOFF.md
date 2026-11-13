@@ -107,6 +107,6 @@ The additional `PYTHONPATH` entry reuses the temporary PyTorch installation alre
 
 1. Real development features and predictions have not been supplied, so every numerical result produced here is synthetic.
 2. Raw ontology snapshots are absent, so mappings and general medical relationships remain unresolved rather than fabricated.
-3. GitHub HTTPS credentials are unavailable in this execution environment. All milestone commits exist locally on `feature`; push attempts returned `fatal: could not read Username for 'https://github.com': Device not configured`.
-4. Lalith should review the registry and real exchange, run the reproduction commands, then integrate accepted `feature` commits from Lalith's account. Only Lalith may merge or push `main`.
+3. The tested work is published only to `origin/feature`; `main` was not modified. Lalith should review the registry and real exchange, run the reproduction commands, then integrate accepted `feature` commits. Only Lalith may merge or push `main`.
+4. The Git Credential Manager authorization used for the feature push is account-level persistent access and should be reviewed or revoked in GitHub settings when it is no longer needed.
 5. No graph benefit, real evaluation result, clinical validation or patient-independent result is claimed.
