@@ -1,8 +1,10 @@
 # TRACE core branch — verified report
 
-Date: 13 November 2026  
-Branch: `codex/core-source-balance-v1`  
-Verified head at report creation: `2157a4b`  
+Date: 13 November 2026
+
+Branch: `codex/core-source-balance-v1`
+
+Verified evidence head before this report commit: `2157a4b`
 Remote: `origin/codex/core-source-balance-v1`
 
 This report distinguishes completed evidence from remaining work. The branch has not been merged into `main`; only Lalith should make that integration decision.
