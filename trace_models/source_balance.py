@@ -15,13 +15,16 @@ from trace_preprocessing import PreprocessingConfig, ProcessingStatus, TracePrep
 from trace_preprocessing.adapters import prepare_dinov2_tensor
 from trace_preprocessing.types import PreprocessingResult
 
-from .dinov2 import load_dinov2_vits14, sha256_file
+from .dinov2 import DINOV2_VITS14_CHECKPOINT_SHA256, load_dinov2_vits14, sha256_file
 
 
 A1_CHECKPOINT_SHA256 = {
     20261111: "fead3b6163e1ee29a3f5091a899270e265c24c42c52dc679fc11a941318f7aec",
     20261112: "2504939a66ebbdaaf907f0cf559af1bc36b3528ef68ed38b60d65b23f8a4f82b",
     20261113: "3d6a69c34b20c30553d5f083e6a8db233e1d9887ddf7dd6322f586e4580592e7",
+}
+A1_ADAPTER_SHA256 = {
+    20261111: "8857f811b723cc0b5559b5a02d32ae116b6754c84fcc9c3603e835ba967e529c",
 }
 
 
@@ -87,6 +90,25 @@ def validate_a1_checkpoint_state(state: dict[str, Any]) -> dict[str, Any]:
     return config
 
 
+def validate_a1_adapter_pack(pack: dict[str, Any]) -> dict[str, Any]:
+    if pack.get("format") != "trace-a1-lora-adapter-v1":
+        raise RuntimeError("Not a TRACE A1 LoRA adapter pack")
+    config = validate_a1_checkpoint_state(
+        {"config": pack.get("config"), "step": pack.get("config", {}).get("updates"), "student": {}}
+    )
+    seed = int(config["seed"])
+    if pack.get("source_checkpoint_sha256") != A1_CHECKPOINT_SHA256[seed]:
+        raise RuntimeError("Adapter source-checkpoint provenance mismatch")
+    if pack.get("base_checkpoint_sha256") != DINOV2_VITS14_CHECKPOINT_SHA256:
+        raise RuntimeError("Adapter base-checkpoint provenance mismatch")
+    lora_state = pack.get("lora_state")
+    if not isinstance(lora_state, dict):
+        raise RuntimeError("Adapter pack has no LoRA tensor state")
+    if len(lora_state) != 16 or sum(value.numel() for value in lora_state.values()) != 73_728:
+        raise RuntimeError("Adapter pack tensor set is incomplete")
+    return config
+
+
 class TraceA1Encoder:
     """Apply frozen TRACE preprocessing and a verified completed A1 encoder."""
 
@@ -99,12 +121,9 @@ class TraceA1Encoder:
     ) -> None:
         self.workspace = Path(workspace)
         self.device = torch.device(device or ("cuda" if torch.cuda.is_available() else "cpu"))
+        default_dir = self.workspace / "models" / "trace_source_balance_v1" / "a1_seed20261111"
         self.checkpoint = Path(checkpoint) if checkpoint else (
-            self.workspace
-            / "models"
-            / "trace_source_balance_v1"
-            / "a1_seed20261111"
-            / "last.pt"
+            default_dir / "adapter.pt" if (default_dir / "adapter.pt").is_file() else default_dir / "last.pt"
         )
         if not self.checkpoint.is_absolute():
             self.checkpoint = self.workspace / self.checkpoint
@@ -112,16 +131,38 @@ class TraceA1Encoder:
             raise FileNotFoundError(f"TRACE A1 checkpoint not found: {self.checkpoint}")
 
         state = torch.load(self.checkpoint, map_location="cpu", weights_only=False)
-        self.config = validate_a1_checkpoint_state(state)
         observed_hash = sha256_file(self.checkpoint)
-        expected_hash = A1_CHECKPOINT_SHA256[int(self.config["seed"])]
+        is_adapter = state.get("format") == "trace-a1-lora-adapter-v1"
+        self.config = (
+            validate_a1_adapter_pack(state) if is_adapter else validate_a1_checkpoint_state(state)
+        )
+        expected_hash = (
+            A1_ADAPTER_SHA256.get(int(self.config["seed"]))
+            if is_adapter
+            else A1_CHECKPOINT_SHA256[int(self.config["seed"])]
+        )
+        if expected_hash is None:
+            raise RuntimeError("No frozen hash is registered for this TRACE A1 adapter")
         if observed_hash != expected_hash:
             raise RuntimeError(f"TRACE A1 checkpoint SHA-256 mismatch: {observed_hash}")
         self.checkpoint_sha256 = observed_hash
+        self.source_checkpoint_sha256 = (
+            state["source_checkpoint_sha256"] if is_adapter else observed_hash
+        )
+        self.artifact_kind = "lora_adapter" if is_adapter else "training_checkpoint"
 
         self.encoder = load_dinov2_vits14(self.workspace, device=self.device)
         add_source_balance_lora(self.encoder)
-        self.encoder.load_state_dict(state["student"], strict=True)
+        if is_adapter:
+            parameters = dict(self.encoder.named_parameters())
+            expected_keys = {name for name in parameters if name.endswith((".lora_a", ".lora_b"))}
+            if set(state["lora_state"]) != expected_keys:
+                raise RuntimeError("Adapter tensor names do not match the TRACE A1 architecture")
+            with torch.no_grad():
+                for name, value in state["lora_state"].items():
+                    parameters[name].copy_(value)
+        else:
+            self.encoder.load_state_dict(state["student"], strict=True)
         self.encoder.eval().requires_grad_(False).to(self.device)
         self.preprocessor = TracePreprocessor(
             PreprocessingConfig(apply_photometric_correction=False)
@@ -158,6 +199,8 @@ class TraceA1Encoder:
             "warnings": list(result.warnings),
             "model_id": f"trace_a1_seed_{self.config['seed']}",
             "checkpoint_sha256": self.checkpoint_sha256,
+            "source_checkpoint_sha256": self.source_checkpoint_sha256,
+            "artifact_kind": self.artifact_kind,
             "preprocessing_version": result.preprocessing_version,
             "embedding": embedding[0].float().cpu().numpy(),
             "embedding_interpretation": (

@@ -374,6 +374,8 @@ The selected predeclared seed has a strict image-to-embedding interface:
 
 It verifies the checkpoint/configuration, runs frozen geometry-only preprocessing and emits 384 values. A real-image smoke test produced a finite `(384,)` float32 vector. The embedding is not a calibrated probability or diagnostic confidence, and no camera-generalization or clinical-safety claim follows from this result.
 
+For inference, `scripts/export_trace_a1_adapter.py` reduces the selected 183 MB training checkpoint to a verified 301 kB LoRA-only artifact (608× smaller). The compact artifact produced a bit-for-bit identical real-image embedding to the full checkpoint. See `data/protocols/trace_source_balance_v1/DEPLOYMENT_ARTIFACT_REPORT.md`.
+
 `scripts/score_trace_fewshot_embeddings.py` fits the same balanced `C=1` logistic head used in the locked evaluation from positive and negative support matrices, then writes query ranking margins. A real-feature smoke test with three positives, 20 negatives and five queries passed. These margins are intentionally not presented as probabilities.
 
 For a complete folder-based research run, use `scripts/run_trace_fewshot_images.py` with positive-support, negative-support and query folders. It performs exact-duplicate role checks, preprocessing, embedding, QC logging, few-shot ranking and provenance-bearing support retrieval in one audited command. An end-to-end six-image smoke run completed with two queries scored, four retrieved supports per query and none rejected. Retrieval does not modify the model margin. The caller remains responsible for label validity and patient/eye separation.

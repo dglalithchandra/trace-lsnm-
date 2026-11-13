@@ -8,7 +8,9 @@ TRACE A1 converts one colour-fundus photograph into a 384-value embedding after 
 
 ## Selected artifact
 
-The callable default is the predeclared screen seed 20261111, rather than whichever replication seed scored highest. Its checkpoint SHA-256 is `fead3b6163e1ee29a3f5091a899270e265c24c42c52dc679fc11a941318f7aec`. Checkpoints are excluded from Git; an authorized user must place the local artifact at `models/trace_source_balance_v1/a1_seed20261111/last.pt`.
+The callable default is the predeclared screen seed 20261111, rather than whichever replication seed scored highest. Its training-checkpoint SHA-256 is `fead3b6163e1ee29a3f5091a899270e265c24c42c52dc679fc11a941318f7aec`. Checkpoints are excluded from Git; an authorized user may place the training artifact at `models/trace_source_balance_v1/a1_seed20261111/last.pt` and run `scripts/export_trace_a1_adapter.py`.
+
+The preferred inference artifact is the 300,979-byte LoRA-only `adapter.pt` with SHA-256 `8857f811b723cc0b5559b5a02d32ae116b6754c84fcc9c3603e835ba967e529c`. It is 608× smaller than the training checkpoint and produced an exactly equal embedding in the real-image equivalence smoke test. The loader prefers the adapter when present and otherwise accepts the verified full checkpoint.
 
 The encoder starts from official DINOv2-S/14 and adds rank-8 LoRA to the final four attention blocks. It was continued for 9,580 optimizer updates on 1,917 label-hidden RFMiD-v1 training photographs. Photometric harmonisation is disabled.
 
@@ -33,7 +35,7 @@ Adding 595 FIVES training images produced only +0.0040 and +0.0052 at K=3/5. Sou
 .\.venv\Scripts\python.exe scripts\embed_trace_a1_image.py --image C:\path\to\fundus.jpg --output embedding.npy
 ```
 
-The loader verifies the base DINOv2 checkpoint, the A1 configuration, completion step and the selected checkpoint SHA-256 before inference.
+The loader verifies the base DINOv2 checkpoint, the A1 configuration, completion step, source-checkpoint provenance and the selected artifact SHA-256 before inference.
 
 To apply the locked few-shot ranking head, save positive-support, negative-support and query embeddings as NumPy matrices and run:
 

@@ -2,7 +2,14 @@ from __future__ import annotations
 
 import pytest
 
-from trace_models.source_balance import validate_a1_checkpoint_state
+import torch
+
+from trace_models.dinov2 import DINOV2_VITS14_CHECKPOINT_SHA256
+from trace_models.source_balance import (
+    A1_CHECKPOINT_SHA256,
+    validate_a1_adapter_pack,
+    validate_a1_checkpoint_state,
+)
 
 
 def valid_state() -> dict[str, object]:
@@ -41,3 +48,21 @@ def test_incomplete_checkpoint_is_rejected() -> None:
     state["step"] = 100
     with pytest.raises(RuntimeError, match="incomplete"):
         validate_a1_checkpoint_state(state)
+
+
+def test_adapter_pack_provenance_is_validated() -> None:
+    state = valid_state()
+    tensors = {
+        f"tensor_{index}": torch.zeros(4608) for index in range(16)
+    }
+    pack = {
+        "format": "trace-a1-lora-adapter-v1",
+        "source_checkpoint_sha256": A1_CHECKPOINT_SHA256[20261111],
+        "base_checkpoint_sha256": DINOV2_VITS14_CHECKPOINT_SHA256,
+        "config": state["config"],
+        "lora_state": tensors,
+    }
+    assert validate_a1_adapter_pack(pack)["seed"] == 20261111
+    pack["source_checkpoint_sha256"] = "bad"
+    with pytest.raises(RuntimeError, match="provenance"):
+        validate_a1_adapter_pack(pack)
