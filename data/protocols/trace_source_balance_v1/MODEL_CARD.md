@@ -12,6 +12,8 @@ The callable default is the predeclared screen seed 20261111, rather than whiche
 
 The preferred inference artifact is the 300,979-byte LoRA-only `adapter.pt` with SHA-256 `8857f811b723cc0b5559b5a02d32ae116b6754c84fcc9c3603e835ba967e529c`. It is 608× smaller than the training checkpoint and produced an exactly equal embedding in the real-image equivalence smoke test. The loader prefers the adapter when present and otherwise accepts the verified full checkpoint.
 
+On the reference RTX 4060 laptop GPU, encoder-only median latency was 8.55 ms at batch 1 and throughput was 213.3 images/s at batch 16. This was a 3.9% batch-1 median-latency overhead and 5.4% batch-16 throughput reduction versus frozen DINOv2-S, with only about 0.46 MiB additional peak allocation. Disk I/O and preprocessing were excluded; see `INFERENCE_BENCHMARK.md`.
+
 The encoder starts from official DINOv2-S/14 and adds rank-8 LoRA to the final four attention blocks. It was continued for 9,580 optimizer updates on 1,917 label-hidden RFMiD-v1 training photographs. Photometric harmonisation is disabled.
 
 ## Development evidence
