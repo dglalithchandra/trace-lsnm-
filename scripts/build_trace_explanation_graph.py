@@ -6,12 +6,16 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import sys
 from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from trace_explanations import load_graph
 
 
-ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_GRAPH = ROOT / "data" / "knowledge_sources" / "curated" / "trace_explanation_graph_v1.json"
 
 
