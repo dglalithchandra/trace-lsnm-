@@ -20,6 +20,8 @@ The encoder starts from official DINOv2-S/14 and adds rank-8 LoRA to the final f
 
 Across three training seeds, A1 improved fixed RFMiD-validation macro AUPRC over its own frozen DINOv2-S initialization by a mean +0.0341 at K=3 and +0.0474 at K=5. All seeds cleared the +0.02 screening gate. Effects were heterogeneous: EDN worsened in all seeds, while CSR and CRVO improved strongly.
 
+On the previously used 177-image RFMiD 2.0 validation cohort, the three A1 seeds had macro-AUPRC point differences of +0.0069, +0.0222 and +0.0102 over frozen DINOv2-S across three provisional mapped labels. This is underpowered exploratory evidence: the labels have only 7, 6 and 8 positive queries, and most per-label intervals crossed zero. See `RFMID2_EXPLORATORY_RESULT.md`.
+
 Adding 595 FIVES training images produced only +0.0040 and +0.0052 at K=3/5. Source balancing added only +0.0024 and +0.0017 beyond natural sampling. Those arms failed the advancement gate and were not selected.
 
 ## Limitations and prohibited claims
