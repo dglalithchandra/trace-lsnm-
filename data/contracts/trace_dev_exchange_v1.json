@@ -1,0 +1,227 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://trace.local/contracts/trace_dev_exchange_v1.json",
+  "title": "TRACE development feature and prediction exchange v1",
+  "description": "Development-only metadata contract. Referenced feature arrays and real predictions remain private artifacts outside Git.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "data_scope",
+    "created_utc",
+    "synthetic",
+    "row_order",
+    "class_order",
+    "label_definitions",
+    "model",
+    "preprocessing",
+    "feature_artifact",
+    "records"
+  ],
+  "properties": {
+    "contract_version": {"const": "trace_dev_exchange_v1"},
+    "data_scope": {"enum": ["development", "synthetic"]},
+    "created_utc": {"type": "string", "format": "date-time"},
+    "synthetic": {"type": "boolean"},
+    "row_order": {"const": "explicit_zero_based_row_index"},
+    "class_order": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "label_definitions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/label_definition"}
+    },
+    "model": {"$ref": "#/$defs/model"},
+    "preprocessing": {"$ref": "#/$defs/preprocessing"},
+    "feature_artifact": {"$ref": "#/$defs/feature_artifact"},
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/record"}
+    }
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "label_definition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label_id", "display_name", "task_type", "definition_status"],
+      "properties": {
+        "label_id": {"type": "string", "minLength": 1},
+        "display_name": {"type": "string", "minLength": 1},
+        "task_type": {"enum": ["disease", "finding", "quality"]},
+        "definition_status": {"enum": ["source_defined", "mapping_pending"]},
+        "definition_source": {"type": ["string", "null"]}
+      }
+    },
+    "output": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "calibration_status"],
+      "properties": {
+        "type": {"enum": ["ranking_score", "probability"]},
+        "calibration_status": {
+          "enum": [
+            "not_probability",
+            "uncalibrated_probability",
+            "frozen_source_probability",
+            "calibrated_platt",
+            "calibrated_isotonic",
+            "calibrated_temperature"
+          ]
+        }
+      }
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "model_id",
+        "architecture",
+        "checkpoint_sha256",
+        "code_commit",
+        "precision",
+        "software_versions",
+        "feature_spec",
+        "output"
+      ],
+      "properties": {
+        "model_id": {"type": "string", "minLength": 1},
+        "architecture": {"type": "string", "minLength": 1},
+        "checkpoint_sha256": {"$ref": "#/$defs/sha256"},
+        "code_commit": {"type": "string", "pattern": "^[a-f0-9]{7,40}$"},
+        "precision": {"enum": ["float16", "bfloat16", "float32", "float64"]},
+        "software_versions": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {"type": "string", "minLength": 1}
+        },
+        "feature_spec": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["implementation", "width", "pooling", "normalisation"],
+          "properties": {
+            "implementation": {"type": "string", "minLength": 1},
+            "width": {"type": "integer", "minimum": 1},
+            "pooling": {"type": "string", "minLength": 1},
+            "normalisation": {"type": "string", "minLength": 1}
+          }
+        },
+        "output": {"$ref": "#/$defs/output"}
+      }
+    },
+    "preprocessing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pipeline_id", "config_sha256", "implementation", "input_shape"],
+      "properties": {
+        "pipeline_id": {"type": "string", "minLength": 1},
+        "config_sha256": {"$ref": "#/$defs/sha256"},
+        "implementation": {"type": "string", "minLength": 1},
+        "input_shape": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {"type": "integer", "minimum": 1}
+        }
+      }
+    },
+    "feature_artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["uri", "sha256", "format", "dtype", "shape", "row_index_field"],
+      "properties": {
+        "uri": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "format": {"enum": ["npy", "npz", "parquet"]},
+        "dtype": {"enum": ["float16", "float32", "float64"]},
+        "shape": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {"type": "integer", "minimum": 1}
+        },
+        "row_index_field": {"const": "row_index"}
+      }
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "status"],
+      "properties": {
+        "value": {"type": ["string", "null"]},
+        "status": {"enum": ["verified", "source_reported", "not_available", "unknown"]}
+      }
+    },
+    "aligned_value": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label_id", "value"],
+      "properties": {
+        "label_id": {"type": "string", "minLength": 1},
+        "value": {"type": ["number", "integer", "null"]}
+      }
+    },
+    "qc_measurement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "value", "measurement_source"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "value": {"type": ["number", "integer", "boolean", "string"]},
+        "unit": {"type": ["string", "null"]},
+        "measurement_source": {"type": "string", "minLength": 1}
+      }
+    },
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "row_index",
+        "record_id",
+        "split",
+        "dataset_id",
+        "source_id",
+        "identities",
+        "targets",
+        "outputs"
+      ],
+      "properties": {
+        "row_index": {"type": "integer", "minimum": 0},
+        "record_id": {"type": "string", "minLength": 1},
+        "split": {
+          "enum": [
+            "development_train",
+            "development_tuning",
+            "calibration",
+            "evaluation",
+            "synthetic"
+          ]
+        },
+        "dataset_id": {"type": "string", "minLength": 1},
+        "source_id": {"type": "string", "minLength": 1},
+        "identities": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["patient", "eye", "group", "device"],
+          "properties": {
+            "patient": {"$ref": "#/$defs/identity"},
+            "eye": {"$ref": "#/$defs/identity"},
+            "group": {"$ref": "#/$defs/identity"},
+            "device": {"$ref": "#/$defs/identity"}
+          }
+        },
+        "targets": {"type": "array", "items": {"$ref": "#/$defs/aligned_value"}},
+        "outputs": {"type": "array", "items": {"$ref": "#/$defs/aligned_value"}},
+        "qc_measurements": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/qc_measurement"}
+        }
+      }
+    }
+  }
+}
